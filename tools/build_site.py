@@ -56,15 +56,15 @@ PAGES = [
         "id": "water",
         "label": "Water height",
         "href": "water-height.html",
-        "title": "Sand Hills, Lakes And Water-Height Questions",
-        "description": "How could height, groundwater and storage be explored through Straddie's ocean, bay, sand hills, perched lakes, aquifers, sands and mineral-sands story?",
+        "title": "Sand Hills, Lakes And Pumped-Hydro Lessons",
+        "description": "Could Straddie learn from Snowy, Wivenhoe, Kidston, Borumba and pumped-hydro atlases while asking its own ocean, bay, sand-hill, perched-lake, aquifer and mineral-sands questions?",
     },
     {
         "id": "marine",
         "label": "Marine",
         "href": "marine.html",
         "title": "Wave And Tidal Without Underwater Blades",
-        "description": "Could wave pressure, tidal movement and reef-edge monitoring be explored without spinning underwater turbines?",
+        "description": "Could wave and tide be explored from first principles: flutter, vortex shedding, shrimp-like cascades, reef geometry, sensors, play, modelling and maker-space tests?",
     },
     {
         "id": "wind",
@@ -307,7 +307,37 @@ SOURCE_LINKS = [
         "title": "Pumped Hydro Energy Storage",
         "url": "https://arena.gov.au/renewable-energy/pumped-hydro-energy-storage/",
         "publisher": "ARENA",
-        "use": "Clarifies pumped hydro as water-height storage, useful here mainly as a comparison point for sandhill, tank-pair, seawater and digital-twin questions.",
+        "use": "Explains pumped hydro as a serious long-duration storage family based on moving water between higher and lower reservoirs.",
+    },
+    {
+        "title": "Snowy 2.0",
+        "url": "https://www.snowyhydro.com.au/snowy-20/about/",
+        "publisher": "Snowy Hydro",
+        "use": "Reference system for large pumped-hydro storage: upper and lower reservoirs, tunnels, reversible generation and long-duration grid support.",
+    },
+    {
+        "title": "Wivenhoe Pumped Storage Hydro Power Station",
+        "url": "https://cleancoqueensland.com.au/portfolio/owned-and-operated/wivenhoe-pumped-storage-hydro-power-station/",
+        "publisher": "CleanCo Queensland",
+        "use": "Queensland pumped-hydro reference: water is lifted from Wivenhoe Dam to Splityard Creek Dam, then released for peak support.",
+    },
+    {
+        "title": "250MW Kidston Pumped Storage Hydro Project",
+        "url": "https://genexpower.com.au/250mw-kidston-pumped-storage-hydro-project/",
+        "publisher": "Genex Power",
+        "use": "Queensland reference for pairing pumped storage with renewable generation and long-duration evening supply.",
+    },
+    {
+        "title": "Borumba Pumped Hydro Project",
+        "url": "https://qldhydro.com.au/projects/borumba/",
+        "publisher": "Queensland Hydro",
+        "use": "Queensland reference for proposed long-duration pumped hydro and the scale of planning behind new water-height storage.",
+    },
+    {
+        "title": "Global Greenfield Pumped Hydro Energy Storage Atlas",
+        "url": "https://re100.eng.anu.edu.au/global/",
+        "publisher": "ANU RE100 Group",
+        "use": "Shows how pumped-hydro thinking can begin as open topographic screening before a local informal proposal chooses its own shape.",
     },
     {
         "title": "Coastal and subcoastal non-floodplain sand lake - Perched hydrology",
@@ -328,16 +358,52 @@ SOURCE_LINKS = [
         "use": "Grounds wave and tidal energy as a broad family of technologies, not one settled device type.",
     },
     {
+        "title": "Marine Energy Basics",
+        "url": "https://www.energy.gov/cmei/water/marine-energy-basics",
+        "publisher": "U.S. Department of Energy",
+        "use": "Keeps marine-energy language broad: waves, tides, currents, temperature gradients and many conversion pathways.",
+    },
+    {
         "title": "Australian Wave Energy Atlas",
         "url": "https://arena.gov.au/projects/australian-wave-energy-atlas/",
         "publisher": "ARENA / CSIRO",
-        "use": "Supports wave-resource mapping before any marine device or reef-edge idea gets proposed.",
+        "use": "Supports wave-resource mapping as one doorway into the many unmapped wave and tide possibilities.",
     },
     {
         "title": "Review of wave energy converter power take-off systems",
         "url": "https://www.nrel.gov/docs/fy23osti/82807.pdf",
         "publisher": "NREL",
         "use": "Adds a research trail for non-standard wave power take-off concepts, including non-air-turbine pathways.",
+    },
+    {
+        "title": "Vortex Hydro Energy develops transformational technology",
+        "url": "https://www.energy.gov/cmei/success-stories/articles/eere-success-story-vortex-hydro-energy-develops-transformational",
+        "publisher": "U.S. Department of Energy",
+        "use": "Reference for vortex-induced vibration as a no-blade current-energy pathway inspired by how fish interact with vortices.",
+    },
+    {
+        "title": "Energy harvesting by flow-induced flutter in an inverted piezoelectric flag",
+        "url": "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/abs/energy-harvesting-by-flowinduced-flutter-in-a-simple-model-of-an-inverted-piezoelectric-flag/37FF699E5B55E238A41F056E4A06DBDB",
+        "publisher": "Journal of Fluid Mechanics",
+        "use": "Supports flutter and flexible-geometry energy harvesting as a real first-principles research lane.",
+    },
+    {
+        "title": "Analysis of biomimetic stream energy device based on flapping foils",
+        "url": "https://tethys-engineering.pnnl.gov/publications/analysis-biomimetic-stream-energy-device-based-flapping-foils",
+        "publisher": "Tethys Engineering / PNNL",
+        "use": "Reference for biomimetic oscillating foils as a hydrokinetic design family beyond standard turbines.",
+    },
+    {
+        "title": "Shrimp metachronal swimming",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10303694/",
+        "publisher": "National Library of Medicine / open-access article",
+        "use": "Opens shrimp-style appendage timing and cascading motion as geometry clues, not finished energy claims.",
+    },
+    {
+        "title": "Mechanics of Movement: Mantis Shrimp",
+        "url": "https://pateklab.biology.duke.edu/research/mechanics-of-ultrafast-movement/mechanics-of-movement-mantis-shrimp/",
+        "publisher": "Patek Lab, Duke University",
+        "use": "Gives a public biology reference for latch, spring and cavitation ideas that can inspire playful marine-energy questions.",
     },
     {
         "title": "Carbon capture and storage",
@@ -448,15 +514,15 @@ BUILDERS = [
     {
         "id": "marine-no-turbine",
         "title": "No-Underwater-Blades Marine Brief Builder",
-        "purpose": "Draft a wave or tidal question that avoids underwater turbines and starts with marine life.",
+        "purpose": "Draft a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.",
         "filename": "straddie-no-turbine-marine-brief",
-        "boundary": "Marine energy questions become more trustworthy when cultural authority, ecology review, navigation checks, fishers, sediment, storm survival and reversibility are visible before physical testing.",
-        "next_step": "Separate resource mapping, tabletop testing, digital simulation and any real-world marine activity.",
+        "boundary": "No underwater blades is not a lack of imagination. It opens the field to forms, rhythms, materials and processes that humans have barely mapped.",
+        "next_step": "Start with sketches, kids' ideas, maker-space rigs, wave tanks, beach observations, digital simulation and source links before choosing any one device family.",
         "fields": [
             ("edge", "Which coast or water edge is being considered?", "Main Beach, Moreton Bay, ferry channel, Amity edge, reef model, wave tank, or concept only."),
-            ("device", "What non-blade idea is being explored?", "Pressure bladder, oscillating body, pump to shore, membrane, sensor buoy, reef monitoring frame, or no device yet."),
-            ("benefit", "What benefit could be tested?", "Power, desalination pressure, monitoring, reef learning, erosion knowledge, emergency signal, or public education."),
-            ("avoid", "What could people want it to avoid?", "Spinning blades, animal strike risk, noise, navigation conflict, permanent anchoring, cultural harm, sediment harm or visual clutter."),
+            ("pattern", "Which pattern or movement could inspire it?", "Shrimp-like flutter cascade, vortex shedding, oscillating foil, flexible flag, reef lattice, membrane pulse, buoyant hinge, kelp sway, shell geometry or a kid's sketch."),
+            ("benefit", "What benefit could be tested?", "Power, sensor trickle-charge, monitoring, reef learning, erosion knowledge, emergency signal, food/habitat co-benefit or public education."),
+            ("open_question", "What remains unmapped?", "Geometry, timing, material, scale, anchoring, reversibility, maintenance, community value, learning value or the next experiment."),
         ],
     },
     {
@@ -478,13 +544,13 @@ BUILDERS = [
         "title": "Power Sharing And Bill Ledger Builder",
         "purpose": "Turn a local sharing idea into a plain-English bill, battery and governance question.",
         "filename": "straddie-power-sharing-ledger",
-        "boundary": "A ledger, token or crypto layer is not automatically a licence to sell electricity or a financial product. Retailer, network, legal, tax, cyber, consent and plain-accounting questions belong on the table early.",
-        "next_step": "Start with one load, one storage node, one bill problem and one non-crypto receipt trail before any token design.",
+        "boundary": "A ledger, token or crypto layer can earn trust by sitting beside clear retail, network, legal, tax, cyber, consent and plain-accounting questions.",
+        "next_step": "Start with one load, one storage node, one bill problem and one plain receipt trail alongside any token design.",
         "fields": [
             ("participants", "Who is sharing value?", "Households, renters, shops, club, ferry gateway, maker-space, EV charger, community battery, trust, co-op or concept only."),
             ("surplus", "What surplus or flexible load exists?", "Midday rooftop solar, hot water, cold storage, sand heat, EV charging, e-bike charging, workshop heat, pumps or batteries."),
             ("settlement", "How could value be settled plainly?", "Bill credit, co-op account, mutual reserve, voucher, local ledger, retailer offer, VPP payment, token question or not known."),
-            ("review", "What could make money movement trustworthy?", "Retail licence, embedded network rules, network tariff, consumer law, tax, privacy, cyber security, anti-fraud, opt-out, hardship or governance."),
+            ("review", "What could make money movement trustworthy?", "Retail licence, embedded network rules, network tariff, consumer law, tax, privacy, cyber security, anti-fraud, opt-out, fair-go help path or governance."),
         ],
     },
     {
@@ -607,8 +673,8 @@ def home_body() -> str:
         {"label": "Storage", "title": "Can sand hold the evening?", "text": "Could solar heat or spare electricity charge sand, rock or hot-water stores for workshop heat, drying, cooking, water and community backup?"},
         {"label": "Sharing", "title": "Can spare solar be worth more before it leaves?", "text": "Could neighbourhood batteries, EV charging, hot water, cold rooms and plain bill credits beat a weak feed-in tariff without trapping anyone?"},
         {"label": "Pressure", "title": "What can compressed air teach on a sand island?", "text": "Could air storage start with containers, pipes, compressors, heat recovery and aquifer models that map to Straddie's sandmass rather than generic mainland infrastructure?"},
-        {"label": "Water", "title": "What can water-height mean on a sand island?", "text": "Could the ocean edge, bay edge, dune height, perched lakes, aquifers, sands and mineral sands teach a Straddie-specific storage imagination?"},
-        {"label": "Marine", "title": "Can wave and tide work without underwater blades?", "text": "Could pressure, buoyancy, membranes, monitoring and simulation be explored before any ocean hardware gets wet?"},
+        {"label": "Water", "title": "What can Snowy-scale thinking teach a sand island?", "text": "Could Snowy, Wivenhoe, Kidston, Borumba and pumped-hydro atlases help people ask better Straddie questions about ocean, bay, dune height, perched lakes, aquifers, sands and mineral sands?"},
+        {"label": "Marine", "title": "How many wave and tide geometries are still unmapped?", "text": "Could flutter, vortex shedding, shrimp-like cascades, oscillating foils, membranes, reef lattices, sensors and kids' sketches open more than one marine-energy path?"},
         {"label": "Wealth", "title": "Who owns the upside?", "text": "Could savings, income, training and resilience feed local stewardship instead of leaking away?"},
     ]) + """
   </div>
@@ -654,11 +720,11 @@ def options_body() -> str:
         {"status": "Start now", "title": "Rooftop solar and batteries", "plain": "The most practical first layer: roofs, shade, small businesses, public buildings, hot water and batteries.", "question": "Which roofs and loads are obvious wins once the owner, electrician and network rules are checked?", "review": "Electrical, fire, roof, cyclone/wind loading, insurance and network export."},
         {"status": "Start small", "title": "Solar thermal and concentration", "plain": "Heat can be easier to store than electricity. Solar concentration might suit a workshop or industrial heat test before any big claim.", "question": "Where does the island need clean heat, not just clean electrons?", "review": "Heat safety, glare, fire risk, land use, maintenance and economics."},
         {"status": "Prototype", "title": "Sand batteries", "plain": "A sand battery is thermal storage: heat goes into sand or similar material and comes out as heat, steam, air or sometimes power through another system.", "question": "Could a maker-space bench test show what local heat storage is good for?", "review": "Insulation, hot surfaces, materials, fire, monitoring, output use and public access."},
-        {"status": "Sharing layer", "title": "Neighbourhood batteries and power sharing", "plain": "Local solar may be worth more when it is used, stored or shared locally before it is exported at a low feed-in tariff.", "question": "Could a community battery, EV charger or bill-credit ledger keep midday solar value close to residents?", "review": "Retailer, network tariff, metering, consent, privacy, hardship, tax, consumer law and governance."},
+        {"status": "Sharing layer", "title": "Neighbourhood batteries and power sharing", "plain": "Local solar may be worth more when it is used, stored or shared locally before it is exported at a low feed-in tariff.", "question": "Could a community battery, EV charger or bill-credit ledger keep midday solar value close to residents?", "review": "Retailer, network tariff, metering, consent, privacy, fair-go help paths, tax, consumer law and governance."},
         {"status": "Research lane", "title": "Compressed air", "plain": "Compressed air can store energy in vessels, pipes, heat-recovery systems or, as a harder research question, suitable aquifer formations.", "question": "Could container-scale air storage, heat recovery and sandmass modelling show what is worth exploring next?", "review": "Pressure-vessel law, compressor noise, heat, rupture risk, geology, emergency services and economics."},
         {"status": "Storage lane", "title": "Flow batteries and salt-gradient ideas", "plain": "The draft research brief names vanadium flow batteries and salt-gradient storage. They are useful to compare, but not the same as sand or air.", "question": "Which storage chemistry is safest, serviceable and most useful for island loads?", "review": "Lifecycle, cost, electrolyte safety, water sensitivity, maintenance, supply chain and end-of-life rules."},
-        {"status": "Geography lens", "title": "Sand hills, perched lakes and water height", "plain": "Pumped hydro uses height, but Straddie is a sand island of ocean edges, bay edges, dune ridges, perched lakes, aquifers, wetlands, sands and mineral sands.", "question": "Could water-height thinking become a local geography model before it becomes an infrastructure idea?", "review": "Traditional Owner authority, hydrology, national park, ecology, water quality and public trust."},
-        {"status": "Ocean lab", "title": "Wave and tidal without underwater blades", "plain": "If no underwater turbines is a hard boundary, the first lane is resource mapping, pressure devices, buoyancy, membranes and simulation.", "question": "What can wave and tide teach without adding animal-strike machinery?", "review": "Marine life, noise, navigation, anchoring, storms, sediment, fishers, visual impact and reversibility."},
+        {"status": "Pumped-hydro lessons", "title": "Sand hills, perched lakes and water height", "plain": "Snowy 2.0, Wivenhoe, Kidston, Borumba and pumped-hydro atlases show that water-height storage is a serious family. Straddie asks it through ocean, bay, dune height, perched lakes, aquifers, wetlands, sands and mineral sands.", "question": "Could a local informal proposal learn from those systems and translate the lesson into Straddie's own sand-island geography?", "review": "Snowy Hydro, CleanCo, Genex, Queensland Hydro, ANU atlas, WetlandInfo, local hydrology and community authority."},
+        {"status": "Ocean lab", "title": "Wave and tidal without underwater blades", "plain": "Humans have explored only a small part of wave and tide. No underwater blades can open flutter, vortex shedding, shrimp-like cascades, oscillating foils, membranes, reef lattices, buoys, sensors and maker-space geometry.", "question": "Could kids, fishers, surfers, engineers, artists and marine scientists all sketch different ways motion might become useful energy or knowledge?", "review": "Wave atlas data, marine life, navigation, anchoring, storms, sediment, local observation, repairability and reversibility."},
         {"status": "Micro test", "title": "Non-turbine wind", "plain": "Bladeless or vibration-based wind is not a main power promise yet. It might still be useful for sensors, signs or education.", "question": "Where is wind useful enough for a tiny load without becoming clutter?", "review": "Noise, vibration, wildlife, visual impact, durability and real output."},
         {"status": "Future repo", "title": "Integrated pressure, carbon and response network", "plain": "This atlas points toward a dedicated repo for the whole pressure, carbon, response and sensing system.", "question": "Could a dedicated map explore compressed air, aquifers, carbon capture, fire response, emergency power, water, ventilation, sensors, data and governance as one living system?", "review": "QYAC, Geoscience Australia, ARENA, Queensland WetlandInfo, emergency-response references and the public source trail."},
     ]) + """
@@ -809,13 +875,13 @@ def sharing_body() -> str:
 <section class="section deep-band">
   <div class="section-inner">
     <div class="section-heading">
-      <p class="section-label">Ledger before token</p>
-      <h2>Could a community ledger make bills fairer without becoming financial hype?</h2>
-      <p class="lede">A ledger could start as simple accounting: who generated, who stored, who used, who paid, who received a credit, and who opted out. A token or crypto layer belongs much later, behind law, tax, consumer protection, cyber security and a plain-language fallback.</p>
+      <p class="section-label">Plain ledger</p>
+      <h2>Could a community ledger make bills easier to trust?</h2>
+      <p class="lede">A ledger could start as simple accounting: who generated, who stored, who used, who paid, who received a credit, and who opted out. A token or crypto layer can sit beside plain rules, consumer rights, cyber security and a human-readable fallback.</p>
     </div>
 """ + card_grid([
         {"label": "Plain bill", "title": "Could local use beat a feed-in tariff?", "text": "If exported solar earns only a small credit, could it be better to offset a neighbour's load, charge a local EV, run a cold room, heat water or build a mutual reserve?"},
-        {"label": "Consent", "title": "Who holds the switch?", "text": "Could every household see the rule, join voluntarily, leave easily, protect private load data and avoid being punished during hardship?"},
+        {"label": "Fair go", "title": "How does everyone keep a fair go?", "text": "Could every household see the rules, join voluntarily, leave easily, protect private load data and find a help path when circumstances change?"},
         {"label": "Retail path", "title": "Which legal wrapper is real?", "text": "Is this a retailer product, embedded network, VPP, community battery subscription, co-op service, grant-funded pilot or only a research note?"},
         {"label": "Builder", "title": "Draft a sharing ledger", "text": "Turn the power-sharing idea into a bill, battery and governance question.", "href": "builders/power-sharing-ledger.html", "action": "Open builder"},
     ]) + """
@@ -829,28 +895,31 @@ def water_body() -> str:
 <section class="section">
   <div class="section-inner split">
     <div>
-      <p class="section-label">Sandmass geography</p>
-      <h2>Could water-height thinking start from Straddie's own shape?</h2>
-      <p class="lede muted">Straddie is ocean, bay, sand hills, dune ridges, perched lakes, wetlands, aquifers, sands and mineral sands. Water-height storage can be explored first as a geography model: what is high, what is low, what holds water, what filters water, and what stories does the sandmass already tell?</p>
+      <p class="section-label">Pumped-hydro lessons</p>
+      <h2>Could Snowy-scale thinking help a sand island ask better questions?</h2>
+      <p class="lede muted">Snowy 2.0, Wivenhoe, Kidston, Borumba and the ANU pumped-hydro atlas prove that water-height storage is a serious human tool. Straddie is a different kind of place: ocean, bay, sand hills, dune ridges, perched lakes, wetlands, aquifers, sands and mineral sands. The informal proposal starts by learning the logic of height, time, tunnels, tanks, reversible flow, modelling and grid support, then asking what belongs on this island's own map.</p>
       <ol class="pathway">
-        <li><p><strong>Model height as local geography.</strong> Start with ocean edge, bay edge, dune height, tank pairs, aquifer data, sandmass diagrams and digital twins.</p></li>
-        <li><p><strong>Let lakes teach without forcing a job on them.</strong> Perched lakes, wetlands and springs can reveal hydrology, culture, ecology and time.</p></li>
-        <li><p><strong>Compare storage stories.</strong> Sand heat, batteries, demand shifting, EVs, tank pairs and seawater-height models can sit beside the water-height question.</p></li>
+        <li><p><strong>Study real pumped hydro with respect.</strong> What do Snowy, Wivenhoe, Kidston and Borumba teach about scale, duration, reservoirs, tunnels, pumps, reversible generation and public trust?</p></li>
+        <li><p><strong>Map Straddie as Straddie.</strong> What do ocean edge, bay edge, dune height, sandmass infiltration, aquifers, perched lakes, wetlands and mineral sands suggest, invite or reshape?</p></li>
+        <li><p><strong>Let models become shared capability.</strong> Could tank pairs, digital twins, school rigs and maker-space demos help residents see the physics before any larger informal proposal grows legs?</p></li>
       </ol>
     </div>
-    <div class="quote-panel">A sand island asks different storage questions from a mountain valley.</div>
+    <div class="quote-panel">A happy clean-energy island can power more than lights: learning, compute, transport, food, repair, culture and local confidence.</div>
   </div>
 </section>
 <section class="section soft-band">
   <div class="section-inner">
     <div class="section-heading">
-      <p class="section-label">Safer first tests</p>
-      <h2>How can water-height thinking teach without becoming a proposal?</h2>
+      <p class="section-label">Reference systems and local sketches</p>
+      <h2>What could a serious informal water-height proposal learn first?</h2>
     </div>
 """ + card_grid([
-        {"label": "Model", "title": "Tank-pair education rig", "text": "Could a small maker-space rig teach gravity storage beside maps of the real sand island?"},
-        {"label": "Digital twin", "title": "Height, water and sandmass overlay", "text": "Could a public map show dune height, bay/ocean edges, aquifers, perched lakes, wetlands, sands and mineral sands together?"},
-        {"label": "Geography", "title": "What does Straddie offer on its own terms?", "text": "Could dune height, bay/ocean edges, sandmass infiltration, aquifers, perched lakes, sands and mineral sands create a different storage imagination?"},
+        {"label": "Snowy 2.0", "title": "What does long-duration storage teach?", "text": "Could tunnels, upper and lower reservoirs, reversible generation and grid timing become a plain-English lesson for island-scale imagination?", "href": "https://www.snowyhydro.com.au/snowy-20/about/", "action": "Open source"},
+        {"label": "Wivenhoe", "title": "What does Queensland already know?", "text": "Could the Wivenhoe and Splityard Creek relationship teach how stored height can answer peak demand close to home?", "href": "https://cleancoqueensland.com.au/portfolio/owned-and-operated/wivenhoe-pumped-storage-hydro-power-station/", "action": "Open source"},
+        {"label": "Kidston", "title": "What can a storage project teach about timing?", "text": "Could the Kidston example help compare solar, evening peaks, long-duration discharge and regional grid value?", "href": "https://genexpower.com.au/250mw-kidston-pumped-storage-hydro-project/", "action": "Open source"},
+        {"label": "Borumba", "title": "What does a new Queensland proposal need to study?", "text": "Could Borumba show the depth of modelling, consultation, access planning and source trail a serious water-height idea gathers?", "href": "https://qldhydro.com.au/projects/borumba/", "action": "Open source"},
+        {"label": "Atlas", "title": "What does topographic screening reveal?", "text": "Could ANU-style pumped-hydro mapping help compare height, distance, water, access and storage duration while translating the lesson to a sand-island setting?", "href": "https://re100.eng.anu.edu.au/global/", "action": "Open atlas"},
+        {"label": "Straddie sketch", "title": "What does the island offer on its own terms?", "text": "Could dune height, bay and ocean edges, tank pairs, sandmass infiltration, aquifers, perched lakes, sands and mineral sands shape a different water-height imagination?"},
         {"label": "Builder", "title": "Draft a geography note", "text": "Turn a water-height idea into a local sand-island map question.", "href": "builders/perched-lake-boundary.html", "action": "Open builder"},
     ]) + """
   </div>
@@ -863,13 +932,13 @@ def marine_body() -> str:
 <section class="section">
   <div class="section-inner split">
     <div>
-      <p class="section-label">No underwater blades</p>
-      <h2>Can wave and tidal energy be explored as pressure, movement and knowledge first?</h2>
-      <p class="lede muted">If turbines are off the table, the first useful work is not a device sale. It is wave-resource mapping, marine-life review, tabletop models, pressure-to-shore questions and reversible sensor buoys.</p>
+      <p class="section-label">First principles ocean lab</p>
+      <h2>How many wave and tide geometries are still unmapped?</h2>
+      <p class="lede muted">The known wave and tidal options explored by humans are only a small patch of the design space. A no-underwater-blades posture can invite more imagination: flutter cascades, shrimp-like timing, vortex shedding, oscillating foils, flexible flags, membranes, reef lattices, buoyant hinges, shell geometries, sensor trickle-power and ideas a kid can sketch in five minutes.</p>
       <ul class="question-list">
-        <li>What can be learned from waves before anything is installed?</li>
-        <li>Could a device pump fluid or air to shore without placing spinning blades in animal pathways?</li>
-        <li>Could reef-energy ideas also improve monitoring, habitat knowledge or erosion understanding?</li>
+        <li>What can waves, tides, fish, shrimp, kelp, shells, foam lines and sand ripples teach about motion?</li>
+        <li>Could maker-space rigs, school models, wave tanks and simulations let people test patterns before choosing a device?</li>
+        <li>Could reef-energy ideas also improve monitoring, habitat knowledge, erosion understanding, food systems and public learning?</li>
       </ul>
     </div>
     <figure class="visual-panel">
@@ -880,11 +949,14 @@ def marine_body() -> str:
 <section class="section soft-band">
   <div class="section-inner">
 """ + card_grid([
-        {"label": "Question", "title": "What does the wave atlas say?", "text": "Could CSIRO and ARENA-style wave-resource mapping guide where to look and where not to look?"},
-        {"label": "Question", "title": "Could pressure do the work?", "text": "Could wave motion pressurise air, water or a membrane, with conversion happening safely onshore or in a service zone?"},
-        {"label": "Question", "title": "Could living breakwaters be habitat first?", "text": "Oyster-crete, reef modules and seagrass edges belong first as ecology and coastal-process questions, with energy only as a secondary possibility."},
-        {"label": "Question", "title": "What does marine life need?", "text": "How do whales, dolphins, turtles, dugongs, fish, birds, currents, sediment and navigation shape the stop rules?"},
-        {"label": "Builder", "title": "Draft a marine brief", "text": "Write a no-underwater-blades marine-energy question.", "href": "builders/marine-no-turbine.html", "action": "Open builder"},
+        {"label": "Wave atlas", "title": "Where is the movement?", "text": "Could ARENA and CSIRO-style resource mapping show swell, season, direction and energy while leaving the design space open?", "href": "https://arena.gov.au/projects/australian-wave-energy-atlas/", "action": "Open source"},
+        {"label": "Flutter", "title": "Could flexible forms harvest tiny repeated motion?", "text": "Could inverted flags, kelp-like strips, soft hinges or piezo surfaces turn small oscillations into useful sensor power or lessons?", "href": "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/abs/energy-harvesting-by-flowinduced-flutter-in-a-simple-model-of-an-inverted-piezoelectric-flag/37FF699E5B55E238A41F056E4A06DBDB", "action": "Open source"},
+        {"label": "Vortex", "title": "Could currents shake useful structures?", "text": "Could vortex-induced vibration, fish-like timing or oscillating bodies offer no-blade current ideas for models and careful field questions?", "href": "https://www.energy.gov/cmei/success-stories/articles/eere-success-story-vortex-hydro-energy-develops-transformational", "action": "Open source"},
+        {"label": "Shrimp clue", "title": "Could cascades and appendage timing teach new geometry?", "text": "Shrimp and mantis shrimp point toward timing, cascades, vortices, latch-spring motion and cavitation. Could those clues become sketches, simulations and bench rigs?", "href": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10303694/", "action": "Open source"},
+        {"label": "Foils", "title": "Could flapping or oscillating foils stay gentle and useful?", "text": "Could biomimetic foils, fish-fin movement and flexible hydrokinetic forms be compared with standard turbines instead of dismissed?", "href": "https://tethys-engineering.pnnl.gov/publications/analysis-biomimetic-stream-energy-device-based-flapping-foils", "action": "Open source"},
+        {"label": "Reef geometry", "title": "Could habitat and energy learning share one model?", "text": "Could oyster-crete, reef modules, seagrass edges and sensor frames teach coastal processes first, with energy as one possible co-benefit?"},
+        {"label": "Kids and makers", "title": "What would a five-minute sketch reveal?", "text": "Could school groups, surfers, fishers, artists, makers, engineers and marine scientists all add pattern ideas to the same public board?"},
+        {"label": "Builder", "title": "Draft a marine curiosity note", "text": "Write a no-underwater-blades marine-energy idea from first principles.", "href": "builders/marine-no-turbine.html", "action": "Open builder"},
     ]) + """
   </div>
 </section>
@@ -897,7 +969,7 @@ def wind_body() -> str:
   <div class="section-inner split">
     <div>
       <p class="section-label">Small loads first</p>
-      <h2>Could non-turbine wind be useful without pretending it is the main game?</h2>
+      <h2>Could non-turbine wind find the small jobs it is genuinely good at?</h2>
       <p class="lede muted">Bladeless or vibration-based wind generators are interesting, and they can start as micro-generation experiments while real output, durability, noise and maintenance become clear.</p>
       <div class="tag-row">
         <span class="tag">Sensors</span>
@@ -974,7 +1046,7 @@ def wealth_body() -> str:
         {"label": "Question", "title": "Could mutual care reduce risk?", "text": "Prevention, maintenance, fire checks, storm readiness and public dashboards can lower risk before insurance or mutuals are discussed.", "href": "https://auraofintelligence.github.io/moreton-bay-community-wealth-and-mutuals/", "action": "Open mutuals"},
         {"label": "Question", "title": "Could Ready S.E.T. train people into the work?", "text": "Audits, installs, media, maintenance, grant reporting and safety checks can become learning pathways if trust is built first.", "href": "https://auraofintelligence.github.io/ready-set-co-op-trust-hub/", "action": "Open Trust Hub"},
         {"label": "Question", "title": "Could a sovereign wealth fund stay plain?", "text": "The draft brief imagines a fund, tokens and dashboards. The public-safe version starts with governance, receipts, audit, anti-fraud rules and the right to refuse."},
-        {"label": "Question", "title": "Could power sharing feed the mutual?", "text": "If local solar beats a weak feed-in tariff, could part of the upside support maintenance, hardship protection, emergency storage or training before any dividend talk?", "href": "sharing.html", "action": "Open power sharing"},
+        {"label": "Question", "title": "Could power sharing feed the mutual?", "text": "If local solar beats a weak feed-in tariff, could part of the upside support maintenance, fair-go support, emergency storage or training alongside any dividend talk?", "href": "sharing.html", "action": "Open power sharing"},
         {"label": "Builder", "title": "Draft a wealth and grant note", "text": "Turn an energy option into a local-benefit and grant-readiness question.", "href": "builders/wealth-grant-readiness.html", "action": "Open builder"},
     ]) + """
   </div>
@@ -997,7 +1069,7 @@ def boundaries_body() -> str:
         {"label": "Marine", "title": "What does sea life need?", "text": "No underwater blades is only one boundary. Noise, anchoring, sediment, navigation and reversibility matter too."},
         {"label": "Pressure", "title": "What could invite engineering review?", "text": "Compressed air, CO2, pressure vessels, heat stores and fire systems can bring formal safety logic into the public conversation early."},
         {"label": "Finance", "title": "What could stop tokens becoming hype?", "text": "Any token, app, ledger or community dividend idea can show law, cybersecurity, plain accounting, consent and an analog fallback."},
-        {"label": "Power bills", "title": "What could stop bill-sharing becoming unfair?", "text": "A power-sharing scheme can show clear opt-in rules, hardship protections, privacy, dispute handling and a boring non-crypto way to read the bill."},
+        {"label": "Power bills", "title": "What could keep bill-sharing fair?", "text": "A power-sharing scheme can show clear opt-in rules, fair-go help paths, privacy, dispute handling and a boring non-crypto way to read the bill."},
         {"label": "Data", "title": "What stays private?", "text": "Household loads, bills, vulnerable people, cultural knowledge and business data can stay out of public dashboards unless people choose otherwise."},
         {"label": "Builder", "title": "Run a boundary check", "text": "Name the consent, safety and evidence gates before the idea gets loud.", "href": "builders/boundary-check.html", "action": "Open builder"},
     ]) + """
@@ -1353,10 +1425,10 @@ It covers:
 - sand batteries and other heat storage
 - compressed air as a careful research lane
 - power sharing, neighbourhood batteries and bill ledgers
-- perched-lake pumped-hydro boundaries
-- wave and tidal options without underwater blades
+- pumped-hydro lessons from Snowy, Wivenhoe, Kidston, Borumba and sand-island geography
+- first-principles wave and tidal options without underwater blades
 - non-turbine wind as a small-load experiment
-- carbon capture and fire-suppression boundaries
+- future pressure, carbon, sensing and response network questions
 - links to maker-space, Sandworm, ferry terminal lab, Grants Lab, community wealth and Ready S.E.T. Trust Hub
 
 ## How it works

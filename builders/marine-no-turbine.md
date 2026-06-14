@@ -1,6 +1,6 @@
 # No-Underwater-Blades Marine Brief Builder
 
-Purpose: Draft a wave or tidal question that avoids underwater turbines and starts with marine life.
+Purpose: Draft a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.
 
 Status: Draft for human review
 
@@ -12,28 +12,28 @@ Prompt: Main Beach, Moreton Bay, ferry channel, Amity edge, reef model, wave tan
 
 _Not answered yet._
 
-### What non-blade idea is being explored?
+### Which pattern or movement could inspire it?
 
-Prompt: Pressure bladder, oscillating body, pump to shore, membrane, sensor buoy, reef monitoring frame, or no device yet.
+Prompt: Shrimp-like flutter cascade, vortex shedding, oscillating foil, flexible flag, reef lattice, membrane pulse, buoyant hinge, kelp sway, shell geometry or a kid's sketch.
 
 _Not answered yet._
 
 ### What benefit could be tested?
 
-Prompt: Power, desalination pressure, monitoring, reef learning, erosion knowledge, emergency signal, or public education.
+Prompt: Power, sensor trickle-charge, monitoring, reef learning, erosion knowledge, emergency signal, food/habitat co-benefit or public education.
 
 _Not answered yet._
 
-### What could people want it to avoid?
+### What remains unmapped?
 
-Prompt: Spinning blades, animal strike risk, noise, navigation conflict, permanent anchoring, cultural harm, sediment harm or visual clutter.
+Prompt: Geometry, timing, material, scale, anchoring, reversibility, maintenance, community value, learning value or the next experiment.
 
 _Not answered yet._
 
 ## Boundaries
 
-Marine energy questions become more trustworthy when cultural authority, ecology review, navigation checks, fishers, sediment, storm survival and reversibility are visible before physical testing.
+No underwater blades is not a lack of imagination. It opens the field to forms, rhythms, materials and processes that humans have barely mapped.
 
 ## Next small step
 
-Separate resource mapping, tabletop testing, digital simulation and any real-world marine activity.
+Start with sketches, kids' ideas, maker-space rigs, wave tanks, beach observations, digital simulation and source links before choosing any one device family.

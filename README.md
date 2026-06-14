@@ -9,10 +9,10 @@ It covers:
 - sand batteries and other heat storage
 - compressed air as a careful research lane
 - power sharing, neighbourhood batteries and bill ledgers
-- perched-lake pumped-hydro boundaries
-- wave and tidal options without underwater blades
+- pumped-hydro lessons from Snowy, Wivenhoe, Kidston, Borumba and sand-island geography
+- first-principles wave and tidal options without underwater blades
 - non-turbine wind as a small-load experiment
-- carbon capture and fire-suppression boundaries
+- future pressure, carbon, sensing and response network questions
 - links to maker-space, Sandworm, ferry terminal lab, Grants Lab, community wealth and Ready S.E.T. Trust Hub
 
 ## How it works

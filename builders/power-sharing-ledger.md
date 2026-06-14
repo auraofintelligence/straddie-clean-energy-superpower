@@ -26,14 +26,14 @@ _Not answered yet._
 
 ### What could make money movement trustworthy?
 
-Prompt: Retail licence, embedded network rules, network tariff, consumer law, tax, privacy, cyber security, anti-fraud, opt-out, hardship or governance.
+Prompt: Retail licence, embedded network rules, network tariff, consumer law, tax, privacy, cyber security, anti-fraud, opt-out, fair-go help path or governance.
 
 _Not answered yet._
 
 ## Boundaries
 
-A ledger, token or crypto layer is not automatically a licence to sell electricity or a financial product. Retailer, network, legal, tax, cyber, consent and plain-accounting questions belong on the table early.
+A ledger, token or crypto layer can earn trust by sitting beside clear retail, network, legal, tax, cyber, consent and plain-accounting questions.
 
 ## Next small step
 
-Start with one load, one storage node, one bill problem and one non-crypto receipt trail before any token design.
+Start with one load, one storage node, one bill problem and one plain receipt trail alongside any token design.
