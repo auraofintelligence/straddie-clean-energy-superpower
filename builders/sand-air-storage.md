@@ -24,7 +24,7 @@ Prompt: Maker-space yard, service zone, ferry lab, existing industrial site, dig
 
 _Not answered yet._
 
-### What is the review gate?
+### What could people inspect before going further?
 
 Prompt: Pressure safety, fire engineering, electrical, geology, heat insulation, public access, noise, permissions or economics.
 
@@ -32,7 +32,7 @@ _Not answered yet._
 
 ## Boundaries
 
-Thermal sand storage, compressed air, CO2, pressure vessels and fire systems are different systems. They need different safety reviews.
+Thermal sand storage, compressed air, CO2, pressure vessels and fire systems can share a conversation without being treated as identical. Each brings different checks into view.
 
 ## Next small step
 

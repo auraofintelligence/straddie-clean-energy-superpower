@@ -12,7 +12,7 @@ Prompt: Height difference, closed-loop reservoir, stormwater tank, seawater rese
 
 _Not answered yet._
 
-### What sensitive place must be protected?
+### What sensitive place could people protect first?
 
 Prompt: Perched lake, wetland, spring, national park, cultural place, habitat, public access or unknown layer.
 
@@ -24,7 +24,7 @@ Prompt: Tank pair, quarry/mine void elsewhere, hilltop reservoir outside sensiti
 
 _Not answered yet._
 
-### Who must be involved before this becomes real?
+### Who could be invited in before this becomes real?
 
 Prompt: Traditional Owners, park managers, hydrologist, ecologist, council, engineer, public safety or landholder.
 

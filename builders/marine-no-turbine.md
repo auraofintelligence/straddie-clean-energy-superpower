@@ -18,13 +18,13 @@ Prompt: Pressure bladder, oscillating body, pump to shore, membrane, sensor buoy
 
 _Not answered yet._
 
-### What benefit should be tested?
+### What benefit could be tested?
 
 Prompt: Power, desalination pressure, monitoring, reef learning, erosion knowledge, emergency signal, or public education.
 
 _Not answered yet._
 
-### What should it avoid?
+### What could people want it to avoid?
 
 Prompt: Spinning blades, animal strike risk, noise, navigation conflict, permanent anchoring, cultural harm, sediment harm or visual clutter.
 
@@ -32,7 +32,7 @@ _Not answered yet._
 
 ## Boundaries
 
-Marine energy needs cultural authority, ecology review, navigation checks, fishers, sediment, storm survival and reversibility before physical testing.
+Marine energy questions become more trustworthy when cultural authority, ecology review, navigation checks, fishers, sediment, storm survival and reversibility are visible before physical testing.
 
 ## Next small step
 

@@ -6,7 +6,7 @@ Status: Draft for human review
 
 ## Questions
 
-### Which idea needs a boundary check?
+### Which idea is ready for a boundary check?
 
 Prompt: Name the option or project.
 
@@ -24,7 +24,7 @@ Prompt: Fire, pressure, heat, water, wildlife, culture, data, cost, noise, visua
 
 _Not answered yet._
 
-### What would make the idea pause?
+### What could make the idea pause?
 
 Prompt: A safety concern, no consent, poor data, ecological risk, bad economics, unclear ownership or community refusal.
 
@@ -32,8 +32,8 @@ _Not answered yet._
 
 ## Boundaries
 
-If a boundary is unclear, slow down. A good clean-energy idea should survive review, correction and refusal.
+If a boundary is unclear, slow down. A good clean-energy idea can survive review, correction and refusal.
 
 ## Next small step
 
-Name the next reviewer and the stop rule.
+Name the next person to invite in and the point where people could pause.

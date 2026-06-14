@@ -12,7 +12,7 @@ Prompt: Home, business, school, club, ferry gateway, car park shade, community h
 
 _Not answered yet._
 
-### What load should it help?
+### What load could it help?
 
 Prompt: Household bills, EV charging, kiosk, fridge, workshop, lighting, water pumping, battery charging or emergency backup.
 
@@ -24,7 +24,7 @@ Prompt: Home battery, community battery, sand heat store, hot water, EV battery,
 
 _Not answered yet._
 
-### What needs checking first?
+### What could be useful to check first?
 
 Prompt: Owner, electrician, roof, fire access, insurance, network export, grant path, shading, public benefit or maintenance.
 
@@ -32,7 +32,7 @@ _Not answered yet._
 
 ## Boundaries
 
-A solar note still needs owner consent, electrical review, cyclone/wind loading, heritage and visual checks, fire access and network rules.
+A solar note is stronger when owner consent, electrical review, cyclone/wind loading, heritage and visual checks, fire access and network rules are visible.
 
 ## Next small step
 

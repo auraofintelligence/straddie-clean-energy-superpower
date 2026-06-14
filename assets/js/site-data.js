@@ -21,6 +21,11 @@ window.CLEAN_ENERGY_SITE = {
       "href": "storage.html"
     },
     {
+      "id": "sharing",
+      "label": "Power sharing",
+      "href": "sharing.html"
+    },
+    {
       "id": "water",
       "label": "Water height",
       "href": "water-height.html"
@@ -79,6 +84,11 @@ window.CLEAN_ENERGY_SITE = {
           "id": "storage",
           "label": "Storage",
           "href": "storage.html"
+        },
+        {
+          "id": "sharing",
+          "label": "Power sharing",
+          "href": "sharing.html"
         },
         {
           "id": "water",
@@ -160,6 +170,11 @@ window.CLEAN_ENERGY_SITE = {
           "href": "storage.html"
         },
         {
+          "id": "sharing",
+          "label": "Power sharing",
+          "href": "sharing.html"
+        },
+        {
           "id": "water",
           "label": "Water height",
           "href": "water-height.html"
@@ -238,6 +253,11 @@ window.CLEAN_ENERGY_SITE = {
       "href": "storage.html"
     },
     {
+      "id": "sharing",
+      "label": "Power sharing",
+      "href": "sharing.html"
+    },
+    {
       "id": "water",
       "label": "Water height",
       "href": "water-height.html"
@@ -291,6 +311,11 @@ window.CLEAN_ENERGY_SITE = {
       "id": "builder-perched-lake-boundary",
       "label": "Perched Lake Boundary Builder",
       "href": "builders/perched-lake-boundary.html"
+    },
+    {
+      "id": "builder-power-sharing-ledger",
+      "label": "Power Sharing And Bill Ledger Builder",
+      "href": "builders/power-sharing-ledger.html"
     },
     {
       "id": "builder-wealth-grant-readiness",

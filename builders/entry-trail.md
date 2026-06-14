@@ -18,7 +18,7 @@ Prompt: Write it as a real question, not a conclusion.
 
 _Not answered yet._
 
-### What would be useful to leave with?
+### What could be useful to leave with?
 
 Prompt: A map, source list, cost question, safety review, workshop test, grant note or public explainer.
 
@@ -30,4 +30,4 @@ The note is an invitation, not an approval claim. People can use one part, rejec
 
 ## Next small step
 
-Name one small thing that would make the option easier to test, explain or dismiss.
+Name one small thing that could make the option easier to test, explain or dismiss.

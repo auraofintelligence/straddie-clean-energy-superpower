@@ -18,7 +18,7 @@ Prompt: Lower bills, local jobs, emergency resilience, training, co-op income, p
 
 _Not answered yet._
 
-### What evidence would a grant need?
+### What evidence could help a grant?
 
 Prompt: Photos, quotes, energy data, letters, risk review, site consent, budgets, milestones or reporting plan.
 
@@ -32,7 +32,7 @@ _Not answered yet._
 
 ## Boundaries
 
-A community wealth note is not a financial product. It needs law, governance, consent, anti-fraud checks and human review.
+A community wealth note is not a financial product. Law, governance, consent, anti-fraud checks and human review are part of making the idea inspectable.
 
 ## Next small step
 

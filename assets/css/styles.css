@@ -295,9 +295,13 @@ h3 {
   width: 100%;
 }
 
-.hero-copy,
-.page-hero-inner {
+.hero-copy {
   max-width: 760px;
+}
+
+.page-hero-inner h1,
+.page-hero .lede {
+  max-width: 790px;
 }
 
 .hero-lede,
@@ -511,6 +515,26 @@ h3 {
 .builder-index p,
 .option-card p {
   color: var(--muted);
+}
+
+.deep-band .card p,
+.deep-band .trail-card p,
+.deep-band .repo-card p,
+.deep-band .question-card p,
+.deep-band .source-card p,
+.deep-band .builder-index p,
+.deep-band .option-card p {
+  color: var(--muted);
+}
+
+.deep-band .card .mini-label,
+.deep-band .trail-card .mini-label,
+.deep-band .repo-card .mini-label,
+.deep-band .question-card .mini-label,
+.deep-band .source-card .mini-label,
+.deep-band .builder-index .mini-label,
+.deep-band .option-card .mini-label {
+  color: var(--bay);
 }
 
 .text-link {

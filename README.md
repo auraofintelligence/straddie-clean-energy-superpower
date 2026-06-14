@@ -8,6 +8,7 @@ It covers:
 - solar thermal and solar concentration
 - sand batteries and other heat storage
 - compressed air as a careful research lane
+- power sharing, neighbourhood batteries and bill ledgers
 - perched-lake pumped-hydro boundaries
 - wave and tidal options without underwater blades
 - non-turbine wind as a small-load experiment
