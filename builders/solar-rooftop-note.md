@@ -2,7 +2,7 @@
 
 Purpose: Turn a roof, car park, shade structure or public building into a first clean-energy question.
 
-Status: Draft for human review
+Status: Working note for human review
 
 ## Questions
 

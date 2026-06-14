@@ -1,8 +1,8 @@
 # No-Underwater-Blades Marine Brief Builder
 
-Purpose: Draft a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.
+Purpose: Shape a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.
 
-Status: Draft for human review
+Status: Working note for human review
 
 ## Questions
 

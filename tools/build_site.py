@@ -12,7 +12,7 @@ ASSET_VERSION = "20260614-energy-superpower-v1"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
-    "power sharing, careful water-height storage, quiet marine energy, non-turbine wind and community wealth."
+    "power sharing, water-height imagination, quiet marine energy, fractal no-blade wind and community wealth."
 )
 
 
@@ -43,7 +43,7 @@ PAGES = [
         "label": "Storage",
         "href": "storage.html",
         "title": "Sand, Air And Heat Storage",
-        "description": "Could sand batteries, thermal stores and visible air-storage questions turn local solar into useful hours while the integrated pressure network gets its own repo?",
+        "description": "Could sand, heat, pressure air, EVs and demand shifting turn island sunlight into evening abundance while the deeper pressure-carbon-response weave gets its own future repo?",
     },
     {
         "id": "sharing",
@@ -68,10 +68,10 @@ PAGES = [
     },
     {
         "id": "wind",
-        "label": "No-blade wind",
+        "label": "Fractal wind",
         "href": "wind.html",
-        "title": "Non-Turbine Wind As A Small Test",
-        "description": "Where could bladeless or vibration-based wind ideas help sensors, signs or small loads without becoming another visual or wildlife problem?",
+        "title": "Fractal Wind And No-Blade Harvesting",
+        "description": "Could Straddie read wind as edge-flow, roof turbulence, vortex, flutter, electrostatic, piezo and triboelectric motion across many useful island places?",
     },
     {
         "id": "network",
@@ -99,7 +99,7 @@ PAGES = [
         "label": "Boundaries",
         "href": "boundaries.html",
         "title": "Boundaries Before Momentum",
-        "description": "Consent, Country, safety, engineering review, marine life, pressure systems, fire systems and public/private data boundaries.",
+        "description": "Consent, Country, engineering review, marine life, pressure systems, response systems and public/private data boundaries.",
     },
     {
         "id": "sources",
@@ -205,7 +205,7 @@ SOURCE_LINKS = [
         "title": "Solar power for your home",
         "url": "https://www.qld.gov.au/housing/buying-owning-home/energy-water-home/solar",
         "publisher": "Queensland Government",
-        "use": "Keeps home solar and battery guidance tied to practical household questions and safety.",
+        "use": "Keeps home solar and battery guidance tied to practical household, electrical and network questions.",
     },
     {
         "title": "Feed-in tariffs",
@@ -295,7 +295,7 @@ SOURCE_LINKS = [
         "title": "Broken Hill Advanced Compressed Air Energy Storage Demonstration",
         "url": "https://arena.gov.au/projects/hydrostor-broken-hill-advanced-compressed-air-energy-storage-demonstration/",
         "publisher": "ARENA",
-        "use": "Shows compressed air as a serious long-duration storage pathway when geology, safety and economics line up.",
+        "use": "Shows compressed air as a serious long-duration storage pathway when geology, pressure behaviour and economics line up.",
     },
     {
         "title": "Technical feasibility of CAES in an aquifer storage vessel",
@@ -337,7 +337,7 @@ SOURCE_LINKS = [
         "title": "Global Greenfield Pumped Hydro Energy Storage Atlas",
         "url": "https://re100.eng.anu.edu.au/global/",
         "publisher": "ANU RE100 Group",
-        "use": "Shows how pumped-hydro thinking can begin as open topographic screening before a local informal proposal chooses its own shape.",
+        "use": "Shows how pumped-hydro thinking can begin as open topographic screening before local informal ideas choose their own shape.",
     },
     {
         "title": "Coastal and subcoastal non-floodplain sand lake - Perched hydrology",
@@ -350,6 +350,54 @@ SOURCE_LINKS = [
         "url": "https://science.nasa.gov/earth/earth-observatory/saving-straddies-sand-146669/",
         "publisher": "NASA Earth Observatory",
         "use": "Adds a remote-sensing source for Straddie's sandmass, mineral-sands history and landform questions.",
+    },
+    {
+        "title": "Vortex Bladeless",
+        "url": "https://vortexbladeless.com/",
+        "publisher": "Vortex Bladeless",
+        "use": "Opens vortex-induced oscillation as one no-blade wind family for local energy-harvesting imagination.",
+    },
+    {
+        "title": "The motionless wind energy system",
+        "url": "https://aerominetechnologies.com/",
+        "publisher": "Aeromine Technologies",
+        "use": "Shows rooftop edge-flow wind harvesting as a real commercial research and product pathway.",
+    },
+    {
+        "title": "EWICON",
+        "url": "https://www.mecanoo.nl/projects/project/61/ewicon",
+        "publisher": "Mecanoo / Delft project",
+        "use": "Adds electrostatic wind conversion without moving mechanical parts to the no-blade wind source trail.",
+    },
+    {
+        "title": "Low Wind Energy",
+        "url": "https://smartshelterfoundation.org/collection/low-wind-energy",
+        "publisher": "Smart Shelter Foundation",
+        "use": "Provides a plain Windbelt-style doorway into low-velocity ribbon and flutter harvesting.",
+    },
+    {
+        "title": "Vortex-induced vibration wind energy harvesting by piezoelectric MEMS device in formation",
+        "url": "https://www.nature.com/articles/s41598-019-56786-0",
+        "publisher": "Scientific Reports",
+        "use": "Supports formation-scale micro-harvesters and the idea that many small wind motions can be studied together.",
+    },
+    {
+        "title": "Recent progress on flutter-based wind energy harvesting",
+        "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/msd2.12035",
+        "publisher": "Wiley",
+        "use": "Supports flutter-based wind harvesting as a research family for microelectronics and small devices.",
+    },
+    {
+        "title": "Structural design strategies of triboelectric nanogenerators for wind energy harvesting",
+        "url": "https://link.springer.com/article/10.1186/s40486-025-00224-6",
+        "publisher": "Springer",
+        "use": "Adds wind-driven fluttering triboelectric films to the fractal wind-harvesting source trail.",
+    },
+    {
+        "title": "Harvesting ambient wind energy with an inverted piezoelectric flag",
+        "url": "https://pure.johnshopkins.edu/en/publications/harvesting-ambient-wind-energy-with-an-inverted-piezoelectric-fla",
+        "publisher": "Johns Hopkins / Applied Physics Letters",
+        "use": "Shows how flag geometry and aeroelastic flutter can turn low-speed wind into small electric output.",
     },
     {
         "title": "Ocean energy",
@@ -415,7 +463,7 @@ SOURCE_LINKS = [
         "title": "Carbon dioxide as a fire suppressant: examining the risks",
         "url": "https://www.epa.gov/snap/carbon-dioxide-fire-suppressant-examining-risks",
         "publisher": "US EPA",
-        "use": "Invites life-safety questions around CO2 fire-suppression ideas, especially where people may occupy the space.",
+        "use": "Adds an authority source for CO2 fire-suppression questions, especially where people may occupy the space.",
     },
     {
         "title": "Naree Budjong Djara National Park",
@@ -436,7 +484,7 @@ LOCAL_DRAFT_INPUTS = [
     {
         "title": "Straddie Sovereign Wealth Fund And Civilisation Of Sand Research Brief",
         "file": "Straddie_Sovereign_Wealth_Fund_&_Civilisation_of_Sand_Research_Brief.md",
-        "use": "Draft concept fuel only. Adds wave and tidal options, solar resource framing, sand batteries, vanadium flow batteries, salt-gradient questions, oyster-crete reefs, sovereign wealth fund architecture, token risks and a risk-register habit.",
+        "use": "Working concept fuel only. Adds wave and tidal options, solar resource framing, sand batteries, vanadium flow batteries, salt-gradient questions, oyster-crete reefs, sovereign wealth fund architecture, token questions and a source-trail habit.",
     }
 ]
 
@@ -480,7 +528,7 @@ BUILDERS = [
         "fields": [
             ("doorway", "Which doorway feels alive?", "Rooftop solar, sand battery, compressed air, wave pressure, no-blade wind, pumped hydro model, grants, wealth, or another doorway."),
             ("question", "What is the plain question?", "Write it as a real question, not a conclusion."),
-            ("useful_output", "What could be useful to leave with?", "A map, source list, cost question, safety review, workshop test, grant note or public explainer."),
+            ("useful_output", "What could be useful to leave with?", "A map, source list, cost question, source review, workshop test, grant note or public explainer."),
         ],
     },
     {
@@ -499,22 +547,22 @@ BUILDERS = [
     },
     {
         "id": "sand-air-storage",
-        "title": "Sand And Air Storage Brief Builder",
-        "purpose": "Compare sand-battery heat storage and visible air storage as two different storage stories.",
+        "title": "Sand And Pressure-Air Storage Builder",
+        "purpose": "Explore sand, heat and pressure-air storage as open questions for island abundance.",
         "filename": "straddie-sand-air-storage-brief",
-        "boundary": "Thermal sand storage, compressed air, CO2, pressure vessels and fire systems can share a conversation without being treated as identical. Each brings different checks into view.",
-        "next_step": "Choose one storage path and one harmless test before connecting it to a bigger network.",
+        "boundary": "Thermal sand storage, compressed air, CO2, pressure vessels and response systems can share a conversation while each keeps its own source trail and learning path.",
+        "next_step": "Choose one storage question and one hands-on learning step before connecting it to a bigger network.",
         "fields": [
             ("need", "What energy problem is being solved?", "Evening power, heat, workshop process heat, emergency backup, ferry gateway load, water pumping, or seasonal resilience."),
             ("medium", "Which storage medium is in play?", "Hot sand, rock, hot water, compressed air vessel, distributed air container, aquifer question, battery, or hybrid."),
-            ("place", "Where could it live visibly?", "Maker-space yard, service zone, ferry lab, existing industrial site, digital model, or not known."),
-            ("review", "Which lenses could help?", "Pressure behaviour, fire response, electrical, geology, heat insulation, public access, noise, access paths or economics."),
+            ("place", "Where could the first learning step live?", "Maker-space yard, service zone, ferry lab, existing industrial site, digital model, or not known."),
+            ("review", "Which lenses could help?", "Pressure behaviour, response systems, electrical, geology, heat insulation, public access, noise, access paths or economics."),
         ],
     },
     {
         "id": "marine-no-turbine",
         "title": "No-Underwater-Blades Marine Brief Builder",
-        "purpose": "Draft a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.",
+        "purpose": "Shape a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.",
         "filename": "straddie-no-turbine-marine-brief",
         "boundary": "No underwater blades is not a lack of imagination. It opens the field to forms, rhythms, materials and processes that humans have barely mapped.",
         "next_step": "Start with sketches, kids' ideas, maker-space rigs, wave tanks, beach observations, digital simulation and source links before choosing any one device family.",
@@ -536,7 +584,7 @@ BUILDERS = [
             ("question", "What is the water-height question?", "Sandhill height, bay/ocean edge, tank pair, seawater reservoir, aquifer model, sandmass model, model only, or educational demo."),
             ("sensitive_place", "What sensitive place could people protect first?", "Perched lake, wetland, spring, national park, cultural place, habitat, aquifer, public access or unknown layer."),
             ("alternative", "What local geography could teach the idea?", "Ocean, bay, sand hill, dune ridge, mineral sands layer, tank pair, sandmass model, aquifer data, virtual model, or no build."),
-            ("authority", "Who could be invited in before this becomes real?", "Traditional Owners, park managers, hydrologist, ecologist, council, engineer, public safety or landholder."),
+            ("authority", "Who could be invited in before this becomes real?", "Traditional Owners, park managers, hydrologist, ecologist, council, engineer, emergency services or landholder."),
         ],
     },
     {
@@ -570,15 +618,15 @@ BUILDERS = [
     {
         "id": "boundary-check",
         "title": "Energy Boundary Check Builder",
-        "purpose": "Name the safety, consent and evidence gates before an exciting energy idea gets loud.",
+        "purpose": "Name the consent, evidence and learning questions before an exciting energy idea gathers momentum.",
         "filename": "straddie-energy-boundary-check",
         "boundary": "A clean-energy idea can become clearer when people name what they are curious about, what they are protecting, and what evidence could change their mind.",
-        "next_step": "Name the next person to invite in and the point where people could pause.",
+        "next_step": "Name the next person to invite in and the evidence that would make the next step wiser.",
         "fields": [
             ("idea", "Which idea is ready for a boundary check?", "Name the option or project."),
             ("people", "Whose consent or authority matters?", "Traditional Owners, residents, landholder, council, business owner, emergency services, marine users, children or workers."),
             ("risk", "What could go wrong?", "Fire, pressure, heat, water, wildlife, culture, data, cost, noise, visual impact, maintenance, false claims or exclusion."),
-            ("stop_rule", "What could make the idea pause?", "A safety concern, no consent, poor data, ecological risk, bad economics, unclear ownership or community refusal."),
+            ("next_question", "What could change the next step?", "New evidence, no consent, better local knowledge, ecological concern, weak economics, unclear ownership or community refusal."),
         ],
     },
 ]
@@ -652,7 +700,7 @@ def home_body() -> str:
     <div class="hero-copy">
       <p class="section-label hero-label">Self-sovereign clean energy atlas</p>
       <h1>Could Straddie become a clean energy superpower?</h1>
-      <p class="hero-lede">What if the island did not start with one giant answer, but with a stack of questions people can inspect: roofs first, storage next, marine edges carefully, local wealth clearly, and every bold idea held behind consent, safety and evidence?</p>
+      <p class="hero-lede">What if the island did not start with one giant answer, but with a stack of questions people can inspect: roofs first, storage next, marine edges carefully, local wealth clearly, and every bold idea growing through consent, evidence and local authority?</p>
       <div class="hero-actions">
         <a class="button primary" href="options.html">Explore the options</a>
         <a class="button secondary" href="network.html">See the local labs</a>
@@ -688,7 +736,7 @@ def home_body() -> str:
       <ol class="pathway">
         <li><p><strong>Ask the plain question.</strong> What problem does this option solve for residents, Country, business, ferry flow, emergency resilience or community wealth?</p></li>
         <li><p><strong>Find the smallest harmless test.</strong> Could a tabletop model, data check, roof audit, workshop bench or digital twin answer the first doubt?</p></li>
-        <li><p><strong>Name the open checks.</strong> Who could help inspect culture, ecology, pressure, fire, water, finance, safety and public claims before momentum builds?</p></li>
+        <li><p><strong>Name the open checks.</strong> Who could help inspect culture, ecology, pressure, response systems, water, finance, data and public claims before momentum builds?</p></li>
       </ol>
     </div>
     <div class="quote-panel">If the idea is strong, it can handle plain English, public sources and people saying no.</div>
@@ -714,18 +762,18 @@ def options_body() -> str:
     <div class="section-heading">
       <p class="section-label">Option stack</p>
       <h2>Which ideas are ready for the front room, and which need the lab?</h2>
-      <p class="lede muted">The point is to let each idea show its shape: what it teaches, which part of Straddie's geography it belongs to, what sources can be followed, and how local people could keep improving the question.</p>
+      <p class="lede muted">The point is to let each idea show its shape: what it teaches, which part of Straddie's geography it speaks with, what sources can be followed, and how local people could keep improving the question.</p>
     </div>
 """ + option_grid([
         {"status": "Start now", "title": "Rooftop solar and batteries", "plain": "The most practical first layer: roofs, shade, small businesses, public buildings, hot water and batteries.", "question": "Which roofs and loads are obvious wins once the owner, electrician and network rules are checked?", "review": "Electrical, fire, roof, cyclone/wind loading, insurance and network export."},
-        {"status": "Start small", "title": "Solar thermal and concentration", "plain": "Heat can be easier to store than electricity. Solar concentration might suit a workshop or industrial heat test before any big claim.", "question": "Where does the island need clean heat, not just clean electrons?", "review": "Heat safety, glare, fire risk, land use, maintenance and economics."},
+        {"status": "Start small", "title": "Solar thermal and concentration", "plain": "Heat can be easier to store than electricity. Solar concentration might suit a workshop, kitchen, repair yard, hot-water load or sand-heat experiment.", "question": "Where does the island need clean heat, not just clean electrons?", "review": "Heat use, glare, fire access, land use, maintenance and economics."},
         {"status": "Prototype", "title": "Sand batteries", "plain": "A sand battery is thermal storage: heat goes into sand or similar material and comes out as heat, steam, air or sometimes power through another system.", "question": "Could a maker-space bench test show what local heat storage is good for?", "review": "Insulation, hot surfaces, materials, fire, monitoring, output use and public access."},
         {"status": "Sharing layer", "title": "Neighbourhood batteries and power sharing", "plain": "Local solar may be worth more when it is used, stored or shared locally before it is exported at a low feed-in tariff.", "question": "Could a community battery, EV charger or bill-credit ledger keep midday solar value close to residents?", "review": "Retailer, network tariff, metering, consent, privacy, fair-go help paths, tax, consumer law and governance."},
-        {"status": "Research lane", "title": "Compressed air", "plain": "Compressed air can store energy in vessels, pipes, heat-recovery systems or, as a harder research question, suitable aquifer formations.", "question": "Could container-scale air storage, heat recovery and sandmass modelling show what is worth exploring next?", "review": "Pressure-vessel law, compressor noise, heat, rupture risk, geology, emergency services and economics."},
-        {"status": "Storage lane", "title": "Flow batteries and salt-gradient ideas", "plain": "The draft research brief names vanadium flow batteries and salt-gradient storage. They are useful to compare, but not the same as sand or air.", "question": "Which storage chemistry is safest, serviceable and most useful for island loads?", "review": "Lifecycle, cost, electrolyte safety, water sensitivity, maintenance, supply chain and end-of-life rules."},
-        {"status": "Pumped-hydro lessons", "title": "Sand hills, perched lakes and water height", "plain": "Snowy 2.0, Wivenhoe, Kidston, Borumba and pumped-hydro atlases show that water-height storage is a serious family. Straddie asks it through ocean, bay, dune height, perched lakes, aquifers, wetlands, sands and mineral sands.", "question": "Could a local informal proposal learn from those systems and translate the lesson into Straddie's own sand-island geography?", "review": "Snowy Hydro, CleanCo, Genex, Queensland Hydro, ANU atlas, WetlandInfo, local hydrology and community authority."},
+        {"status": "Research lane", "title": "Compressed air", "plain": "Compressed air can be explored through pressure vessels, pipes, heat recovery, control systems, sensor data and sandmass models before the future integrated network gets its own repo.", "question": "Could pressure-air thinking help Straddie understand storage, heat, sensing and resilience as one joyful systems question?", "review": "Pressure behaviour, compressor sound, heat recovery, service access, local skills, geology, emergency knowledge and economics."},
+        {"status": "Storage lane", "title": "Flow batteries and salt-gradient ideas", "plain": "Vanadium flow batteries and salt-gradient storage add more storage imagination to the bench. They are different tools with different rhythms, materials and maintenance stories.", "question": "Which storage chemistry fits island loads, repair skills, water context, budget and local stewardship?", "review": "Lifecycle, cost, electrolyte handling, water sensitivity, maintenance, supply chain and end-of-life rules."},
+        {"status": "Pumped-hydro lessons", "title": "Sand hills, perched lakes and water height", "plain": "Snowy 2.0, Wivenhoe, Kidston, Borumba and pumped-hydro atlases show that water-height storage is a serious family. Straddie asks it through ocean, bay, dune height, perched lakes, aquifers, wetlands, sands and mineral sands.", "question": "Could a local informal idea learn from those systems and translate the lesson into Straddie's own sand-island geography?", "review": "Snowy Hydro, CleanCo, Genex, Queensland Hydro, ANU atlas, WetlandInfo, local hydrology and community authority."},
         {"status": "Ocean lab", "title": "Wave and tidal without underwater blades", "plain": "Humans have explored only a small part of wave and tide. No underwater blades can open flutter, vortex shedding, shrimp-like cascades, oscillating foils, membranes, reef lattices, buoys, sensors and maker-space geometry.", "question": "Could kids, fishers, surfers, engineers, artists and marine scientists all sketch different ways motion might become useful energy or knowledge?", "review": "Wave atlas data, marine life, navigation, anchoring, storms, sediment, local observation, repairability and reversibility."},
-        {"status": "Micro test", "title": "Non-turbine wind", "plain": "Bladeless or vibration-based wind is not a main power promise yet. It might still be useful for sensors, signs or education.", "question": "Where is wind useful enough for a tiny load without becoming clutter?", "review": "Noise, vibration, wildlife, visual impact, durability and real output."},
+        {"status": "Fractal harvesting", "title": "Bladeless, motionless and flutter wind", "plain": "Wind is not only tower-scale turbines. Vortex masts, rooftop pressure systems, flutter ribbons, piezo flags, triboelectric films and electrostatic converters all ask how motion at different scales could feed island intelligence.", "question": "Could island wind be mapped as many useful edge motions, not just one peak-output machine?", "review": "Roof edges, ferry ramps, dunes, vents, masts, railings, durability, quietness, repair, wildlife, data and output."},
         {"status": "Future repo", "title": "Integrated pressure, carbon and response network", "plain": "This atlas points toward a dedicated repo for the whole pressure, carbon, response and sensing system.", "question": "Could a dedicated map explore compressed air, aquifers, carbon capture, fire response, emergency power, water, ventilation, sensors, data and governance as one living system?", "review": "QYAC, Geoscience Australia, ARENA, Queensland WetlandInfo, emergency-response references and the public source trail."},
     ]) + """
   </div>
@@ -767,13 +815,12 @@ def solar_body() -> str:
     <div class="section-heading">
       <p class="section-label">Solar heat</p>
       <h2>Could concentration be a workshop question before it is a power-station claim?</h2>
-      <p class="lede muted">Concentrated solar thermal can make high-grade heat and store it. On an island, the public-safe first question may be smaller: can clean heat dry, cook, sterilise, warm water, support a workshop or charge a sand store?</p>
+      <p class="lede muted">Concentrated solar thermal can make high-grade heat and store it. On an island, the public first question may be smaller: can clean heat dry, cook, sterilise, warm water, support a workshop or charge a sand store?</p>
     </div>
 """ + card_grid([
         {"label": "Question", "title": "What could use heat?", "text": "Food, water, washing, repair, drying, ceramics, glass, community kitchen, disaster response or industrial process heat?"},
         {"label": "Question", "title": "Where does shade already make sense?", "text": "Could car parks, ferry waiting areas, market spaces and workshop yards carry solar shade before they carry big claims?"},
         {"label": "Question", "title": "What is the no-regret test?", "text": "Could one roof audit, load profile, hot-water upgrade or small solar-thermal demo make the next decision clearer?"},
-        {"label": "Builder", "title": "Draft a rooftop note", "text": "Turn a roof or shade idea into a clean Markdown brief.", "href": "builders/solar-rooftop-note.html", "action": "Open builder"},
     ]) + """
   </div>
 </section>
@@ -786,20 +833,19 @@ def storage_body() -> str:
   <div class="section-inner split">
     <div>
       <p class="section-label">Storage is the island question</p>
-      <h2>Can clean power stay useful after sunset, storms and ferry peaks?</h2>
-      <p class="lede muted">This page holds the storage doorway: heat, hot water, sand, rock, visible air storage, EVs and demand shifting. The larger pressure, carbon, sensing and fire-response network belongs in a dedicated repo where the whole system can be mapped properly.</p>
+      <h2>Can clean power become evening abundance for homes, workshops and ferries?</h2>
+      <p class="lede muted">This page opens storage as a joyful responsible abundance question: heat, hot water, sand, rock, compressed air, EVs and demand shifting. The larger pressure, carbon, sensing and fire-response weave is only introduced here, with source links, so a future repo can explore the whole living network properly.</p>
     </div>
-    <div class="quote-panel">This atlas opens the storage doorway. The full integrated system can have its own map.</div>
+    <div class="quote-panel">How much intelligence could a happy clean-energy island power when sunlight, heat, movement and storage begin working together?</div>
   </div>
 </section>
 <section class="section soft-band">
   <div class="section-inner">
 """ + card_grid([
-        {"label": "Sand battery", "title": "Could sand store useful heat?", "text": "A sand battery is best understood as a heat store. It may suit water, drying, workshop heat, cooking or process heat before electric export."},
-        {"label": "Flow battery", "title": "Could a vanadium flow battery be boring in the good way?", "text": "Flow batteries may suit longer daily cycling if the site, cost, maintenance and electrolyte supply chain make sense."},
-        {"label": "Salt gradient", "title": "Could blue-energy ideas start in the research drawer?", "text": "Salinity-gradient systems are interesting, but the first public step may be a source note, not hardware."},
-        {"label": "Visible air", "title": "Could air storage begin as visible learning?", "text": "Containers, pipes, compressors, heat recovery and controls can be explored as understandable first models while the wider integrated system gets its own repo."},
-        {"label": "Builder", "title": "Draft a storage brief", "text": "Sketch a sand, heat or visible-air storage question while leaving the whole integrated network for its own map.", "href": "builders/sand-air-storage.html", "action": "Open builder"},
+        {"label": "Sand battery", "title": "Could sand store warmth, work and community confidence?", "text": "A sand battery is a heat story first. Could local sand, stone, insulation, sensors and repair skills teach clean heat for water, drying, cooking, workshops or resilience?"},
+        {"label": "Flow battery", "title": "Could flow batteries suit the island's daily rhythm?", "text": "Flow batteries invite questions about longer cycling, maintenance, materials, water context, service access, ownership and who learns how to keep them working."},
+        {"label": "Salt gradient", "title": "Could blue-energy chemistry add another doorway?", "text": "Salt-gradient systems can begin as a curiosity bench: what can ocean, bay, brine, membranes and chemistry teach before anyone imagines island hardware?"},
+        {"label": "Pressure air", "title": "Could compressed air become a transparent pressure-energy question?", "text": "What can containers, pipes, compressors, heat recovery, controls, sensor data and sandmass modelling teach when residents can see the tradeoffs and imagine the next shape themselves?"},
     ]) + """
   </div>
 </section>
@@ -807,11 +853,11 @@ def storage_body() -> str:
   <div class="section-inner">
     <div class="section-heading">
       <p class="section-label">Future repo bridge</p>
-      <h2>The integrated pressure, carbon and response network gets its own map.</h2>
-      <p class="lede muted">A full repo can explore compressed air, aquifers, carbon capture, fire response, emergency power, water, ventilation, sensors, data, governance and local authority as one living system. This atlas keeps the doorway open and gathers the first authority and source links.</p>
+      <h2>Where does the bigger pressure-carbon-response map live next?</h2>
+      <p class="lede muted">A later repo can hold the whole weave: compressed air, aquifers, carbon capture, fire response, emergency power, water, ventilation, sensors, data, governance and local authority. This first atlas keeps a bridge and gathers the source links that help the deeper map begin well.</p>
     </div>
 """ + card_grid([
-        {"label": "Future repo", "title": "Integrated pressure, carbon and response network", "text": "A placeholder bridge for the deeper repo that can carry the whole systems map when it is ready."},
+        {"label": "Future repo", "title": "Integrated pressure, carbon and response network", "text": "A bridge for the deeper repo that can explore the whole systems map in more detail when that room is ready."},
         {"label": "Authority", "title": "Quandamooka Yoolooburrabee Aboriginal Corporation", "text": "Public organisational doorway for Quandamooka Country, land and sea management.", "href": "https://qyac.net.au/", "action": "Open QYAC"},
         {"label": "Reference", "title": "Geoscience Australia carbon capture and storage", "text": "National source trail for capture, transport, compression, storage and monitoring language.", "href": "https://www.ga.gov.au/aecr2024/carbon-capture-and-storage", "action": "Open source"},
         {"label": "Reference", "title": "ARENA advanced compressed air", "text": "Australian source trail for long-duration compressed-air storage.", "href": "https://arena.gov.au/projects/hydrostor-broken-hill-advanced-compressed-air-energy-storage-demonstration/", "action": "Open source"},
@@ -837,7 +883,7 @@ def sharing_body() -> str:
         <li><p><strong>Settle plainly.</strong> Can savings be shown as bill credits, co-op accounts, vouchers or public receipts alongside any token idea?</p></li>
       </ol>
     </div>
-    <div class="quote-panel">The useful question is not “can crypto sell power?” It is “can people see, consent to and benefit from the value their energy creates?”</div>
+    <div class="quote-panel">The useful question is not "can crypto sell power?" It is "can people see, consent to and benefit from the value their energy creates?"</div>
   </div>
 </section>
 <section class="section soft-band">
@@ -883,7 +929,6 @@ def sharing_body() -> str:
         {"label": "Plain bill", "title": "Could local use beat a feed-in tariff?", "text": "If exported solar earns only a small credit, could it be better to offset a neighbour's load, charge a local EV, run a cold room, heat water or build a mutual reserve?"},
         {"label": "Fair go", "title": "How does everyone keep a fair go?", "text": "Could every household see the rules, join voluntarily, leave easily, protect private load data and find a help path when circumstances change?"},
         {"label": "Retail path", "title": "Which legal wrapper is real?", "text": "Is this a retailer product, embedded network, VPP, community battery subscription, co-op service, grant-funded pilot or only a research note?"},
-        {"label": "Builder", "title": "Draft a sharing ledger", "text": "Turn the power-sharing idea into a bill, battery and governance question.", "href": "builders/power-sharing-ledger.html", "action": "Open builder"},
     ]) + """
   </div>
 </section>
@@ -897,11 +942,11 @@ def water_body() -> str:
     <div>
       <p class="section-label">Pumped-hydro lessons</p>
       <h2>Could Snowy-scale thinking help a sand island ask better questions?</h2>
-      <p class="lede muted">Snowy 2.0, Wivenhoe, Kidston, Borumba and the ANU pumped-hydro atlas prove that water-height storage is a serious human tool. Straddie is a different kind of place: ocean, bay, sand hills, dune ridges, perched lakes, wetlands, aquifers, sands and mineral sands. The informal proposal starts by learning the logic of height, time, tunnels, tanks, reversible flow, modelling and grid support, then asking what belongs on this island's own map.</p>
+      <p class="lede muted">Snowy 2.0, Wivenhoe, Kidston, Borumba and the ANU pumped-hydro atlas prove that water-height storage is a serious human tool. Straddie is a different kind of place: ocean, bay, sand hills, dune ridges, perched lakes, wetlands, aquifers, sands and mineral sands. The informal question starts by learning the logic of height, time, tunnels, tanks, reversible flow, modelling and grid support, then asking what the island's own map reveals.</p>
       <ol class="pathway">
         <li><p><strong>Study real pumped hydro with respect.</strong> What do Snowy, Wivenhoe, Kidston and Borumba teach about scale, duration, reservoirs, tunnels, pumps, reversible generation and public trust?</p></li>
         <li><p><strong>Map Straddie as Straddie.</strong> What do ocean edge, bay edge, dune height, sandmass infiltration, aquifers, perched lakes, wetlands and mineral sands suggest, invite or reshape?</p></li>
-        <li><p><strong>Let models become shared capability.</strong> Could tank pairs, digital twins, school rigs and maker-space demos help residents see the physics before any larger informal proposal grows legs?</p></li>
+        <li><p><strong>Let models become shared capability.</strong> Could tank pairs, digital twins, school rigs and maker-space demos help residents see the physics before any larger informal idea grows legs?</p></li>
       </ol>
     </div>
     <div class="quote-panel">A happy clean-energy island can power more than lights: learning, compute, transport, food, repair, culture and local confidence.</div>
@@ -911,16 +956,15 @@ def water_body() -> str:
   <div class="section-inner">
     <div class="section-heading">
       <p class="section-label">Reference systems and local sketches</p>
-      <h2>What could a serious informal water-height proposal learn first?</h2>
+      <h2>What could a serious informal water-height idea learn first?</h2>
     </div>
 """ + card_grid([
         {"label": "Snowy 2.0", "title": "What does long-duration storage teach?", "text": "Could tunnels, upper and lower reservoirs, reversible generation and grid timing become a plain-English lesson for island-scale imagination?", "href": "https://www.snowyhydro.com.au/snowy-20/about/", "action": "Open source"},
         {"label": "Wivenhoe", "title": "What does Queensland already know?", "text": "Could the Wivenhoe and Splityard Creek relationship teach how stored height can answer peak demand close to home?", "href": "https://cleancoqueensland.com.au/portfolio/owned-and-operated/wivenhoe-pumped-storage-hydro-power-station/", "action": "Open source"},
         {"label": "Kidston", "title": "What can a storage project teach about timing?", "text": "Could the Kidston example help compare solar, evening peaks, long-duration discharge and regional grid value?", "href": "https://genexpower.com.au/250mw-kidston-pumped-storage-hydro-project/", "action": "Open source"},
-        {"label": "Borumba", "title": "What does a new Queensland proposal need to study?", "text": "Could Borumba show the depth of modelling, consultation, access planning and source trail a serious water-height idea gathers?", "href": "https://qldhydro.com.au/projects/borumba/", "action": "Open source"},
+        {"label": "Borumba", "title": "What does a new Queensland water-height idea need to study?", "text": "Could Borumba show the depth of modelling, consultation, access planning and source trail a serious water-height idea gathers?", "href": "https://qldhydro.com.au/projects/borumba/", "action": "Open source"},
         {"label": "Atlas", "title": "What does topographic screening reveal?", "text": "Could ANU-style pumped-hydro mapping help compare height, distance, water, access and storage duration while translating the lesson to a sand-island setting?", "href": "https://re100.eng.anu.edu.au/global/", "action": "Open atlas"},
         {"label": "Straddie sketch", "title": "What does the island offer on its own terms?", "text": "Could dune height, bay and ocean edges, tank pairs, sandmass infiltration, aquifers, perched lakes, sands and mineral sands shape a different water-height imagination?"},
-        {"label": "Builder", "title": "Draft a geography note", "text": "Turn a water-height idea into a local sand-island map question.", "href": "builders/perched-lake-boundary.html", "action": "Open builder"},
     ]) + """
   </div>
 </section>
@@ -956,7 +1000,6 @@ def marine_body() -> str:
         {"label": "Foils", "title": "Could flapping or oscillating foils stay gentle and useful?", "text": "Could biomimetic foils, fish-fin movement and flexible hydrokinetic forms be compared with standard turbines instead of dismissed?", "href": "https://tethys-engineering.pnnl.gov/publications/analysis-biomimetic-stream-energy-device-based-flapping-foils", "action": "Open source"},
         {"label": "Reef geometry", "title": "Could habitat and energy learning share one model?", "text": "Could oyster-crete, reef modules, seagrass edges and sensor frames teach coastal processes first, with energy as one possible co-benefit?"},
         {"label": "Kids and makers", "title": "What would a five-minute sketch reveal?", "text": "Could school groups, surfers, fishers, artists, makers, engineers and marine scientists all add pattern ideas to the same public board?"},
-        {"label": "Builder", "title": "Draft a marine curiosity note", "text": "Write a no-underwater-blades marine-energy idea from first principles.", "href": "builders/marine-no-turbine.html", "action": "Open builder"},
     ]) + """
   </div>
 </section>
@@ -968,26 +1011,35 @@ def wind_body() -> str:
 <section class="section">
   <div class="section-inner split">
     <div>
-      <p class="section-label">Small loads first</p>
-      <h2>Could non-turbine wind find the small jobs it is genuinely good at?</h2>
-      <p class="lede muted">Bladeless or vibration-based wind generators are interesting, and they can start as micro-generation experiments while real output, durability, noise and maintenance become clear.</p>
+      <p class="section-label">Fractal wind field</p>
+      <h2>Could Straddie harvest the wind hiding in edges, flutter and turbulence?</h2>
+      <p class="lede muted">Bladeless wind includes vortex-induced vibration, motionless rooftop capture, aeroelastic flutter, piezo flags, triboelectric films, Windbelt-style ribbons and EWICON-style electrostatics. The island question is not only peak commercial output. It is how many small, quiet energy moments could power sensors, signs, radios, lights, weather stations, data loggers, art, learning kits and distributed intelligence.</p>
       <div class="tag-row">
-        <span class="tag">Sensors</span>
-        <span class="tag">Signs</span>
-        <span class="tag">Education</span>
-        <span class="tag">Remote trickle loads</span>
-        <span class="tag">Wind-data logging</span>
+        <span class="tag">Vortex</span>
+        <span class="tag">Flutter</span>
+        <span class="tag">Roof-edge flow</span>
+        <span class="tag">Turbulence</span>
+        <span class="tag">Piezo flags</span>
+        <span class="tag">TENG films</span>
+        <span class="tag">Windbelt ribbons</span>
+        <span class="tag">EWICON</span>
+        <span class="tag">Aeromine</span>
+        <span class="tag">Sensor mesh</span>
       </div>
     </div>
-    <div class="quote-panel">If solar can do the job quietly, the no-blade wind test could offer a clearer reason than novelty.</div>
+    <div class="quote-panel">Fractal wind asks where motion already lives: roof edges, dune paths, ferry waiting areas, shade structures, vents, signs, masts, railings and workshop rigs.</div>
   </div>
 </section>
 <section class="section soft-band">
   <div class="section-inner">
 """ + card_grid([
-        {"label": "Question", "title": "Where is wind actually strong and useful?", "text": "Could one year of wind data tell us where a small device is worth testing?"},
-        {"label": "Question", "title": "What load is tiny enough?", "text": "Could it power a sensor, sign, low-power radio, environmental monitor or learning kit?"},
-        {"label": "Question", "title": "What could make it pause?", "text": "Poor output, noise, vibration, wildlife concern, visual clutter, storm damage or easier solar options."},
+        {"label": "Vortex", "title": "Could a no-blade mast turn shed vortices into power?", "text": "Vortex Bladeless treats oscillation as the harvest, not a problem to remove.", "href": "https://vortexbladeless.com/", "action": "Open source"},
+        {"label": "Roof edge", "title": "Could ferry roofs and sheds read pressure flow?", "text": "Aeromine-style rooftop systems point to roof-edge wind as a designed surface, not a tower.", "href": "https://aerominetechnologies.com/", "action": "Open source"},
+        {"label": "Electrostatic", "title": "Could wind move charge without spinning machinery?", "text": "EWICON adds an electrostatic branch to the no-moving-mechanical-parts wind conversation.", "href": "https://www.mecanoo.nl/projects/project/61/ewicon", "action": "Open source"},
+        {"label": "Ribbon", "title": "Could Windbelt-style flutter teach low-wind harvesting?", "text": "A ribbon, belt or flag can turn air movement into vibration that a tiny generator can read.", "href": "https://smartshelterfoundation.org/collection/low-wind-energy", "action": "Open source"},
+        {"label": "Micro-array", "title": "Could many tiny harvesters act like a wind-reading field?", "text": "VIV micro-harvesters in formation invite sensor-mesh thinking rather than one big machine.", "href": "https://www.nature.com/articles/s41598-019-56786-0", "action": "Open paper"},
+        {"label": "Flutter", "title": "Could flags, films and membranes feed island intelligence?", "text": "Piezo and triboelectric flutter research opens low-power pathways for signals, monitoring, art and learning kits.", "href": "https://onlinelibrary.wiley.com/doi/full/10.1002/msd2.12035", "action": "Open paper"},
+        {"label": "Island map", "title": "Could kids and makers map wind as patterns?", "text": "Roof edges, dunes, ferry ramps, signs, masts, vents and pathways could become a shared wind-pattern atlas before any one device is chosen."},
     ]) + """
   </div>
 </section>
@@ -1044,10 +1096,9 @@ def wealth_body() -> str:
 """ + card_grid([
         {"label": "Question", "title": "Could Grants Lab fund the first tests?", "text": "Roof audits, data logging, solar shade, maker-space thermal tests and emergency nodes may become clearer grant notes before big capital is needed.", "href": "https://auraofintelligence.github.io/stradbroke-grants-lab/", "action": "Open Grants Lab"},
         {"label": "Question", "title": "Could mutual care reduce risk?", "text": "Prevention, maintenance, fire checks, storm readiness and public dashboards can lower risk before insurance or mutuals are discussed.", "href": "https://auraofintelligence.github.io/moreton-bay-community-wealth-and-mutuals/", "action": "Open mutuals"},
-        {"label": "Question", "title": "Could Ready S.E.T. train people into the work?", "text": "Audits, installs, media, maintenance, grant reporting and safety checks can become learning pathways if trust is built first.", "href": "https://auraofintelligence.github.io/ready-set-co-op-trust-hub/", "action": "Open Trust Hub"},
-        {"label": "Question", "title": "Could a sovereign wealth fund stay plain?", "text": "The draft brief imagines a fund, tokens and dashboards. The public-safe version starts with governance, receipts, audit, anti-fraud rules and the right to refuse."},
+        {"label": "Question", "title": "Could Ready S.E.T. train people into the work?", "text": "Audits, installs, media, maintenance, grant reporting and site checks can become learning pathways if trust is built first.", "href": "https://auraofintelligence.github.io/ready-set-co-op-trust-hub/", "action": "Open Trust Hub"},
+        {"label": "Question", "title": "Could a sovereign wealth fund stay plain?", "text": "The draft brief imagines a fund, tokens and dashboards. The plain public version starts with governance, receipts, audit, anti-fraud rules and the right to refuse."},
         {"label": "Question", "title": "Could power sharing feed the mutual?", "text": "If local solar beats a weak feed-in tariff, could part of the upside support maintenance, fair-go support, emergency storage or training alongside any dividend talk?", "href": "sharing.html", "action": "Open power sharing"},
-        {"label": "Builder", "title": "Draft a wealth and grant note", "text": "Turn an energy option into a local-benefit and grant-readiness question.", "href": "builders/wealth-grant-readiness.html", "action": "Open builder"},
     ]) + """
   </div>
 </section>
@@ -1061,17 +1112,16 @@ def boundaries_body() -> str:
     <div class="section-heading">
       <p class="section-label">Guardrails</p>
       <h2>The bolder the energy idea, the simpler the boundary could be.</h2>
-      <p class="lede muted">A boundary can be a living question: what is being protected, who holds authority, what evidence matters, and how could an idea keep changing without becoming extraction, unsafe pressure, false endorsement, private-data capture or ecological harm?</p>
+      <p class="lede muted">A boundary can be a living question: what is being cared for, who holds authority, what evidence can sharpen the idea, and how could it keep sovereignty, ecology, privacy and trust intact as it grows?</p>
     </div>
 """ + card_grid([
         {"label": "Country", "title": "Who holds authority here?", "text": "Public pages can avoid implying approval, representation or cultural authority that has not been granted."},
         {"label": "Water", "title": "Which water could teach before it is used?", "text": "Perched lakes, wetlands, springs and protected water places can begin as teachers of hydrology, culture, ecology and time."},
         {"label": "Marine", "title": "What does sea life need?", "text": "No underwater blades is only one boundary. Noise, anchoring, sediment, navigation and reversibility matter too."},
-        {"label": "Pressure", "title": "What could invite engineering review?", "text": "Compressed air, CO2, pressure vessels, heat stores and fire systems can bring formal safety logic into the public conversation early."},
+        {"label": "Pressure", "title": "What could invite engineering review?", "text": "Compressed air, CO2, pressure vessels, heat stores and response systems can bring engineering knowledge, public sources and local skills into the conversation early."},
         {"label": "Finance", "title": "What could stop tokens becoming hype?", "text": "Any token, app, ledger or community dividend idea can show law, cybersecurity, plain accounting, consent and an analog fallback."},
         {"label": "Power bills", "title": "What could keep bill-sharing fair?", "text": "A power-sharing scheme can show clear opt-in rules, fair-go help paths, privacy, dispute handling and a boring non-crypto way to read the bill."},
         {"label": "Data", "title": "What stays private?", "text": "Household loads, bills, vulnerable people, cultural knowledge and business data can stay out of public dashboards unless people choose otherwise."},
-        {"label": "Builder", "title": "Run a boundary check", "text": "Name the consent, safety and evidence gates before the idea gets loud.", "href": "builders/boundary-check.html", "action": "Open builder"},
     ]) + """
   </div>
 </section>
@@ -1183,7 +1233,7 @@ def builder_body(builder: dict) -> str:
 <section class="section">
   <div class="section-inner builder-layout">
     <div class="builder-panel">
-      <p class="section-label">Draft form</p>
+      <p class="section-label">Working form</p>
       <form class="builder-form" data-builder-form>
         {''.join(fields)}
       </form>
@@ -1329,7 +1379,7 @@ def builder_template(builder: dict) -> str:
         "",
         f"Purpose: {builder['purpose']}",
         "",
-        "Status: Draft for human review",
+        "Status: Working note for human review",
         "",
         "## Questions",
         "",
@@ -1391,7 +1441,7 @@ def write_docs() -> None:
         "",
         "This note records the public sources and nearby repos used for the first clean-energy atlas.",
         "",
-        "## Local Draft Inputs",
+        "## Local Working Inputs",
     ]
     for source in LOCAL_DRAFT_INPUTS:
         source_lines.append(f"- `{source['file']}` - {source['use']}")
@@ -1427,7 +1477,7 @@ It covers:
 - power sharing, neighbourhood batteries and bill ledgers
 - pumped-hydro lessons from Snowy, Wivenhoe, Kidston, Borumba and sand-island geography
 - first-principles wave and tidal options without underwater blades
-- non-turbine wind as a small-load experiment
+- fractal no-blade wind across vortex, flutter, rooftop and sensor-scale flows
 - future pressure, carbon, sensing and response network questions
 - links to maker-space, Sandworm, ferry terminal lab, Grants Lab, community wealth and Ready S.E.T. Trust Hub
 

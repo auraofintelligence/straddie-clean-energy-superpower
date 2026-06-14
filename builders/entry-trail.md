@@ -2,7 +2,7 @@
 
 Purpose: Choose a clean-energy doorway without needing to accept the whole atlas.
 
-Status: Draft for human review
+Status: Working note for human review
 
 ## Questions
 
@@ -20,7 +20,7 @@ _Not answered yet._
 
 ### What could be useful to leave with?
 
-Prompt: A map, source list, cost question, safety review, workshop test, grant note or public explainer.
+Prompt: A map, source list, cost question, source review, workshop test, grant note or public explainer.
 
 _Not answered yet._
 

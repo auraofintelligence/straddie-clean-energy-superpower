@@ -2,7 +2,7 @@
 
 Purpose: Turn a local sharing idea into a plain-English bill, battery and governance question.
 
-Status: Draft for human review
+Status: Working note for human review
 
 ## Questions
 

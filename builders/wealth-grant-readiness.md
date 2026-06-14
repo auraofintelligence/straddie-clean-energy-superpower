@@ -2,7 +2,7 @@
 
 Purpose: Turn an energy option into a local-benefit note that Grants Lab and mutual-care thinking can inspect.
 
-Status: Draft for human review
+Status: Working note for human review
 
 ## Questions
 

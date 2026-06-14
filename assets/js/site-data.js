@@ -37,7 +37,7 @@ window.CLEAN_ENERGY_SITE = {
     },
     {
       "id": "wind",
-      "label": "No-blade wind",
+      "label": "Fractal wind",
       "href": "wind.html"
     },
     {
@@ -102,7 +102,7 @@ window.CLEAN_ENERGY_SITE = {
         },
         {
           "id": "wind",
-          "label": "No-blade wind",
+          "label": "Fractal wind",
           "href": "wind.html"
         }
       ]
@@ -186,7 +186,7 @@ window.CLEAN_ENERGY_SITE = {
         },
         {
           "id": "wind",
-          "label": "No-blade wind",
+          "label": "Fractal wind",
           "href": "wind.html"
         }
       ]
@@ -269,7 +269,7 @@ window.CLEAN_ENERGY_SITE = {
     },
     {
       "id": "wind",
-      "label": "No-blade wind",
+      "label": "Fractal wind",
       "href": "wind.html"
     },
     {
@@ -299,7 +299,7 @@ window.CLEAN_ENERGY_SITE = {
     },
     {
       "id": "builder-sand-air-storage",
-      "label": "Sand And Air Storage Brief Builder",
+      "label": "Sand And Pressure-Air Storage Builder",
       "href": "builders/sand-air-storage.html"
     },
     {

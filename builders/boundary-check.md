@@ -1,8 +1,8 @@
 # Energy Boundary Check Builder
 
-Purpose: Name the safety, consent and evidence gates before an exciting energy idea gets loud.
+Purpose: Name the consent, evidence and learning questions before an exciting energy idea gathers momentum.
 
-Status: Draft for human review
+Status: Working note for human review
 
 ## Questions
 
@@ -24,9 +24,9 @@ Prompt: Fire, pressure, heat, water, wildlife, culture, data, cost, noise, visua
 
 _Not answered yet._
 
-### What could make the idea pause?
+### What could change the next step?
 
-Prompt: A safety concern, no consent, poor data, ecological risk, bad economics, unclear ownership or community refusal.
+Prompt: New evidence, no consent, better local knowledge, ecological concern, weak economics, unclear ownership or community refusal.
 
 _Not answered yet._
 
@@ -36,4 +36,4 @@ A clean-energy idea can become clearer when people name what they are curious ab
 
 ## Next small step
 
-Name the next person to invite in and the point where people could pause.
+Name the next person to invite in and the evidence that would make the next step wiser.

@@ -2,7 +2,7 @@
 
 Purpose: Turn water-height curiosity into a local geography note grounded in ocean, bay, sand hills, perched lakes, aquifers, sands and mineral sands.
 
-Status: Draft for human review
+Status: Working note for human review
 
 ## Questions
 
@@ -26,7 +26,7 @@ _Not answered yet._
 
 ### Who could be invited in before this becomes real?
 
-Prompt: Traditional Owners, park managers, hydrologist, ecologist, council, engineer, public safety or landholder.
+Prompt: Traditional Owners, park managers, hydrologist, ecologist, council, engineer, emergency services or landholder.
 
 _Not answered yet._
 
