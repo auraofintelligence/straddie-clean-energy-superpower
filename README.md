@@ -1,0 +1,50 @@
+# Straddie Clean Energy Superpower
+
+A public, question-led static site for exploring clean energy options for Minjerribah / North Stradbroke Island.
+
+It covers:
+
+- rooftop solar and batteries
+- solar thermal and solar concentration
+- sand batteries and other heat storage
+- compressed air as a careful research lane
+- perched-lake pumped-hydro boundaries
+- wave and tidal options without underwater blades
+- non-turbine wind as a small-load experiment
+- carbon capture and fire-suppression boundaries
+- links to maker-space, Sandworm, ferry terminal lab, Grants Lab, community wealth and Ready S.E.T. Trust Hub
+
+## How it works
+
+The source of truth is `tools/build_site.py`.
+
+In simple terms:
+
+1. The Python file stores the page list, builder list, source links and companion repo links.
+2. Running it writes the public `.html` pages.
+3. The builder pages let a visitor fill in a small form, preview Markdown, copy it, or download a `.md` file.
+4. Hero images live in `assets/img/heroes/`.
+
+## Optimise images
+
+```powershell
+python tools\optimise_images.py
+```
+
+The script keeps the hero images as WebP and caps oversized files so the site loads faster on phones.
+
+## Local build
+
+```powershell
+python tools\build_site.py
+```
+
+Then open `index.html`, or run:
+
+```powershell
+python -m http.server 4179 --bind 127.0.0.1
+```
+
+## Public posture
+
+This is an exploration workbench. It is not an approval claim, engineering design, cultural authority statement, environmental approval, legal advice, financial advice or fire-safety design.

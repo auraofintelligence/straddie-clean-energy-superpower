@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Sandworm Subterranean Systems mark">
+  <rect width="64" height="64" rx="14" fill="#06242d"/>
+  <path d="M8 42c11-17 25-24 48-23" fill="none" stroke="#e2b75b" stroke-width="6" stroke-linecap="round"/>
+  <path d="M13 45c14-4 28-4 41 0" fill="none" stroke="#4e856d" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="43" cy="20" r="5" fill="#f7f3e8"/>
+  <path d="M18 34h10m-5-5v10" stroke="#f7f3e8" stroke-width="3" stroke-linecap="round"/>
+</svg>
