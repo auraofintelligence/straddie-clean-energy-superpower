@@ -309,7 +309,7 @@ window.CLEAN_ENERGY_SITE = {
     },
     {
       "id": "builder-perched-lake-boundary",
-      "label": "Perched Lake Boundary Builder",
+      "label": "Water-Height Geography Builder",
       "href": "builders/perched-lake-boundary.html"
     },
     {

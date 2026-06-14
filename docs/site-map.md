@@ -4,9 +4,9 @@
 - [Straddie Clean Energy Superpower](../index.html) - A self-sovereign public atlas for exploring clean energy options on Minjerribah / North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, power sharing, careful water-height storage, quiet marine energy, non-turbine wind and community wealth.
 - [Energy Options Map](../options.html) - A plain-English map of which energy options look near-term, which invite bench tests, and which work best as careful questions for now.
 - [Rooftops, Shade And Solar Heat](../solar.html) - Could island roofs, shade structures, ferry-gateway car parks and solar thermal tests become the first clean energy layer?
-- [Sand, Air And Heat Storage](../storage.html) - Could sand batteries, thermal stores and carefully reviewed compressed-air ideas turn local solar into useful hours after sunset?
+- [Sand, Air And Heat Storage](../storage.html) - Could sand batteries, thermal stores and visible air-storage questions turn local solar into useful hours while the integrated pressure network gets its own repo?
 - [Power Sharing And Neighbourhood Batteries](../sharing.html) - Could local solar be worth more when it is shared, stored, shifted into EVs or settled through a plain community ledger before it leaves the island cheaply?
-- [Perched Lakes And Pumped-Hydro Questions](../water-height.html) - How could water-height storage be modelled without touching sensitive perched lakes, wetlands or cultural places?
+- [Sand Hills, Lakes And Water-Height Questions](../water-height.html) - How could height, groundwater and storage be explored through Straddie's ocean, bay, sand hills, perched lakes, aquifers, sands and mineral-sands story?
 - [Wave And Tidal Without Underwater Blades](../marine.html) - Could wave pressure, tidal movement and reef-edge monitoring be explored without spinning underwater turbines?
 - [Non-Turbine Wind As A Small Test](../wind.html) - Where could bladeless or vibration-based wind ideas help sensors, signs or small loads without becoming another visual or wildlife problem?
 - [Linked Local Labs](../network.html) - Deep links to the maker-space, Sandworm, ferry terminal lab, grants lab, community wealth and mutuals, and Ready S.E.T. Trust Hub.
@@ -19,9 +19,9 @@
 ## Builders
 - [Energy Entry Trail Builder](../builders/entry-trail.html) - Choose a clean-energy doorway without needing to accept the whole atlas.
 - [Rooftop Solar And Shade Note Builder](../builders/solar-rooftop-note.html) - Turn a roof, car park, shade structure or public building into a first clean-energy question.
-- [Sand And Air Storage Brief Builder](../builders/sand-air-storage.html) - Compare sand-battery heat storage with compressed-air storage without mixing up their risks.
+- [Sand And Air Storage Brief Builder](../builders/sand-air-storage.html) - Compare sand-battery heat storage and visible air storage as two different storage stories.
 - [No-Underwater-Blades Marine Brief Builder](../builders/marine-no-turbine.html) - Draft a wave or tidal question that avoids underwater turbines and starts with marine life.
-- [Perched Lake Boundary Builder](../builders/perched-lake-boundary.html) - Keep pumped-hydro curiosity away from sensitive lakes until evidence and authority are clear.
+- [Water-Height Geography Builder](../builders/perched-lake-boundary.html) - Turn water-height curiosity into a local geography note grounded in ocean, bay, sand hills, perched lakes, aquifers, sands and mineral sands.
 - [Power Sharing And Bill Ledger Builder](../builders/power-sharing-ledger.html) - Turn a local sharing idea into a plain-English bill, battery and governance question.
 - [Wealth And Grant Readiness Builder](../builders/wealth-grant-readiness.html) - Turn an energy option into a local-benefit note that Grants Lab and mutual-care thinking can inspect.
 - [Energy Boundary Check Builder](../builders/boundary-check.html) - Name the safety, consent and evidence gates before an exciting energy idea gets loud.

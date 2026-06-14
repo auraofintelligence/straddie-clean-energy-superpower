@@ -1,6 +1,6 @@
 # Sand And Air Storage Brief Builder
 
-Purpose: Compare sand-battery heat storage with compressed-air storage without mixing up their risks.
+Purpose: Compare sand-battery heat storage and visible air storage as two different storage stories.
 
 Status: Draft for human review
 
@@ -14,19 +14,19 @@ _Not answered yet._
 
 ### Which storage medium is in play?
 
-Prompt: Hot sand, rock, hot water, compressed air vessel, mine/cavern idea, aquifer question, battery, or hybrid.
+Prompt: Hot sand, rock, hot water, compressed air vessel, distributed air container, aquifer question, battery, or hybrid.
 
 _Not answered yet._
 
-### Where could it live safely?
+### Where could it live visibly?
 
 Prompt: Maker-space yard, service zone, ferry lab, existing industrial site, digital model, or not known.
 
 _Not answered yet._
 
-### What could people inspect before going further?
+### Which lenses could help?
 
-Prompt: Pressure safety, fire engineering, electrical, geology, heat insulation, public access, noise, permissions or economics.
+Prompt: Pressure behaviour, fire response, electrical, geology, heat insulation, public access, noise, access paths or economics.
 
 _Not answered yet._
 

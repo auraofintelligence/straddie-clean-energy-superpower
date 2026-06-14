@@ -32,7 +32,7 @@ _Not answered yet._
 
 ## Boundaries
 
-If a boundary is unclear, slow down. A good clean-energy idea can survive review, correction and refusal.
+A clean-energy idea can become clearer when people name what they are curious about, what they are protecting, and what evidence could change their mind.
 
 ## Next small step
 

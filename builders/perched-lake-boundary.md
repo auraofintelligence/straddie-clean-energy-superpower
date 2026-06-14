@@ -1,6 +1,6 @@
-# Perched Lake Boundary Builder
+# Water-Height Geography Builder
 
-Purpose: Keep pumped-hydro curiosity away from sensitive lakes until evidence and authority are clear.
+Purpose: Turn water-height curiosity into a local geography note grounded in ocean, bay, sand hills, perched lakes, aquifers, sands and mineral sands.
 
 Status: Draft for human review
 
@@ -8,19 +8,19 @@ Status: Draft for human review
 
 ### What is the water-height question?
 
-Prompt: Height difference, closed-loop reservoir, stormwater tank, seawater reservoir, model only, or educational demo.
+Prompt: Sandhill height, bay/ocean edge, tank pair, seawater reservoir, aquifer model, sandmass model, model only, or educational demo.
 
 _Not answered yet._
 
 ### What sensitive place could people protect first?
 
-Prompt: Perched lake, wetland, spring, national park, cultural place, habitat, public access or unknown layer.
+Prompt: Perched lake, wetland, spring, national park, cultural place, habitat, aquifer, public access or unknown layer.
 
 _Not answered yet._
 
-### What alternative could be safer?
+### What local geography could teach the idea?
 
-Prompt: Tank pair, quarry/mine void elsewhere, hilltop reservoir outside sensitive area, virtual model, or no build.
+Prompt: Ocean, bay, sand hill, dune ridge, mineral sands layer, tank pair, sandmass model, aquifer data, virtual model, or no build.
 
 _Not answered yet._
 
@@ -32,8 +32,8 @@ _Not answered yet._
 
 ## Boundaries
 
-A perched lake is not a spare battery. Treat lakes, wetlands, springs and cultural places as boundaries first, not infrastructure sites.
+A perched lake can be a teacher without being the battery. Let the first draft map ocean, bay, sand hills, aquifers, wetlands, sands, mineral sands and cultural places.
 
 ## Next small step
 
-Use a map, digital twin or off-river closed-loop model before naming any real water body.
+Use a map, digital twin, tank pair, seawater-height model or sandhill elevation model to let real water bodies appear as teachers rather than assumed infrastructure.
