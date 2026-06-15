@@ -1331,9 +1331,14 @@
             <span>${part.label}</span>
             <strong>${metres3(part.volume)} -> ${unitCount(part.blocks, selectedScenario.unit)}</strong>
             <em>${raw(part.size)} m3 each</em>
-            <code>${part.formula}</code>
           </div>`).join("")}
         </div>
+        <details class="component-formula-details">
+          <summary>Show component formulas</summary>
+          <div class="component-formula-list">
+            ${selectedScenario.components.map((part) => `<code>${part.label}: ${part.formula}</code>`).join("")}
+          </div>
+        </details>
         <p class="calc-note">${selectedScenario.batch}; current week: about ${setCount(selectedScenario.weeklySets)} sets.</p>
       </article>`;
     }

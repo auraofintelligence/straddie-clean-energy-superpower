@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v14"
+ASSET_VERSION = "20260615-energy-superpower-v15"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -1317,111 +1317,125 @@ def reefs_body() -> str:
       <p class="lede muted">Move the sliders to sketch a weekly material flow. The 100 m volume stays as the clean comparison unit; tunnel speed shows whether that material arrives in hours, days or weeks. The speed slider treats 1 km/week as the aspiration marker: early rigs sit to the left, and the far right asks what opens if the aspiration is exceeded.</p>
     </div>
     <div class="reef-calculator" data-reef-calculator>
-      <div class="calc-controls">
-        <div class="range-field">
-          <label for="reef-diameter">Tunnel diameter <output data-calc-out="diameter">1.5 m</output></label>
-          <input id="reef-diameter" type="range" min="0.6" max="5" step="0.1" value="1.5" data-calc-input="diameter">
-        </div>
-        <div class="range-field">
-          <label for="reef-speed">Tunnel advance per week <output data-calc-out="weeklyAdvance">300 m/week</output></label>
-          <input id="reef-speed" type="range" min="25" max="1250" step="25" value="300" data-calc-input="weeklyAdvance">
-          <p class="range-note">Prototype pace to the left. 1 km/week is the aspiration marker near the high end.</p>
-        </div>
-        <div class="range-field">
-          <label for="reef-weeks">Weeks in this sprint <output data-calc-out="weeks">4</output></label>
-          <input id="reef-weeks" type="range" min="1" max="16" step="1" value="4" data-calc-input="weeks">
-        </div>
-        <div class="range-field">
-          <label for="reef-share">Material converted to useful media <output data-calc-out="reefShare">35%</output></label>
-          <input id="reef-share" type="range" min="0" max="90" step="5" value="35" data-calc-input="reefShare">
-        </div>
-        <div class="range-field">
-          <label for="reef-preset">Media size preset <output data-calc-out="modulePreset">4x interlock block</output></label>
-          <select id="reef-preset" data-calc-input="modulePreset">
-            <option value="0.028">2x service block (0.028 m3)</option>
-            <option value="0.056" selected>4x interlock block (0.056 m3)</option>
-            <option value="0.08">Robotic interlock block (0.08 m3)</option>
-            <option value="0.02">Glass or silicate batch (0.02 m3)</option>
-            <option value="0.05">Tile or paver batch (0.05 m3)</option>
-            <option value="0.18">Service-channel block (0.18 m3)</option>
-            <option value="0.35">Stone-circle seat block (0.35 m3)</option>
-            <option value="0.75">Small shoreline cell (0.75 m3)</option>
-            <option value="1.2">Reef basket or bag (1.2 m3)</option>
-            <option value="2.5">Large geotextile cell (2.5 m3)</option>
-            <option value="5">Small reef pod (5 m3)</option>
-            <option value="25">Large reef module (25 m3)</option>
-            <option value="custom">Custom size</option>
-          </select>
-        </div>
-        <div class="range-field">
-          <label for="reef-module">Average piece or media cell <output data-calc-out="moduleSize">0.056 m3</output></label>
-          <input id="reef-module" type="number" min="0.01" max="250" step="0.001" value="0.056" data-calc-input="moduleSize">
-        </div>
-        <div class="range-field scale-field" id="reef-scale">
-          <label>Build-example scale <output data-calc-out="scenarioScale">Medium</output></label>
-          <div class="segmented-control" role="radiogroup" aria-label="Build-example scale">
-            <label><input type="radio" name="reef-scale" value="minimal" data-calc-input="scenarioScale"><span>Minimal</span></label>
-            <label><input type="radio" name="reef-scale" value="medium" data-calc-input="scenarioScale" checked><span>Medium</span></label>
-            <label><input type="radio" name="reef-scale" value="large" data-calc-input="scenarioScale"><span>Large</span></label>
+      <div class="calc-workbench">
+        <article class="calc-panel calc-config-panel">
+          <p class="mini-label">Configure the sketch</p>
+          <h3>What are we sizing?</h3>
+          <div class="calc-choice-grid" aria-label="Material story">
+            <div class="range-field">
+              <label for="reef-focus">1. Pathway <output data-calc-out="focusLabel">Mixed island portfolio</output></label>
+              <select id="reef-focus" data-calc-input="focus">
+                <option value="mixed" selected>Mixed island portfolio</option>
+                <option value="oyster">Oyster and shellfish reef</option>
+                <option value="living">Living shoreline</option>
+                <option value="surf">Surf bank geometry</option>
+                <option value="construction">Quick-fit construction blocks</option>
+                <option value="meeting">Stone circle and civic pieces</option>
+                <option value="homes">Glass, silicate and home products</option>
+                <option value="dune">Stable dune support</option>
+                <option value="island">Artificial island or platform question</option>
+              </select>
+            </div>
+            <div class="range-field">
+              <label for="reef-example">2. Example <output data-calc-out="exampleLabel">Oyster nursery reach</output></label>
+              <select id="reef-example" data-calc-input="example">
+                <option value="0" selected>Oyster nursery reach</option>
+              </select>
+            </div>
           </div>
-          <p class="range-note">Switches every building example, including its component split and exported Markdown.</p>
-        </div>
+          <div class="calc-controls">
+            <div class="range-field">
+              <label for="reef-diameter">Tunnel diameter <output data-calc-out="diameter">1.5 m</output></label>
+              <input id="reef-diameter" type="range" min="0.6" max="5" step="0.1" value="1.5" data-calc-input="diameter">
+            </div>
+            <div class="range-field">
+              <label for="reef-speed">Advance per week <output data-calc-out="weeklyAdvance">300 m/week</output></label>
+              <input id="reef-speed" type="range" min="25" max="1250" step="25" value="300" data-calc-input="weeklyAdvance">
+              <p class="range-note">1 km/week is the aspiration marker near the high end.</p>
+            </div>
+            <div class="range-field">
+              <label for="reef-weeks">Sprint length <output data-calc-out="weeks">4</output></label>
+              <input id="reef-weeks" type="range" min="1" max="16" step="1" value="4" data-calc-input="weeks">
+            </div>
+            <div class="range-field">
+              <label for="reef-share">Useful-media share <output data-calc-out="reefShare">35%</output></label>
+              <input id="reef-share" type="range" min="0" max="90" step="5" value="35" data-calc-input="reefShare">
+            </div>
+            <div class="range-field">
+              <label for="reef-preset">Media preset <output data-calc-out="modulePreset">4x interlock block</output></label>
+              <select id="reef-preset" data-calc-input="modulePreset">
+                <option value="0.028">2x service block (0.028 m3)</option>
+                <option value="0.056" selected>4x interlock block (0.056 m3)</option>
+                <option value="0.08">Robotic interlock block (0.08 m3)</option>
+                <option value="0.02">Glass or silicate batch (0.02 m3)</option>
+                <option value="0.05">Tile or paver batch (0.05 m3)</option>
+                <option value="0.18">Service-channel block (0.18 m3)</option>
+                <option value="0.35">Stone-circle seat block (0.35 m3)</option>
+                <option value="0.75">Small shoreline cell (0.75 m3)</option>
+                <option value="1.2">Reef basket or bag (1.2 m3)</option>
+                <option value="2.5">Large geotextile cell (2.5 m3)</option>
+                <option value="5">Small reef pod (5 m3)</option>
+                <option value="25">Large reef module (25 m3)</option>
+                <option value="custom">Custom size</option>
+              </select>
+            </div>
+            <div class="range-field">
+              <label for="reef-module">Piece or cell size <output data-calc-out="moduleSize">0.056 m3</output></label>
+              <input id="reef-module" type="number" min="0.01" max="250" step="0.001" value="0.056" data-calc-input="moduleSize">
+            </div>
+            <div class="range-field scale-field" id="reef-scale">
+              <label>Example scale <output data-calc-out="scenarioScale">Medium</output></label>
+              <div class="segmented-control" role="radiogroup" aria-label="Build-example scale">
+                <label><input type="radio" name="reef-scale" value="minimal" data-calc-input="scenarioScale"><span>Minimal</span></label>
+                <label><input type="radio" name="reef-scale" value="medium" data-calc-input="scenarioScale" checked><span>Medium</span></label>
+                <label><input type="radio" name="reef-scale" value="large" data-calc-input="scenarioScale"><span>Large</span></label>
+              </div>
+              <p class="range-note">Switches examples and the exported Markdown.</p>
+            </div>
+          </div>
+        </article>
+        <article class="calc-panel calc-live-panel">
+          <p class="mini-label" data-calc-out="estimateKicker">Transformation sketches</p>
+          <h3 data-calc-out="estimateTitle">How large could this batch become?</h3>
+          <p class="calc-note" data-calc-out="estimateNote">Choose a pathway to swap the examples, piece sizes, component splits and verification note.</p>
+          <div class="calc-results">
+            <article class="calc-metric"><span>Per 100 m tunnel</span><strong data-calc-out="per100">1,018 m3</strong><p data-calc-out="per100Scale">about 31 shipping containers</p></article>
+            <article class="calc-metric"><span>Time to earn 100 m</span><strong data-calc-out="timePer100">16.8 h</strong></article>
+            <article class="calc-metric"><span>Weekly useful media</span><strong data-calc-out="weeklyReef">4,097 m3</strong><p data-calc-out="weeklyReefScale">about 124 shipping containers</p></article>
+            <article class="calc-metric"><span data-calc-out="weeklyUnitLabel">Approx. pieces / week</span><strong data-calc-out="weeklyModules">73,160</strong></article>
+          </div>
+          <div data-calc-out="selectedExample"></div>
+          <details class="calc-more-numbers">
+            <summary>More numbers</summary>
+            <div class="calc-results">
+              <article class="calc-metric"><span>Weekly tunnel volume</span><strong data-calc-out="weeklySpoil">10,179 m3</strong><p data-calc-out="weeklySpoilScale">about 308 shipping containers</p></article>
+              <article class="calc-metric"><span>Sprint useful media</span><strong data-calc-out="stageReef">16,389 m3</strong><p data-calc-out="stageReefScale">about 497 shipping containers</p></article>
+              <article class="calc-metric"><span>Rough weekly weight</span><strong data-calc-out="weeklyWeight">16,286 t</strong><p data-calc-out="weeklyWeightScale">about 814 loaded tip trucks</p></article>
+              <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">14,251 m3</strong><p data-calc-out="avoidedScale">about 432 shipping containers</p></article>
+            </div>
+          </details>
+          <div class="calc-export-actions">
+            <button class="button primary" type="button" data-export-reef-markdown>Download verification .md</button>
+            <span data-calc-out="exportStatus">Configure the calculator, then download a Markdown note for verification.</span>
+          </div>
+          <details class="markdown-preview">
+            <summary>Preview verification Markdown</summary>
+            <textarea data-reef-markdown-preview readonly></textarea>
+          </details>
+        </article>
       </div>
-      <div class="calc-choice-grid" aria-label="Material story">
-        <div class="range-field">
-          <label for="reef-focus">1. What could this batch become? <output data-calc-out="focusLabel">Mixed island portfolio</output></label>
-          <select id="reef-focus" data-calc-input="focus">
-            <option value="mixed" selected>Mixed island portfolio</option>
-            <option value="oyster">Oyster and shellfish reef</option>
-            <option value="living">Living shoreline</option>
-            <option value="surf">Surf bank geometry</option>
-            <option value="construction">Quick-fit construction blocks</option>
-            <option value="meeting">Stone circle and civic pieces</option>
-            <option value="homes">Glass, silicate and home products</option>
-            <option value="dune">Stable dune support</option>
-            <option value="island">Artificial island or platform question</option>
-          </select>
-        </div>
-        <div class="range-field">
-          <label for="reef-example">2. Which example should we size? <output data-calc-out="exampleLabel">Oyster nursery reach</output></label>
-          <select id="reef-example" data-calc-input="example">
-            <option value="0" selected>Oyster nursery reach</option>
-          </select>
-        </div>
-        <article class="calc-panel calc-assumptions">
-          <p class="mini-label">Everyday yardsticks</p>
-          <h3>What does this pathway roughly mean?</h3>
+      <details class="calc-panel calc-assumptions">
+        <summary><span>Everyday yardsticks</span><strong>What does this pathway roughly mean?</strong></summary>
+        <div class="detail-panel-body">
           <p>Uses simple public yardsticks: one wheelbarrow is about 0.1 m3, one concrete truck is about 6 m3, one twenty-foot shipping container is about 33 m3, and rough damp sandmass is counted as about 1.6 tonnes per m3.</p>
           <p data-calc-out="focusYardstick">A mixed island portfolio can compare small reef cells, quick-fit blocks, home products and public-space pieces from the same material stream.</p>
           <div class="focus-measure-grid" data-calc-out="focusMeasures"></div>
-        </article>
-      </div>
-      <div class="calc-results">
-        <article class="calc-metric"><span>Per 100 m tunnel</span><strong data-calc-out="per100">1,018 m3</strong><p data-calc-out="per100Scale">about 31 shipping containers</p></article>
-        <article class="calc-metric"><span>Time to earn 100 m</span><strong data-calc-out="timePer100">16.8 h</strong></article>
-        <article class="calc-metric"><span>Weekly tunnel volume</span><strong data-calc-out="weeklySpoil">10,179 m3</strong><p data-calc-out="weeklySpoilScale">about 308 shipping containers</p></article>
-        <article class="calc-metric"><span>Weekly useful media</span><strong data-calc-out="weeklyReef">4,097 m3</strong><p data-calc-out="weeklyReefScale">about 124 shipping containers</p></article>
-        <article class="calc-metric"><span>Sprint useful media</span><strong data-calc-out="stageReef">16,389 m3</strong><p data-calc-out="stageReefScale">about 497 shipping containers</p></article>
-        <article class="calc-metric"><span data-calc-out="weeklyUnitLabel">Approx. pieces / week</span><strong data-calc-out="weeklyModules">73,160</strong></article>
-        <article class="calc-metric"><span>Rough weekly weight</span><strong data-calc-out="weeklyWeight">16,286 t</strong><p data-calc-out="weeklyWeightScale">about 814 loaded tip trucks</p></article>
-        <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">14,251 m3</strong><p data-calc-out="avoidedScale">about 432 shipping containers</p></article>
-      </div>
-      <article class="calc-panel block-estimate-panel">
-        <p class="mini-label" data-calc-out="estimateKicker">Transformation sketches</p>
-        <h3 data-calc-out="estimateTitle">How large could this batch become?</h3>
-        <p class="calc-note" data-calc-out="estimateNote">Choose a pathway to swap the examples, piece sizes, component splits and verification note.</p>
-        <div data-calc-out="selectedExample"></div>
-        <p class="mini-label">Other examples in this pathway</p>
-        <div class="block-estimate-grid" data-calc-out="blockEstimates"></div>
-        <div class="calc-export-actions">
-          <button class="button primary" type="button" data-export-reef-markdown>Download verification .md</button>
-          <span data-calc-out="exportStatus">Configure the calculator, then download a Markdown note for verification.</span>
         </div>
-        <details class="markdown-preview">
-          <summary>Preview verification Markdown</summary>
-          <textarea data-reef-markdown-preview readonly></textarea>
-        </details>
-      </article>
+      </details>
+      <details class="calc-panel other-examples-panel">
+        <summary><span>Other examples</span><strong>Compare the rest of this pathway</strong></summary>
+        <div class="block-estimate-grid" data-calc-out="blockEstimates"></div>
+      </details>
       <div class="calc-panels">
         <article class="calc-panel">
           <p class="mini-label">Time flow</p>

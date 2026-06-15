@@ -687,6 +687,13 @@ h3 {
   gap: 1.2rem;
 }
 
+.calc-workbench {
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(360px, .9fr) minmax(520px, 1.1fr);
+}
+
 .calc-controls,
 .calc-results,
 .calc-panels,
@@ -697,16 +704,16 @@ h3 {
 }
 
 .calc-controls {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .calc-results {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .calc-choice-grid {
   align-items: start;
-  grid-template-columns: minmax(220px, .7fr) minmax(260px, .8fr) minmax(320px, 1.5fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .calc-panels {
@@ -734,6 +741,39 @@ h3 {
   padding: 1rem;
 }
 
+.calc-config-panel,
+.calc-live-panel {
+  align-content: start;
+}
+
+.calc-config-panel .range-field,
+.calc-live-panel .calc-metric {
+  background: var(--paper);
+  box-shadow: none;
+  padding: .8rem;
+}
+
+.calc-more-numbers {
+  border-top: 1px solid var(--line);
+  padding-top: .2rem;
+}
+
+.calc-more-numbers summary {
+  color: var(--bay);
+  cursor: pointer;
+  font-family: var(--heading);
+  font-size: .9rem;
+  font-weight: 900;
+}
+
+.calc-more-numbers .calc-results {
+  margin-top: .65rem;
+}
+
+.calc-config-panel .scale-field {
+  grid-column: 1 / -1;
+}
+
 .range-field {
   align-content: start;
   align-self: start;
@@ -752,7 +792,7 @@ h3 {
 .range-field output {
   color: var(--bay);
   display: block;
-  font-size: 1.05rem;
+  font-size: .98rem;
   margin-top: .2rem;
 }
 
@@ -857,7 +897,7 @@ h3 {
 .calc-metric strong {
   color: var(--bay);
   font-family: var(--heading);
-  font-size: clamp(1.3rem, 2vw, 1.9rem);
+  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
   line-height: 1.05;
 }
 
@@ -866,8 +906,59 @@ h3 {
   gap: .85rem;
 }
 
-.calc-assumptions {
-  align-content: start;
+.calc-panel h3 {
+  margin-bottom: 0;
+}
+
+details.calc-panel > summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  gap: .75rem;
+  justify-content: space-between;
+  list-style: none;
+}
+
+details.calc-panel > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.calc-panel > summary::after {
+  color: var(--bay);
+  content: "+";
+  font-family: var(--heading);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+details.calc-panel[open] > summary::after {
+  content: "-";
+}
+
+details.calc-panel > summary span {
+  color: var(--bay);
+  font-family: var(--heading);
+  font-size: .82rem;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+details.calc-panel > summary strong {
+  color: var(--deep);
+  display: block;
+  font-family: var(--heading);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+}
+
+.detail-panel-body {
+  display: grid;
+  gap: .85rem;
+  padding-top: .85rem;
+}
+
+.detail-panel-body p {
+  margin: 0;
 }
 
 .focus-measure-grid {
@@ -964,8 +1055,8 @@ h3 {
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) - 2px);
   display: grid;
-  gap: 1rem;
-  padding: 1rem;
+  gap: .8rem;
+  padding: .9rem;
 }
 
 .selected-example-card h4,
@@ -976,7 +1067,7 @@ h3 {
 .selected-example-card h4 {
   color: var(--deep);
   font-family: var(--heading);
-  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
   line-height: 1.1;
 }
 
@@ -990,17 +1081,19 @@ h3 {
 
 .component-schedule {
   display: grid;
-  gap: .65rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .4rem;
+  grid-template-columns: 1fr;
 }
 
 .component-schedule div {
+  align-items: center;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: .55rem;
   display: grid;
-  gap: .25rem;
-  padding: .75rem;
+  gap: .5rem;
+  grid-template-columns: minmax(130px, 1fr) minmax(130px, auto) minmax(72px, auto);
+  padding: .55rem .65rem;
 }
 
 .component-schedule span {
@@ -1014,13 +1107,29 @@ h3 {
   color: var(--muted);
   font-size: .82rem;
   font-style: normal;
+  text-align: right;
 }
 
-.component-schedule code {
+.component-formula-details summary {
+  color: var(--bay);
+  cursor: pointer;
+  font-family: var(--heading);
+  font-size: .86rem;
+  font-weight: 900;
+}
+
+.component-formula-list {
+  display: grid;
+  gap: .45rem;
+  margin-top: .6rem;
+}
+
+.component-formula-list code {
   background: rgba(0, 95, 108, .06);
   border: 1px solid rgba(0, 95, 108, .14);
   border-radius: .4rem;
   color: var(--bay);
+  display: block;
   font-family: Consolas, "Courier New", monospace;
   font-size: .78rem;
   line-height: 1.45;
@@ -1382,6 +1491,7 @@ textarea {
   .source-grid,
   .builder-index,
   .option-grid,
+  .calc-workbench,
   .calc-controls,
   .calc-results,
   .calc-panels,
@@ -1405,6 +1515,15 @@ textarea {
 
   .component-schedule {
     grid-template-columns: 1fr;
+  }
+
+  .component-schedule div {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .component-schedule em {
+    text-align: left;
   }
 }
 
