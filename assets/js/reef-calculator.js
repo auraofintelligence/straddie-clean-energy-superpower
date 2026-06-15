@@ -22,6 +22,7 @@
     moduleSize: root.querySelector('[data-calc-input="moduleSize"]'),
     scenarioScale: root.querySelectorAll('[data-calc-input="scenarioScale"]'),
     focus: root.querySelector('[data-calc-input="focus"]'),
+    example: root.querySelector('[data-calc-input="example"]'),
   };
   const exportButton = root.querySelector("[data-export-reef-markdown]");
   const markdownPreview = root.querySelector("[data-reef-markdown-preview]");
@@ -807,19 +808,96 @@
     return `${raw(volume)} m3 / ${raw(moduleSize)} m3 = ${unitCount(pieces, unit)}`;
   };
 
-  const componentRows = (parts, moduleSize, scaleMultiplier = 1, unit = "pieces") => parts.map((part) => {
+  const matchedComponentSize = (label, focusKey, fallbackSize) => {
+    const text = String(label || "").toLowerCase();
+
+    if (focusKey === "mixed") {
+      if (/tile|paver|sample|marker|survey|sensor|monitoring/.test(text)) return 0.05;
+      if (/service|access|edge|ledge|rib|facet|anchor|privacy|repair|shade|footing/.test(text)) return 0.18;
+      if (/seat|arc|bench|plinth|step|pocket|toe|block|storage|porch|core/.test(text)) return 0.35;
+      if (/basket|bag|shell/.test(text)) return 1.2;
+      if (/reef|habitat|cell|patch|shape|reset/.test(text)) return 5;
+      return fallbackSize;
+    }
+
+    if (focusKey === "oyster") {
+      if (/tile|tray|tag|marker|mount|station/.test(text)) return 0.05;
+      if (/basket|bag|shell/.test(text)) return 1.2;
+      if (/reef|habitat|refuge|patch/.test(text)) return 5;
+      return fallbackSize;
+    }
+
+    if (focusKey === "living") {
+      if (/plant|monitor|photo/.test(text)) return 0.03;
+      if (/access|edge|gap|pocket/.test(text)) return 0.18;
+      if (/toe|cell|shelf|catcher|trap/.test(text)) return 0.75;
+      if (/reach|storm|reserve/.test(text)) return 2.5;
+      return fallbackSize;
+    }
+
+    if (focusKey === "surf") {
+      if (/mini|model|tray|marker/.test(text)) return 0.02;
+      if (/facet|rib|anchor|survey|camera|sensor/.test(text)) return 0.35;
+      if (/cell|shape|current|reset|field|corridor/.test(text)) return 5;
+      return fallbackSize;
+    }
+
+    if (focusKey === "construction") {
+      if (/service|cable|corridor|drain|void|inspection/.test(text)) return 0.18;
+      if (/seat|bench|shade|footing|plinth|step|handrail|toe|pocket/.test(text)) return 0.35;
+      if (/wall|edge|block|spare|repair|storage|porch|core/.test(text)) return 0.08;
+      return fallbackSize;
+    }
+
+    if (focusKey === "meeting") {
+      if (/marker|edge|paver|wayfinding/.test(text)) return 0.05;
+      if (/seat|arc|stone|shade|plinth|speaker|stage|terrace/.test(text)) return 0.35;
+      if (/field|reserve/.test(text)) return 1.2;
+      return fallbackSize;
+    }
+
+    if (focusKey === "homes") {
+      if (/tile|paver|sample|coupon|colour|recipe|repair/.test(text)) return 0.05;
+      if (/panel|sill|bench|shelf|trim|service/.test(text)) return 0.18;
+      if (/counter|privacy|breeze|shade|garden|storage/.test(text)) return 0.35;
+      return fallbackSize;
+    }
+
+    if (focusKey === "dune") {
+      if (/vegetation|photo|marker/.test(text)) return 0.03;
+      if (/access|edge|rung|lip|step|guard|control/.test(text)) return 0.18;
+      if (/ladder|toe|cell|shelf|platform/.test(text)) return 0.75;
+      if (/mat|corridor|reserve|storm/.test(text)) return 2.5;
+      return fallbackSize;
+    }
+
+    if (focusKey === "island") {
+      if (/marker|sensor|model/.test(text)) return 0.75;
+      if (/settlement|anchor|landing|pocket/.test(text)) return 2.5;
+      if (/platform|habitat|edge|shelf|cell/.test(text)) return 5;
+      if (/island|field|corridor|reserve|core|service/.test(text)) return 25;
+      return fallbackSize;
+    }
+
+    return fallbackSize;
+  };
+
+  const componentRows = (parts, moduleSize, scaleMultiplier = 1, unit = "pieces", focusKey = "mixed") => parts.map((part) => {
     const volume = part.volume * scaleMultiplier;
-    const blocks = moduleSize > 0 ? volume / moduleSize : 0;
+    const partSize = Number(part.size || matchedComponentSize(part.label, focusKey, moduleSize));
+    const blocks = partSize > 0 ? volume / partSize : 0;
     return {
       ...part,
       baseVolume: part.volume,
       volume,
       blocks,
-      formula: blockFormula(volume, moduleSize, unit),
+      size: partSize,
+      formula: blockFormula(volume, partSize, unit),
     };
   });
 
   const componentTotal = (parts) => parts.reduce((sum, part) => sum + part.volume, 0);
+  const componentPieceTotal = (parts) => parts.reduce((sum, part) => sum + part.blocks, 0);
 
   const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
@@ -1067,6 +1145,21 @@
     inputs.moduleSize.value = selectedValue;
   };
 
+  const setExampleOptionsForFocus = (focusKey, options = {}) => {
+    if (!inputs.example) return;
+    const focus = focusData[focusKey] || focusData.mixed;
+    const scenarios = focus.scenarios || scenarioLibraries.mixed;
+    const currentValue = inputs.example.value;
+    const selectedValue = options.preserve && scenarios[Number(currentValue)]
+      ? currentValue
+      : "0";
+
+    inputs.example.innerHTML = scenarios
+      .map((item, index) => `<option value="${index}">${item.title}</option>`)
+      .join("");
+    inputs.example.value = selectedValue;
+  };
+
   const updateSandwormBridge = () => {
     const holder = root.querySelector("[data-sandworm-links]");
     if (!holder) return;
@@ -1104,6 +1197,9 @@
     const focus = focusData[focusKey] || focusData.mixed;
     const scenarioSource = focus.scenarios || scenarioLibraries.mixed;
     const unit = focus.unit || "pieces";
+    const selectedExampleIndex = inputs.example && scenarioSource[Number(inputs.example.value)]
+      ? Number(inputs.example.value)
+      : 0;
     const selectedScale = root.querySelector('[data-calc-input="scenarioScale"]:checked')?.value || "medium";
     const scenarioScale = scaleBands[selectedScale] || scaleBands.medium;
     const presetLabel = inputs.modulePreset && inputs.modulePreset.selectedOptions.length
@@ -1124,9 +1220,9 @@
     const per100Pieces = moduleSize > 0 ? per100Useful / moduleSize : 0;
     const scenarioResults = scenarioSource.map((item) => {
       const itemUnit = item.unit || unit;
-      const components = componentRows(item.parts || [], moduleSize, scenarioScale.multiplier, itemUnit);
+      const components = componentRows(item.parts || [], moduleSize, scenarioScale.multiplier, itemUnit, focusKey);
       const volume = components.length ? componentTotal(components) : item.volume * scenarioScale.multiplier;
-      const blocks = moduleSize > 0 ? volume / moduleSize : 0;
+      const blocks = components.length ? componentPieceTotal(components) : (moduleSize > 0 ? volume / moduleSize : 0);
       const weeklySets = volume > 0 ? weeklyReef / volume : 0;
       return {
         ...item,
@@ -1135,13 +1231,16 @@
         volume,
         blocks,
         weeklySets,
-        formula: blockFormula(volume, moduleSize, itemUnit),
+        formula: components.length
+          ? `component schedule = ${unitCount(blocks, itemUnit)} across ${metres3(volume)}`
+          : blockFormula(volume, moduleSize, itemUnit),
         components,
         componentVolume: componentTotal(components),
         scale: scenarioScale,
         batch: batchComparison(per100Useful, volume),
       };
     });
+    const selectedScenario = scenarioResults[selectedExampleIndex] || scenarioResults[0];
 
     output("diameter", `${decimal.format(diameter)} m`);
     output("weeklyAdvance", formatAdvance(weeklyAdvance));
@@ -1154,6 +1253,7 @@
     output("estimateKicker", focus.estimateKicker || "Transformation sketches");
     output("estimateTitle", focus.estimateTitle || "How large could this batch become?");
     output("estimateNote", focus.estimateNote || "Choose a pathway to swap the example cards and verification note.");
+    output("exampleLabel", selectedScenario ? selectedScenario.title : "");
     output("focusYardstick", focus.yardstick || "");
     output("per100", metres3(per100));
     output("per100Scale", volumeScale(per100));
@@ -1217,23 +1317,36 @@
       ].join("");
     }
 
+    const selectedExample = root.querySelector("[data-calc-out=\"selectedExample\"]");
+    if (selectedExample && selectedScenario) {
+      selectedExample.innerHTML = `<article class="selected-example-card">
+        <div>
+          <p class="mini-label">Selected example</p>
+          <h4>${selectedScenario.title}</h4>
+          <strong>${metres3(selectedScenario.volume)} sketch -> ${unitCount(selectedScenario.blocks, selectedScenario.unit)}</strong>
+          <p>${selectedScenario.scale.label} scale. Medium reference was ${metres3(selectedScenario.baseVolume)}. Includes ${selectedScenario.text}.</p>
+        </div>
+        <div class="component-schedule">
+          ${selectedScenario.components.map((part) => `<div>
+            <span>${part.label}</span>
+            <strong>${metres3(part.volume)} -> ${unitCount(part.blocks, selectedScenario.unit)}</strong>
+            <em>${raw(part.size)} m3 each</em>
+            <code>${part.formula}</code>
+          </div>`).join("")}
+        </div>
+        <p class="calc-note">${selectedScenario.batch}; current week: about ${setCount(selectedScenario.weeklySets)} sets.</p>
+      </article>`;
+    }
+
     const blockEstimates = root.querySelector("[data-calc-out=\"blockEstimates\"]");
     if (blockEstimates) {
-      blockEstimates.innerHTML = scenarioResults.map((item) => {
-        const componentList = item.components.length ? `<details class="component-split">
-          <summary>Show example component split</summary>
-          <ul>
-            ${item.components.map((part) => `<li><span>${part.label}: ${metres3(part.volume)} -> ${unitCount(part.blocks, item.unit)}</span><code>${part.formula}</code></li>`).join("")}
-          </ul>
-        </details>` : "";
-        return `<article class="block-estimate-card">
+      blockEstimates.innerHTML = scenarioResults.map((item, index) => {
+        const current = index === selectedExampleIndex ? " is-current" : "";
+        return `<article class="block-estimate-card compact${current}">
           <p class="mini-label">${item.label}</p>
           <h4>${item.title}</h4>
-          <strong>${unitCount(item.blocks, item.unit)}</strong>
-          <p>${item.scale.label} scale: ${metres3(item.volume)} sketch. Medium reference was ${metres3(item.baseVolume)}. Includes ${item.text}.</p>
-          <code>Formula: ${item.formula}</code>
-          ${componentList}
-          <em>${item.batch}; current week: about ${setCount(item.weeklySets)} sets.</em>
+          <strong>${metres3(item.volume)}</strong>
+          <p>${unitCount(item.blocks, item.unit)} by matched component sizes.</p>
         </article>`;
       }).join("");
     }
@@ -1248,6 +1361,8 @@
       focus,
       focusKey,
       unit,
+      selectedExampleIndex,
+      selectedScenario,
       presetLabel,
       area,
       per100,
@@ -1284,9 +1399,10 @@
       `- Sprint length: ${number.format(state.weeks)} week${state.weeks === 1 ? "" : "s"}`,
       `- Material converted to useful media: ${number.format(state.reefShare)}%`,
       `- Media preset: ${state.presetLabel}`,
-      `- Selected piece or media cell: ${metres3(state.moduleSize)}`,
+      `- Global comparison unit: ${metres3(state.moduleSize)}`,
       `- Build-example scale: ${state.scenarioScale.label} (${state.scenarioScale.note}, ${raw(state.scenarioScale.multiplier, 2)}x the medium sketch)`,
       `- Material story: ${state.focus.label}`,
+      `- Selected example: ${state.selectedScenario ? state.selectedScenario.title : "Not selected"}`,
       `- Counting unit: ${state.unit}`,
       "",
       "## Shared Assumptions",
@@ -1318,11 +1434,19 @@
       `- ${state.unit} per week = ${metres3(state.weeklyReef)} / ${metres3(state.moduleSize)} = ${unitCount(state.weeklyPieces, state.unit)}.`,
       `- Rough weekly weight = ${metres3(state.weeklySpoil)} x ${SANDMASS_TONNES_PER_M3} t/m3 = ${tonnes(state.weeklyWeight)} (${weightScale(state.weeklyWeight)}).`,
       "",
+      "## Selected Example Component Schedule",
+      "",
+      state.selectedScenario
+        ? `${state.selectedScenario.title}: ${metres3(state.selectedScenario.volume)} sketch, counted as ${unitCount(state.selectedScenario.blocks, state.selectedScenario.unit)} across matched component sizes.`
+        : "No selected example was available.",
+      "",
+      ...(state.selectedScenario ? state.selectedScenario.components.map((part) => `- ${part.label}: ${part.formula} (${raw(part.size)} m3 each)`) : []),
+      "",
       `## ${state.focus.estimateTitle}`,
       "",
       state.focus.estimateNote,
       "",
-      `Each example uses: sketch volume / selected ${state.unit} envelope = approximate ${state.unit}.`,
+      `Each example uses its own matched component sizes. The global comparison unit remains visible above so people can compare it with the component schedule.`,
       "",
       `| Example | Scale | Medium reference | Sketch volume | Formula | Approx. ${state.unit} | 100 m batch comparison | Current week |`,
       "| --- | --- | ---: | ---: | --- | ---: | --- | --- |",
@@ -1393,6 +1517,7 @@
   if (inputs.focus) {
     inputs.focus.addEventListener("change", () => {
       setPresetOptionsForFocus(inputs.focus.value);
+      setExampleOptionsForFocus(inputs.focus.value);
       update();
     });
   }
@@ -1416,6 +1541,8 @@
   if (exportButton) exportButton.addEventListener("click", downloadMarkdown);
 
   updateSandwormBridge();
-  setPresetOptionsForFocus(inputs.focus ? inputs.focus.value : "mixed", { preserve: true });
+  const initialFocus = inputs.focus ? inputs.focus.value : "mixed";
+  setPresetOptionsForFocus(initialFocus);
+  setExampleOptionsForFocus(initialFocus);
   update();
 })();

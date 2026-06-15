@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v12"
+ASSET_VERSION = "20260615-energy-superpower-v14"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -1336,7 +1336,7 @@ def reefs_body() -> str:
           <input id="reef-share" type="range" min="0" max="90" step="5" value="35" data-calc-input="reefShare">
         </div>
         <div class="range-field">
-          <label for="reef-preset">Media size preset <output data-calc-out="modulePreset">4x Besser-style interlock block</output></label>
+          <label for="reef-preset">Media size preset <output data-calc-out="modulePreset">4x interlock block</output></label>
           <select id="reef-preset" data-calc-input="modulePreset">
             <option value="0.028">2x service block (0.028 m3)</option>
             <option value="0.056" selected>4x interlock block (0.056 m3)</option>
@@ -1369,7 +1369,7 @@ def reefs_body() -> str:
       </div>
       <div class="calc-choice-grid" aria-label="Material story">
         <div class="range-field">
-          <label for="reef-focus">What could this batch become? <output data-calc-out="focusLabel">Mixed island portfolio</output></label>
+          <label for="reef-focus">1. What could this batch become? <output data-calc-out="focusLabel">Mixed island portfolio</output></label>
           <select id="reef-focus" data-calc-input="focus">
             <option value="mixed" selected>Mixed island portfolio</option>
             <option value="oyster">Oyster and shellfish reef</option>
@@ -1380,6 +1380,12 @@ def reefs_body() -> str:
             <option value="homes">Glass, silicate and home products</option>
             <option value="dune">Stable dune support</option>
             <option value="island">Artificial island or platform question</option>
+          </select>
+        </div>
+        <div class="range-field">
+          <label for="reef-example">2. Which example should we size? <output data-calc-out="exampleLabel">Oyster nursery reach</output></label>
+          <select id="reef-example" data-calc-input="example">
+            <option value="0" selected>Oyster nursery reach</option>
           </select>
         </div>
         <article class="calc-panel calc-assumptions">
@@ -1404,6 +1410,8 @@ def reefs_body() -> str:
         <p class="mini-label" data-calc-out="estimateKicker">Transformation sketches</p>
         <h3 data-calc-out="estimateTitle">How large could this batch become?</h3>
         <p class="calc-note" data-calc-out="estimateNote">Choose a pathway to swap the examples, piece sizes, component splits and verification note.</p>
+        <div data-calc-out="selectedExample"></div>
+        <p class="mini-label">Other examples in this pathway</p>
         <div class="block-estimate-grid" data-calc-out="blockEstimates"></div>
         <div class="calc-export-actions">
           <button class="button primary" type="button" data-export-reef-markdown>Download verification .md</button>
