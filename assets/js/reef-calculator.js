@@ -4,6 +4,8 @@
 
   const number = new Intl.NumberFormat("en-AU", { maximumFractionDigits: 0 });
   const decimal = new Intl.NumberFormat("en-AU", { maximumFractionDigits: 2 });
+  const preciseDecimal = new Intl.NumberFormat("en-AU", { maximumFractionDigits: 3 });
+  const oneDecimal = new Intl.NumberFormat("en-AU", { maximumFractionDigits: 1 });
   const FORMING_FACTOR = 1.15;
   const SANDMASS_TONNES_PER_M3 = 1.6;
 
@@ -23,6 +25,7 @@
   };
 
   const metres3 = (value) => {
+    if (Math.abs(value) < 1) return `${preciseDecimal.format(value)} m3`;
     if (Math.abs(value) < 100) return `${decimal.format(value)} m3`;
     return `${number.format(Math.round(value))} m3`;
   };
@@ -33,7 +36,8 @@
   };
 
   const count = (value) => number.format(Math.max(0, Math.round(value)));
-  const count1 = (value) => decimal.format(Math.max(0, value));
+  const count1 = (value) => oneDecimal.format(Math.max(0, value));
+  const setCount = (value) => value >= 10 ? count(value) : count1(value);
 
   const formatAdvance = (metresPerWeek) => {
     if (metresPerWeek >= 1000) return `${decimal.format(metresPerWeek / 1000)} km/week`;
@@ -66,6 +70,64 @@
 
   const makeList = (label, items) => {
     return `<div><strong>${label}</strong><p>${items.join(", ")}</p></div>`;
+  };
+
+  const blockScenarios = [
+    {
+      label: "Bus stop",
+      title: "Covered bus stop",
+      volume: 8,
+      text: "shade bases, seats, battery plinth, cable channels and movable edges",
+    },
+    {
+      label: "Jetty",
+      title: "Jetty footing set",
+      volume: 30,
+      text: "footing caps, service runs, spare blocks and inspection lids",
+    },
+    {
+      label: "School / hall",
+      title: "School or community upgrade",
+      volume: 45,
+      text: "ramps, shade edges, seating, storage and visible service blocks",
+    },
+    {
+      label: "Home",
+      title: "Small housing shell",
+      volume: 90,
+      text: "raised core, wet-area walls, service spine and modular porch pieces",
+    },
+    {
+      label: "Ballow Road",
+      title: "Sand sports clubhouse",
+      volume: 120,
+      text: "clubhouse walls, shade, counters, storage, screens and robot-readable block IDs",
+    },
+    {
+      label: "Ferry",
+      title: "Ferry terminal upgrade",
+      volume: 180,
+      text: "arrival edges, seats, lighting bases, wayfinding plinths and service corridors",
+    },
+    {
+      label: "Steep seating",
+      title: "Stadium seating on slopes",
+      volume: 250,
+      text: "terraced seating, retaining ribs, handrail bases and drain or service voids",
+    },
+    {
+      label: "Rock / living edge",
+      title: "Rock wall or living edge",
+      volume: 320,
+      text: "heavy interlocks, toe pieces, planted pockets, access steps and monitoring points",
+    },
+  ];
+
+  const batchComparison = (per100Useful, volume) => {
+    if (per100Useful <= 0) return "100 m batch is ready to compare";
+    const ratio = per100Useful / volume;
+    if (ratio >= 1) return `100 m batch: about ${setCount(ratio)} sets`;
+    return `Needs about ${setCount(volume / per100Useful)} x 100 m batches`;
   };
 
   const focusData = {
@@ -165,6 +227,7 @@
 
     const area = Math.PI * (diameter / 2) ** 2;
     const per100 = area * 100;
+    const per100Useful = per100 * (reefShare / 100) * FORMING_FACTOR;
     const weeklySpoil = area * weeklyAdvance;
     const weeklyDiverted = weeklySpoil * (reefShare / 100);
     const weeklyReef = weeklyDiverted * FORMING_FACTOR;
@@ -229,6 +292,21 @@
         makeList("Human skills that could grow", [...new Set([...skills, ...focus.skills])]),
         makeList("Records people could inspect", [...new Set([...records, ...focus.records])]),
       ].join("");
+    }
+
+    const blockEstimates = root.querySelector("[data-calc-out=\"blockEstimates\"]");
+    if (blockEstimates) {
+      blockEstimates.innerHTML = blockScenarios.map((item) => {
+        const blocks = moduleSize > 0 ? item.volume / moduleSize : 0;
+        const weeklySets = item.volume > 0 ? weeklyReef / item.volume : 0;
+        return `<article class="block-estimate-card">
+          <p class="mini-label">${item.label}</p>
+          <h4>${item.title}</h4>
+          <strong>${count(blocks)} unique blocks</strong>
+          <p>${metres3(item.volume)} sketch: ${item.text}.</p>
+          <em>${batchComparison(per100Useful, item.volume)}; current week: about ${setCount(weeklySets)} sets.</em>
+        </article>`;
+      }).join("");
     }
   };
 

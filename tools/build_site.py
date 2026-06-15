@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v6"
+ASSET_VERSION = "20260615-energy-superpower-v7"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -1336,9 +1336,11 @@ def reefs_body() -> str:
           <input id="reef-share" type="range" min="0" max="90" step="5" value="35" data-calc-input="reefShare">
         </div>
         <div class="range-field">
-          <label for="reef-preset">Media size preset <output data-calc-out="modulePreset">Quick interlock block</output></label>
+          <label for="reef-preset">Media size preset <output data-calc-out="modulePreset">4x Besser-style interlock block</output></label>
           <select id="reef-preset" data-calc-input="modulePreset">
-            <option value="0.08" selected>Quick interlock block - 0.08 m3</option>
+            <option value="0.028">2x Besser-style service block - 0.028 m3</option>
+            <option value="0.056" selected>4x Besser-style interlock block - 0.056 m3</option>
+            <option value="0.08">Larger robotic interlock block - 0.08 m3</option>
             <option value="0.02">Glass or silicate test batch - 0.02 m3</option>
             <option value="0.05">Tile or paver batch - 0.05 m3</option>
             <option value="0.18">Service-channel block - 0.18 m3</option>
@@ -1352,8 +1354,8 @@ def reefs_body() -> str:
           </select>
         </div>
         <div class="range-field">
-          <label for="reef-module">Average piece or media cell <output data-calc-out="moduleSize">0.08 m3</output></label>
-          <input id="reef-module" type="number" min="0.01" max="250" step="0.01" value="0.08" data-calc-input="moduleSize">
+          <label for="reef-module">Average piece or media cell <output data-calc-out="moduleSize">0.056 m3</output></label>
+          <input id="reef-module" type="number" min="0.01" max="250" step="0.001" value="0.056" data-calc-input="moduleSize">
         </div>
       </div>
       <div class="calc-choice-grid" aria-label="Material story">
@@ -1374,7 +1376,7 @@ def reefs_body() -> str:
         <article class="calc-panel calc-assumptions">
           <p class="mini-label">Everyday yardsticks</p>
           <h3>What do the numbers roughly mean?</h3>
-          <p>Uses simple public yardsticks: one wheelbarrow is about 0.1 m3, one concrete truck is about 6 m3, one twenty-foot shipping container is about 33 m3, and rough damp sandmass is counted as about 1.6 tonnes per m3.</p>
+          <p>Uses simple public yardsticks: one wheelbarrow is about 0.1 m3, one concrete truck is about 6 m3, one twenty-foot shipping container is about 33 m3, and rough damp sandmass is counted as about 1.6 tonnes per m3. A common 390 x 190 x 190 mm Besser-style block is about 0.014 m3 as an outside envelope, so 2x is about 0.028 m3 and 4x is about 0.056 m3.</p>
         </article>
       </div>
       <div class="calc-results">
@@ -1383,10 +1385,16 @@ def reefs_body() -> str:
         <article class="calc-metric"><span>Weekly tunnel volume</span><strong data-calc-out="weeklySpoil">10,179 m3</strong><p data-calc-out="weeklySpoilScale">about 308 shipping containers</p></article>
         <article class="calc-metric"><span>Weekly useful media</span><strong data-calc-out="weeklyReef">4,097 m3</strong><p data-calc-out="weeklyReefScale">about 124 shipping containers</p></article>
         <article class="calc-metric"><span>Sprint useful media</span><strong data-calc-out="stageReef">16,389 m3</strong><p data-calc-out="stageReefScale">about 497 shipping containers</p></article>
-        <article class="calc-metric"><span>Approx. pieces / week</span><strong data-calc-out="weeklyModules">51,212</strong></article>
+        <article class="calc-metric"><span>Approx. pieces / week</span><strong data-calc-out="weeklyModules">73,160</strong></article>
         <article class="calc-metric"><span>Rough weekly weight</span><strong data-calc-out="weeklyWeight">16,286 t</strong><p data-calc-out="weeklyWeightScale">about 814 loaded tip trucks</p></article>
         <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">14,251 m3</strong><p data-calc-out="avoidedScale">about 432 shipping containers</p></article>
       </div>
+      <article class="calc-panel block-estimate-panel">
+        <p class="mini-label">Quick interlock building sketches</p>
+        <h3>How many unique blocks could real island works need?</h3>
+        <p class="calc-note">These are early public yardsticks for robotic placement and block schedules. Counts use the selected media size, treat each block as potentially unique, and leave room for service holes, conduits, lifting points, repairs, disassembly and sea-level adaptation.</p>
+        <div class="block-estimate-grid" data-calc-out="blockEstimates"></div>
+      </article>
       <div class="calc-panels">
         <article class="calc-panel">
           <p class="mini-label">Time flow</p>

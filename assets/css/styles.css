@@ -690,7 +690,8 @@ h3 {
 .calc-controls,
 .calc-results,
 .calc-panels,
-.calc-choice-grid {
+.calc-choice-grid,
+.block-estimate-grid {
   display: grid;
   gap: 1rem;
 }
@@ -709,6 +710,10 @@ h3 {
 
 .calc-panels {
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+}
+
+.block-estimate-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .range-field,
@@ -845,6 +850,45 @@ h3 {
   display: block;
   font-family: var(--heading);
   margin-bottom: .2rem;
+}
+
+.block-estimate-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 2px);
+  display: grid;
+  gap: .45rem;
+  padding: .9rem;
+}
+
+.block-estimate-card h4,
+.block-estimate-card p,
+.block-estimate-card em {
+  margin: 0;
+}
+
+.block-estimate-card h4 {
+  color: var(--deep);
+  font-family: var(--heading);
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.block-estimate-card strong {
+  color: var(--bay);
+  font-family: var(--heading);
+  font-size: 1.2rem;
+}
+
+.block-estimate-card p,
+.block-estimate-card em {
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+.block-estimate-card em {
+  font-style: normal;
 }
 
 .sandworm-bridge {
@@ -1076,6 +1120,7 @@ textarea {
   .calc-results,
   .calc-panels,
   .calc-choice-grid,
+  .block-estimate-grid,
   .two-grid,
   .split,
   .builder-layout,
