@@ -863,7 +863,8 @@ h3 {
 
 .block-estimate-card h4,
 .block-estimate-card p,
-.block-estimate-card em {
+.block-estimate-card em,
+.block-estimate-card code {
   margin: 0;
 }
 
@@ -887,8 +888,58 @@ h3 {
   line-height: 1.45;
 }
 
+.block-estimate-card code {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: .45rem;
+  color: var(--bay);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: .82rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  padding: .45rem .55rem;
+}
+
 .block-estimate-card em {
   font-style: normal;
+}
+
+.calc-export-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.calc-export-actions span {
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.markdown-preview {
+  border-top: 1px solid var(--line);
+  padding-top: .75rem;
+}
+
+.markdown-preview summary {
+  color: var(--bay);
+  cursor: pointer;
+  font-family: var(--heading);
+  font-weight: 900;
+}
+
+.markdown-preview textarea {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 2px);
+  color: var(--deep);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: .86rem;
+  line-height: 1.45;
+  margin-top: .75rem;
+  min-height: 320px;
+  padding: .8rem;
+  width: 100%;
 }
 
 .sandworm-bridge {

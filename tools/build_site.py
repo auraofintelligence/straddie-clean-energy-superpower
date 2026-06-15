@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v7"
+ASSET_VERSION = "20260615-energy-superpower-v8"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -1394,6 +1394,14 @@ def reefs_body() -> str:
         <h3>How many unique blocks could real island works need?</h3>
         <p class="calc-note">These are early public yardsticks for robotic placement and block schedules. Counts use the selected media size, treat each block as potentially unique, and leave room for service holes, conduits, lifting points, repairs, disassembly and sea-level adaptation.</p>
         <div class="block-estimate-grid" data-calc-out="blockEstimates"></div>
+        <div class="calc-export-actions">
+          <button class="button primary" type="button" data-export-reef-markdown>Download verification .md</button>
+          <span data-calc-out="exportStatus">Configure the calculator, then download a Markdown note for verification.</span>
+        </div>
+        <details class="markdown-preview">
+          <summary>Preview verification Markdown</summary>
+          <textarea data-reef-markdown-preview readonly></textarea>
+        </details>
       </article>
       <div class="calc-panels">
         <article class="calc-panel">

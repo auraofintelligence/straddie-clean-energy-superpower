@@ -8,6 +8,10 @@
   const oneDecimal = new Intl.NumberFormat("en-AU", { maximumFractionDigits: 1 });
   const FORMING_FACTOR = 1.15;
   const SANDMASS_TONNES_PER_M3 = 1.6;
+  const BESSER_LENGTH_M = 0.39;
+  const BESSER_WIDTH_M = 0.19;
+  const BESSER_HEIGHT_M = 0.19;
+  const BESSER_ENVELOPE_M3 = BESSER_LENGTH_M * BESSER_WIDTH_M * BESSER_HEIGHT_M;
 
   const inputs = {
     diameter: root.querySelector('[data-calc-input="diameter"]'),
@@ -18,6 +22,9 @@
     moduleSize: root.querySelector('[data-calc-input="moduleSize"]'),
     focus: root.querySelector('[data-calc-input="focus"]'),
   };
+  const exportButton = root.querySelector("[data-export-reef-markdown]");
+  const markdownPreview = root.querySelector("[data-reef-markdown-preview]");
+  let latestState = null;
 
   const output = (name, value) => {
     const target = root.querySelector(`[data-calc-out="${name}"]`);
@@ -30,6 +37,11 @@
     return `${number.format(Math.round(value))} m3`;
   };
 
+  const metres2 = (value) => {
+    if (Math.abs(value) < 100) return `${decimal.format(value)} m2`;
+    return `${number.format(Math.round(value))} m2`;
+  };
+
   const tonnes = (value) => {
     if (Math.abs(value) < 100) return `${decimal.format(value)} t`;
     return `${number.format(Math.round(value))} t`;
@@ -38,6 +50,7 @@
   const count = (value) => number.format(Math.max(0, Math.round(value)));
   const count1 = (value) => oneDecimal.format(Math.max(0, value));
   const setCount = (value) => value >= 10 ? count(value) : count1(value);
+  const raw = (value, digits = 3) => Number(value.toFixed(digits)).toString();
 
   const formatAdvance = (metresPerWeek) => {
     if (metresPerWeek >= 1000) return `${decimal.format(metresPerWeek / 1000)} km/week`;
@@ -129,6 +142,13 @@
     if (ratio >= 1) return `100 m batch: about ${setCount(ratio)} sets`;
     return `Needs about ${setCount(volume / per100Useful)} x 100 m batches`;
   };
+
+  const blockFormula = (volume, moduleSize) => {
+    const blocks = moduleSize > 0 ? volume / moduleSize : 0;
+    return `${raw(volume)} m3 / ${raw(moduleSize)} m3 = ${count(blocks)} blocks`;
+  };
+
+  const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
   const focusData = {
     mixed: {
@@ -236,6 +256,17 @@
     const weeklyPieces = moduleSize > 0 ? weeklyReef / moduleSize : 0;
     const weeklyWeight = weeklySpoil * SANDMASS_TONNES_PER_M3;
     const timePer100Hours = weeklyAdvance > 0 ? (100 / weeklyAdvance) * 7 * 24 : 0;
+    const scenarioResults = blockScenarios.map((item) => {
+      const blocks = moduleSize > 0 ? item.volume / moduleSize : 0;
+      const weeklySets = item.volume > 0 ? weeklyReef / item.volume : 0;
+      return {
+        ...item,
+        blocks,
+        weeklySets,
+        formula: blockFormula(item.volume, moduleSize),
+        batch: batchComparison(per100Useful, item.volume),
+      };
+    });
 
     output("diameter", `${decimal.format(diameter)} m`);
     output("weeklyAdvance", formatAdvance(weeklyAdvance));
@@ -296,18 +327,126 @@
 
     const blockEstimates = root.querySelector("[data-calc-out=\"blockEstimates\"]");
     if (blockEstimates) {
-      blockEstimates.innerHTML = blockScenarios.map((item) => {
-        const blocks = moduleSize > 0 ? item.volume / moduleSize : 0;
-        const weeklySets = item.volume > 0 ? weeklyReef / item.volume : 0;
+      blockEstimates.innerHTML = scenarioResults.map((item) => {
         return `<article class="block-estimate-card">
           <p class="mini-label">${item.label}</p>
           <h4>${item.title}</h4>
-          <strong>${count(blocks)} unique blocks</strong>
+          <strong>${count(item.blocks)} unique blocks</strong>
           <p>${metres3(item.volume)} sketch: ${item.text}.</p>
-          <em>${batchComparison(per100Useful, item.volume)}; current week: about ${setCount(weeklySets)} sets.</em>
+          <code>Formula: ${item.formula}</code>
+          <em>${item.batch}; current week: about ${setCount(item.weeklySets)} sets.</em>
         </article>`;
       }).join("");
     }
+
+    latestState = {
+      diameter,
+      weeklyAdvance,
+      weeks,
+      reefShare,
+      moduleSize,
+      focus,
+      presetLabel,
+      area,
+      per100,
+      per100Useful,
+      weeklySpoil,
+      weeklyDiverted,
+      weeklyReef,
+      stageReef,
+      stageDiverted,
+      weeklyPieces,
+      weeklyWeight,
+      timePer100Hours,
+      scenarioResults,
+      generatedAt: new Date(),
+    };
+    if (markdownPreview) markdownPreview.value = markdownFromState(latestState);
+  };
+
+  const markdownFromState = (state) => {
+    const generated = state.generatedAt.toLocaleString("en-AU");
+    const lines = [
+      "# Straddie Reef, Tunnel Media And Quick-Block Verification Note",
+      "",
+      `Generated: ${generated}`,
+      `Source page: ${window.location.href.split("#")[0]}`,
+      "",
+      "This is a public calculation note, not an engineering sign-off. It captures the viewer's current calculator settings so a builder, engineer, maker-space, council team, neighbour group or grant lab can check the assumptions.",
+      "",
+      "## Current Calculator Settings",
+      "",
+      `- Tunnel diameter: ${decimal.format(state.diameter)} m`,
+      `- Tunnel advance: ${formatAdvance(state.weeklyAdvance)}`,
+      `- Sprint length: ${number.format(state.weeks)} week${state.weeks === 1 ? "" : "s"}`,
+      `- Material converted to useful media: ${number.format(state.reefShare)}%`,
+      `- Media preset: ${state.presetLabel}`,
+      `- Selected piece or media cell: ${metres3(state.moduleSize)}`,
+      `- Material story: ${state.focus.label}`,
+      "",
+      "## Shared Assumptions",
+      "",
+      `- Forming factor: ${FORMING_FACTOR}x useful formed media from diverted raw material.`,
+      `- Rough damp sandmass: ${SANDMASS_TONNES_PER_M3} tonnes per m3.`,
+      "- Everyday volume yardsticks: wheelbarrow 0.1 m3, concrete truck 6 m3, twenty-foot container 33 m3, Olympic pool 2,500 m3.",
+      `- Besser-style reference envelope: ${BESSER_LENGTH_M} m x ${BESSER_WIDTH_M} m x ${BESSER_HEIGHT_M} m = ${raw(BESSER_ENVELOPE_M3, 6)} m3.`,
+      `- 2x Besser-style envelope: ${raw(BESSER_ENVELOPE_M3 * 2, 3)} m3.`,
+      `- 4x Besser-style envelope: ${raw(BESSER_ENVELOPE_M3 * 4, 3)} m3.`,
+      "- Service holes, lifting points, conduits, drainage, interlocks and material recipes can change the final mass and engineering method. This note counts block envelopes for early verification.",
+      "",
+      "## Core Formulas",
+      "",
+      `- Tunnel cross-section area = pi x (${decimal.format(state.diameter)} / 2)^2 = ${metres2(state.area)}.`,
+      `- 100 m tunnel volume = ${metres2(state.area)} x 100 m = ${metres3(state.per100)} (${volumeScale(state.per100)}).`,
+      `- Useful media per 100 m = ${metres3(state.per100)} x ${number.format(state.reefShare)}% x ${FORMING_FACTOR} = ${metres3(state.per100Useful)}.`,
+      `- Weekly tunnel volume = ${metres2(state.area)} x ${number.format(state.weeklyAdvance)} m/week = ${metres3(state.weeklySpoil)} (${volumeScale(state.weeklySpoil)}).`,
+      `- Weekly useful media = ${metres3(state.weeklySpoil)} x ${number.format(state.reefShare)}% x ${FORMING_FACTOR} = ${metres3(state.weeklyReef)} (${volumeScale(state.weeklyReef)}).`,
+      `- Sprint useful media = ${metres3(state.weeklyReef)} x ${number.format(state.weeks)} = ${metres3(state.stageReef)} (${volumeScale(state.stageReef)}).`,
+      `- Pieces per week = ${metres3(state.weeklyReef)} / ${metres3(state.moduleSize)} = ${count(state.weeklyPieces)} pieces.`,
+      `- Rough weekly weight = ${metres3(state.weeklySpoil)} x ${SANDMASS_TONNES_PER_M3} t/m3 = ${tonnes(state.weeklyWeight)} (${weightScale(state.weeklyWeight)}).`,
+      "",
+      "## Quick Interlock Building Sketches",
+      "",
+      "Each example uses: sketch volume / selected block envelope = approximate unique blocks.",
+      "",
+      "| Example | Sketch volume | Formula | Approx. blocks | 100 m batch comparison | Current week |",
+      "| --- | ---: | --- | ---: | --- | --- |",
+      ...state.scenarioResults.map((item) => `| ${item.title} | ${metres3(item.volume)} | ${item.formula} | ${count(item.blocks)} | ${item.batch} | about ${setCount(item.weeklySets)} sets |`),
+      "",
+      "## Verification Questions",
+      "",
+      "- Which parts are structural, non-structural, landscape, service, seating, reef, footing or temporary public-space pieces?",
+      "- Which blocks need service holes, conduits, drainage, lifting points, RFID or QR passports, interlocks, inspection lids or custom geometry?",
+      "- What material recipe, curing path, testing protocol and durability target would make each block family inspectable?",
+      "- Which dimensions should be changed after site survey, access, robotics, maintenance, storm, sea-level, corrosion and community-use checks?",
+      "- What data should be exported back into the Sandworm subterranean systems repo or a local digital twin?",
+      "",
+      "## Related Public Context",
+      "",
+      "- Straddie Clean Energy Superpower reef calculator",
+      "- Sandworm Subterranean Systems spoil-loop and digital-twin work",
+      "- Straddie Maker-Space Lab material recipe work",
+      "- Dunwich / Gumpi Ferry Terminal Open Data Lab",
+      "- Ballow Road Sand & Screen Hub",
+    ];
+
+    return `${lines.join("\n")}\n`;
+  };
+
+  const downloadMarkdown = () => {
+    update();
+    if (!latestState) return;
+
+    const blob = new Blob([markdownFromState(latestState)], { type: "text/markdown;charset=utf-8" });
+    const link = document.createElement("a");
+    const focusLabel = slug(latestState.focus.label) || "material";
+    link.href = URL.createObjectURL(blob);
+    link.download = `straddie-reef-block-verification-${focusLabel}.md`;
+    document.body.appendChild(link);
+    link.click();
+    URL.revokeObjectURL(link.href);
+    link.remove();
+    output("exportStatus", "Markdown verification note downloaded.");
   };
 
   Object.entries(inputs).forEach(([name, input]) => {
@@ -325,6 +464,8 @@
       update();
     });
   }
+
+  if (exportButton) exportButton.addEventListener("click", downloadMarkdown);
 
   updateSandwormBridge();
   update();
