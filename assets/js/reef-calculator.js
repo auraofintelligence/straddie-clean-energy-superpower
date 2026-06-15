@@ -335,7 +335,7 @@
     const selectedScale = root.querySelector('[data-calc-input="scenarioScale"]:checked')?.value || "medium";
     const scenarioScale = scaleBands[selectedScale] || scaleBands.medium;
     const presetLabel = inputs.modulePreset && inputs.modulePreset.selectedOptions.length
-      ? inputs.modulePreset.selectedOptions[0].textContent.replace(/\s+-\s+.*$/, "")
+      ? inputs.modulePreset.selectedOptions[0].textContent.replace(/\s+(?:-\s+.*|\(.*\))$/, "")
       : "Custom size";
 
     const area = Math.PI * (diameter / 2) ** 2;

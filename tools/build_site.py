@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v10"
+ASSET_VERSION = "20260615-energy-superpower-v11"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -1338,18 +1338,18 @@ def reefs_body() -> str:
         <div class="range-field">
           <label for="reef-preset">Media size preset <output data-calc-out="modulePreset">4x Besser-style interlock block</output></label>
           <select id="reef-preset" data-calc-input="modulePreset">
-            <option value="0.028">2x Besser-style service block - 0.028 m3</option>
-            <option value="0.056" selected>4x Besser-style interlock block - 0.056 m3</option>
-            <option value="0.08">Larger robotic interlock block - 0.08 m3</option>
-            <option value="0.02">Glass or silicate test batch - 0.02 m3</option>
-            <option value="0.05">Tile or paver batch - 0.05 m3</option>
-            <option value="0.18">Service-channel block - 0.18 m3</option>
-            <option value="0.35">Stone-circle seat block - 0.35 m3</option>
-            <option value="0.75">Small shoreline cell - 0.75 m3</option>
-            <option value="1.2">Reef basket or bag - 1.2 m3</option>
-            <option value="2.5">Large geotextile cell - 2.5 m3</option>
-            <option value="5">Small reef pod - 5 m3</option>
-            <option value="25">Large reef module - 25 m3</option>
+            <option value="0.028">2x service block (0.028 m3)</option>
+            <option value="0.056" selected>4x interlock block (0.056 m3)</option>
+            <option value="0.08">Robotic interlock block (0.08 m3)</option>
+            <option value="0.02">Glass or silicate batch (0.02 m3)</option>
+            <option value="0.05">Tile or paver batch (0.05 m3)</option>
+            <option value="0.18">Service-channel block (0.18 m3)</option>
+            <option value="0.35">Stone-circle seat block (0.35 m3)</option>
+            <option value="0.75">Small shoreline cell (0.75 m3)</option>
+            <option value="1.2">Reef basket or bag (1.2 m3)</option>
+            <option value="2.5">Large geotextile cell (2.5 m3)</option>
+            <option value="5">Small reef pod (5 m3)</option>
+            <option value="25">Large reef module (25 m3)</option>
             <option value="custom">Custom size</option>
           </select>
         </div>
