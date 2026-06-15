@@ -1666,7 +1666,7 @@ def render_shell(page_id: str, title: str, description: str, body: str, path: st
     base = "../" if "/" in path else ""
     canonical = BASE_URL + path
     css = base + f"assets/css/styles.css?v={ASSET_VERSION}"
-    favicon = base + "assets/img/favicon.svg"
+    favicon = base + f"assets/img/favicon.svg?v={ASSET_VERSION}"
     site_data = base + f"assets/js/site-data.js?v={ASSET_VERSION}"
     site_nav = base + f"assets/js/site-nav.js?v={ASSET_VERSION}"
     image_path = hero_image(page_id)
