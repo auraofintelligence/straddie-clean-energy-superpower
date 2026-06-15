@@ -690,7 +690,7 @@ h3 {
 .calc-controls,
 .calc-results,
 .calc-panels,
-.calc-toggle-grid {
+.calc-choice-grid {
   display: grid;
   gap: 1rem;
 }
@@ -699,9 +699,12 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.calc-results,
-.calc-toggle-grid {
+.calc-results {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.calc-choice-grid {
+  grid-template-columns: minmax(280px, .85fr) minmax(320px, 1.15fr);
 }
 
 .calc-panels {
@@ -709,7 +712,6 @@ h3 {
 }
 
 .range-field,
-.toggle-card,
 .calc-metric,
 .calc-panel,
 .sandworm-bridge {
@@ -720,7 +722,6 @@ h3 {
 }
 
 .range-field,
-.toggle-card,
 .calc-metric,
 .calc-panel,
 .sandworm-bridge {
@@ -733,7 +734,6 @@ h3 {
 }
 
 .range-field label,
-.toggle-card span,
 .calc-metric span {
   color: var(--deep);
   font-family: var(--heading);
@@ -766,23 +766,16 @@ h3 {
   width: 100%;
 }
 
-.toggle-card {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  gap: .65rem;
-}
-
-.toggle-card input {
-  accent-color: var(--bay);
-  height: 1.15rem;
-  min-height: 0;
-  width: 1.15rem;
-}
-
 .calc-metric {
   display: grid;
   gap: .35rem;
+}
+
+.calc-metric p {
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .calc-metric strong {
@@ -795,6 +788,10 @@ h3 {
 .calc-panel {
   display: grid;
   gap: .85rem;
+}
+
+.calc-assumptions {
+  align-content: start;
 }
 
 .timeline-bars {
@@ -1071,7 +1068,7 @@ textarea {
   .calc-controls,
   .calc-results,
   .calc-panels,
-  .calc-toggle-grid,
+  .calc-choice-grid,
   .two-grid,
   .split,
   .builder-layout,

@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v4"
+ASSET_VERSION = "20260615-energy-superpower-v5"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -1249,13 +1249,13 @@ def reefs_body() -> str:
         {"label": "Sandworm", "title": "How does the tunnel-spoil loop join this page?", "text": "Could the Sandworm spoil-loop builder supply the material-stream question while this page calculates volume, reef media, skills, equipment and timing?", "href": "https://auraofintelligence.github.io/sandworm-subterranean-systems/builders/spoil-loop-brief.html", "action": "Open builder"},
     ]
     scale_cards = [
-        {"label": "Workbench", "title": "What if the first unit is smaller than one cubic metre?", "text": "Could glass batches, silicate samples, tiles, pavers, handles, service lids and quick interlock blocks start at 0.02-0.35 m3 so people can touch the material story before anyone imagines a reef field?", "href": "https://auraofintelligence.github.io/straddie-makerspace-lab/sand.html", "action": "Open sand lab"},
-        {"label": "Geotextile cells", "title": "Could small shoreline cells teach repairable scale?", "text": "Australian geotextile shoreline work includes 0.75 m3 and 2.5 m3 containers. Could those sizes help people compare lift, fill, handling, placement, repair, reuse and community inspection?", "href": "https://library.geosyntheticssociety.org/wp-content/uploads/resources/proceedings/D.01%20Geotextile%20Sand%20Containers%20Innovative%20Shoreline%20Protection%20Systems.pdf", "action": "Open paper"},
-        {"label": "Moreton Bay", "title": "What does a 150 m3 rock start let people compare?", "text": "Queensland's Harry Atkinson reef began with 150 m3 of quarried rock and later grew through reef balls, pipes, vessels and fish boxes. Could that help Straddie compare modules, patterns and staged learning?", "href": "https://parks.qld.gov.au/parks/moreton-bay/zoning/trial_artificial_reef_program", "action": "Open source"},
-        {"label": "North Stradbroke", "title": "What is already offshore near Adder Rock?", "text": "Queensland lists a 30 hectare North Stradbroke Island Artificial Reef with 38, 17 tonne Arrowhead modules arranged in five clusters. Could that nearby reference become a respectful comparison point?", "href": "https://parks.qld.gov.au/parks/moreton-bay/zoning/trial_artificial_reef_program", "action": "Open source"},
-        {"label": "Great Sandy", "title": "What can patterned structures teach?", "text": "Great Sandy Marine Park's newer reefs include 88 bombora structures and reef pyramids with 80 m3 internal volume. Could void shape, pattern, spacing and monitoring matter as much as raw material volume?", "href": "https://parks.qld.gov.au/parks/great-sandy-marine/management-and-zoning/artificial-reefs", "action": "Open source"},
-        {"label": "Palm Beach", "title": "What does 60,000 tonnes of rock put in perspective?", "text": "Gold Coast's Palm Beach reef is a large surf-and-erosion reference: 60,000 tonnes of rock offshore. Could a Straddie calculator let people move between tiny blocks, bags, pods and major placements without losing scale?", "href": "https://www.goldcoast.qld.gov.au/Environment-sustainability/Protecting-our-environment/Managing-our-beaches/Seawalls-artificial-reefs", "action": "Open source"},
-        {"label": "Windara", "title": "What does 10,000 tonnes over 20 hectares teach?", "text": "Windara Reef used 10,000 tonnes of limestone across 159 reef segments and 20 hectares. Could oyster habitat, water quality, fishing, monitoring and community story become one shared material map?", "href": "https://www.marineparks.sa.gov.au/enjoy/fishing/artificial-reef-project", "action": "Open source"},
+        {"label": "Workbench", "title": "What if the first unit is smaller than one cubic metre?", "text": "Could glass batches, silicate samples, tiles, pavers, handles, service lids and quick interlock blocks start at 0.02-0.35 m3: roughly from a bucket or two through to a few wheelbarrows?", "href": "https://auraofintelligence.github.io/straddie-makerspace-lab/sand.html", "action": "Open sand lab"},
+        {"label": "Geotextile cells", "title": "Could small shoreline cells teach repairable scale?", "text": "Australian geotextile shoreline work includes 0.75 m3 and 2.5 m3 containers: about 8 to 25 wheelbarrows. Could that scale help people compare lift, fill, placement and repair?", "href": "https://library.geosyntheticssociety.org/wp-content/uploads/resources/proceedings/D.01%20Geotextile%20Sand%20Containers%20Innovative%20Shoreline%20Protection%20Systems.pdf", "action": "Open paper"},
+        {"label": "Moreton Bay", "title": "What does a 150 m3 rock start let people compare?", "text": "Queensland's Harry Atkinson reef began with 150 m3 of quarried rock: about 25 concrete-truck loads or 5 twenty-foot shipping containers before later reef balls, pipes, vessels and fish boxes.", "href": "https://parks.qld.gov.au/parks/moreton-bay/zoning/trial_artificial_reef_program", "action": "Open source"},
+        {"label": "North Stradbroke", "title": "What is already offshore near Adder Rock?", "text": "Queensland lists a 30 hectare North Stradbroke Island Artificial Reef with 38, 17 tonne Arrowhead modules: about 646 tonnes, or roughly 32 loaded 20 tonne tip-truck loads.", "href": "https://parks.qld.gov.au/parks/moreton-bay/zoning/trial_artificial_reef_program", "action": "Open source"},
+        {"label": "Great Sandy", "title": "What can patterned structures teach?", "text": "Great Sandy Marine Park's newer reefs include 88 bombora structures and reef pyramids with 80 m3 internal volume: about 13 concrete-truck loads each.", "href": "https://parks.qld.gov.au/parks/great-sandy-marine/management-and-zoning/artificial-reefs", "action": "Open source"},
+        {"label": "Palm Beach", "title": "What does 60,000 tonnes of rock put in perspective?", "text": "Gold Coast's Palm Beach reef is a large surf-and-erosion reference: 60,000 tonnes offshore, roughly 3,000 loaded 20 tonne tip-truck loads.", "href": "https://www.goldcoast.qld.gov.au/Environment-sustainability/Protecting-our-environment/Managing-our-beaches/Seawalls-artificial-reefs", "action": "Open source"},
+        {"label": "Windara", "title": "What does 10,000 tonnes over 20 hectares teach?", "text": "Windara Reef used 10,000 tonnes of limestone across 159 reef segments and 20 hectares: about 500 loaded 20 tonne tip-truck loads, arranged as habitat rather than a pile.", "href": "https://www.marineparks.sa.gov.au/enjoy/fishing/artificial-reef-project", "action": "Open source"},
     ]
     questions = [
         {"label": "Oyster reef", "title": "Could shellfish farming and habitat learn together?", "text": "Where could recycled shell, reef base, spat, water quality, working boats, monitoring and local food knowledge meet without pretending one shape fits every shore?"},
@@ -1304,7 +1304,7 @@ def reefs_body() -> str:
     <div class="section-heading">
       <p class="section-label">Scale comparisons</p>
       <h2>How big are the pieces, cells and reef fields humans already use?</h2>
-      <p class="lede muted">Known projects use different public units: cubic metres, tonnes, structure counts, hectares and site footprints. Keeping those units visible helps people compare without pretending every reef, block, bag, tunnel or island idea belongs on the same ruler.</p>
+      <p class="lede muted">Known projects use different public units: cubic metres, tonnes, structure counts, hectares and site footprints. The rough everyday translations below are only yardsticks, but they help the numbers become visible.</p>
     </div>
 """ + card_grid(scale_cards) + """
   </div>
@@ -1335,10 +1335,6 @@ def reefs_body() -> str:
           <input id="reef-share" type="range" min="0" max="90" step="5" value="35" data-calc-input="reefShare">
         </div>
         <div class="range-field">
-          <label for="reef-bulking">Bulking or formed-media factor <output data-calc-out="bulking">1.15x</output></label>
-          <input id="reef-bulking" type="range" min="0.8" max="1.6" step="0.05" value="1.15" data-calc-input="bulking">
-        </div>
-        <div class="range-field">
           <label for="reef-preset">Media size preset <output data-calc-out="modulePreset">Quick interlock block</output></label>
           <select id="reef-preset" data-calc-input="modulePreset">
             <option value="0.08" selected>Quick interlock block - 0.08 m3</option>
@@ -1359,26 +1355,36 @@ def reefs_body() -> str:
           <input id="reef-module" type="number" min="0.01" max="250" step="0.01" value="0.08" data-calc-input="moduleSize">
         </div>
       </div>
-      <div class="calc-toggle-grid" aria-label="Material pathways">
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="oyster" checked><span>Oyster / shellfish reef</span></label>
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="living" checked><span>Living shoreline</span></label>
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="surf" checked><span>Surf bank geometry</span></label>
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="dune"><span>Stable dune support</span></label>
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="island"><span>Artificial island / platform</span></label>
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="surface" checked><span>Quick-fit surface blocks</span></label>
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="construction" checked><span>Construction interlock blocks</span></label>
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="meeting"><span>Stone circle / community pieces</span></label>
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="homes"><span>Glass / silicate home products</span></label>
-        <label class="toggle-card"><input type="checkbox" data-calc-toggle="automation" checked><span>Automation and sensors</span></label>
+      <div class="calc-choice-grid" aria-label="Material story">
+        <div class="range-field">
+          <label for="reef-focus">What could this batch become? <output data-calc-out="focusLabel">Mixed island portfolio</output></label>
+          <select id="reef-focus" data-calc-input="focus">
+            <option value="mixed" selected>Mixed island portfolio</option>
+            <option value="oyster">Oyster and shellfish reef</option>
+            <option value="living">Living shoreline</option>
+            <option value="surf">Surf bank geometry</option>
+            <option value="construction">Quick-fit construction blocks</option>
+            <option value="meeting">Stone circle and civic pieces</option>
+            <option value="homes">Glass, silicate and home products</option>
+            <option value="dune">Stable dune support</option>
+            <option value="island">Artificial island or platform question</option>
+          </select>
+        </div>
+        <article class="calc-panel calc-assumptions">
+          <p class="mini-label">Everyday yardsticks</p>
+          <h3>What do the numbers roughly mean?</h3>
+          <p>Uses simple public yardsticks: one wheelbarrow is about 0.1 m3, one concrete truck is about 6 m3, one twenty-foot shipping container is about 33 m3, and rough damp sandmass is counted as about 1.6 tonnes per m3.</p>
+        </article>
       </div>
       <div class="calc-results">
-        <article class="calc-metric"><span>Per 100 m tunnel</span><strong data-calc-out="per100">1,018 m3</strong></article>
+        <article class="calc-metric"><span>Per 100 m tunnel</span><strong data-calc-out="per100">1,018 m3</strong><p data-calc-out="per100Scale">about 31 shipping containers</p></article>
         <article class="calc-metric"><span>Time to earn 100 m</span><strong data-calc-out="timePer100">16.8 h</strong></article>
-        <article class="calc-metric"><span>Weekly tunnel volume</span><strong data-calc-out="weeklySpoil">10,179 m3</strong></article>
-        <article class="calc-metric"><span>Weekly useful media</span><strong data-calc-out="weeklyReef">4,097 m3</strong></article>
-        <article class="calc-metric"><span>Sprint useful media</span><strong data-calc-out="stageReef">16,389 m3</strong></article>
+        <article class="calc-metric"><span>Weekly tunnel volume</span><strong data-calc-out="weeklySpoil">10,179 m3</strong><p data-calc-out="weeklySpoilScale">about 308 shipping containers</p></article>
+        <article class="calc-metric"><span>Weekly useful media</span><strong data-calc-out="weeklyReef">4,097 m3</strong><p data-calc-out="weeklyReefScale">about 124 shipping containers</p></article>
+        <article class="calc-metric"><span>Sprint useful media</span><strong data-calc-out="stageReef">16,389 m3</strong><p data-calc-out="stageReefScale">about 497 shipping containers</p></article>
         <article class="calc-metric"><span>Approx. pieces / week</span><strong data-calc-out="weeklyModules">51,212</strong></article>
-        <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">14,251 m3</strong></article>
+        <article class="calc-metric"><span>Rough weekly weight</span><strong data-calc-out="weeklyWeight">16,286 t</strong><p data-calc-out="weeklyWeightScale">about 814 loaded tip trucks</p></article>
+        <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">14,251 m3</strong><p data-calc-out="avoidedScale">about 432 shipping containers</p></article>
       </div>
       <div class="calc-panels">
         <article class="calc-panel">
