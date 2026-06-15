@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v3"
+ASSET_VERSION = "20260615-energy-superpower-v4"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -93,7 +93,7 @@ PAGES = [
         "label": "Network",
         "href": "network.html",
         "title": "Linked Local Labs",
-        "description": "Deep links to the maker-space, Sandworm, ferry terminal lab, grants lab, community wealth and mutuals, and Ready S.E.T. Trust Hub.",
+        "description": "Deep links to the maker-space, Sandworm, ferry terminal lab, grants lab, community wealth and mutuals, Legal Memory Workbench, and Ready S.E.T. Trust Hub.",
     },
     {
         "id": "wealth",
@@ -197,6 +197,12 @@ COMPANION_LINKS = [
         "site": "https://auraofintelligence.github.io/ready-set-co-op-trust-hub/",
         "repo": "https://github.com/auraofintelligence/ready-set-co-op-trust-hub",
         "summary": "The trust, jobs, media, co-working and co-op pathway that could help people enter the energy work voluntarily.",
+    },
+    {
+        "title": "Legal Memory Workbench",
+        "site": "https://auraofintelligence.github.io/legal-memory-workbench/",
+        "repo": "https://github.com/auraofintelligence/legal-memory-workbench",
+        "summary": "The legal-information preparation layer for AI-ready notes, source trails, jurisdiction markers, evidence gaps and local private memory.",
     },
     {
         "title": "Ballow Road Sand & Screen Hub",
@@ -557,6 +563,18 @@ SOURCE_LINKS = [
         "use": "Shows artificial reef sites already operating in Moreton Bay Marine Park for habitat and recreational fishing value.",
     },
     {
+        "title": "Moreton Bay artificial reefs",
+        "url": "https://parks.qld.gov.au/parks/moreton-bay/zoning/trial_artificial_reef_program",
+        "publisher": "Queensland Parks",
+        "use": "Provides reef-site scale examples including 150 cubic metres of quarried rock, reef balls, pipes, vessels, fish boxes, the 30 hectare North Stradbroke artificial reef and site footprints.",
+    },
+    {
+        "title": "Great Sandy Marine Park artificial reefs",
+        "url": "https://parks.qld.gov.au/parks/great-sandy-marine/management-and-zoning/artificial-reefs",
+        "publisher": "Queensland Parks",
+        "use": "Shows a current Queensland example using 88 bombora structures and 80 cubic metre reef pyramid structures as patterned habitat geometry.",
+    },
+    {
         "title": "Restoring Australia's lost shellfish reefs",
         "url": "https://www.nature.org/en-us/about-us/where-we-work/asia-pacific/australia/stories-in-australia/restoring-australias-lost-shellfish-reefs/",
         "publisher": "The Nature Conservancy",
@@ -569,10 +587,22 @@ SOURCE_LINKS = [
         "use": "Australian oyster reef reference for restored shellfish reef benefits, including fish, water quality and biodiversity.",
     },
     {
+        "title": "Shellfish reef projects",
+        "url": "https://www.marineparks.sa.gov.au/enjoy/fishing/artificial-reef-project",
+        "publisher": "South Australian Marine Parks",
+        "use": "Gives a public scale reference for Windara: 10,000 tonnes of limestone across 159 reef segments and 20 hectares.",
+    },
+    {
         "title": "Moreton Bay Shellfish Reef Restoration",
         "url": "https://ozfish.org.au/projects/moreton-bay-shellfish-reef-restoration/",
         "publisher": "OzFish Unlimited",
         "use": "Connects Moreton Bay shellfish reef restoration to recycled shells, community work and bay habitat recovery.",
+    },
+    {
+        "title": "Geotextile Sand Containers",
+        "url": "https://library.geosyntheticssociety.org/wp-content/uploads/resources/proceedings/D.01%20Geotextile%20Sand%20Containers%20Innovative%20Shoreline%20Protection%20Systems.pdf",
+        "publisher": "Geosynthetics International Society / Geofabrics authors",
+        "use": "Provides small geotextile container scale references around 0.75 and 2.5 cubic metres for shoreline and reef-media comparison.",
     },
     {
         "title": "Living Shorelines",
@@ -849,7 +879,7 @@ def repo_grid() -> str:
             '<article class="repo-card">'
             f'<p class="mini-label">Source bridge</p><h3>{e(link["title"])}</h3>'
             f'<p>{e(link["summary"])}</p>'
-            f'<p><a class="text-link" href="{e(link["site"])}">Live site</a> '
+            f'<p class="repo-actions"><a class="text-link" href="{e(link["site"])}">Live site</a> '
             f'<a class="text-link" href="{e(link["repo"])}">Source repo</a></p>'
             '</article>'
         )
@@ -912,7 +942,7 @@ def home_body() -> str:
     <div class="section-heading">
       <p class="section-label">Linked ecosystem</p>
       <h2>The energy atlas plugs into existing local workbenches.</h2>
-      <p class="lede">Maker-space, Sandworm, ferry terminal lab, grants lab, community wealth and Ready S.E.T. Trust Hub already hold the right shape: practical tests, public sources, builders, trust and local benefit.</p>
+      <p class="lede">Maker-space, Sandworm, ferry terminal lab, grants lab, community wealth, Legal Memory Workbench and Ready S.E.T. Trust Hub already hold the right shape: practical tests, public sources, builders, trust and local benefit.</p>
     </div>
 """ + repo_grid() + """
   </div>
@@ -1218,6 +1248,15 @@ def reefs_body() -> str:
         {"label": "Reclamation", "title": "What can Port of Brisbane teach about staged media placement?", "text": "Could large-scale reclamation help people ask better questions about walls, ground improvement, material logistics, settlement, monitoring and public evidence?", "href": "https://www.portbris.com.au/major-projects/fpe", "action": "Open source"},
         {"label": "Sandworm", "title": "How does the tunnel-spoil loop join this page?", "text": "Could the Sandworm spoil-loop builder supply the material-stream question while this page calculates volume, reef media, skills, equipment and timing?", "href": "https://auraofintelligence.github.io/sandworm-subterranean-systems/builders/spoil-loop-brief.html", "action": "Open builder"},
     ]
+    scale_cards = [
+        {"label": "Workbench", "title": "What if the first unit is smaller than one cubic metre?", "text": "Could glass batches, silicate samples, tiles, pavers, handles, service lids and quick interlock blocks start at 0.02-0.35 m3 so people can touch the material story before anyone imagines a reef field?", "href": "https://auraofintelligence.github.io/straddie-makerspace-lab/sand.html", "action": "Open sand lab"},
+        {"label": "Geotextile cells", "title": "Could small shoreline cells teach repairable scale?", "text": "Australian geotextile shoreline work includes 0.75 m3 and 2.5 m3 containers. Could those sizes help people compare lift, fill, handling, placement, repair, reuse and community inspection?", "href": "https://library.geosyntheticssociety.org/wp-content/uploads/resources/proceedings/D.01%20Geotextile%20Sand%20Containers%20Innovative%20Shoreline%20Protection%20Systems.pdf", "action": "Open paper"},
+        {"label": "Moreton Bay", "title": "What does a 150 m3 rock start let people compare?", "text": "Queensland's Harry Atkinson reef began with 150 m3 of quarried rock and later grew through reef balls, pipes, vessels and fish boxes. Could that help Straddie compare modules, patterns and staged learning?", "href": "https://parks.qld.gov.au/parks/moreton-bay/zoning/trial_artificial_reef_program", "action": "Open source"},
+        {"label": "North Stradbroke", "title": "What is already offshore near Adder Rock?", "text": "Queensland lists a 30 hectare North Stradbroke Island Artificial Reef with 38, 17 tonne Arrowhead modules arranged in five clusters. Could that nearby reference become a respectful comparison point?", "href": "https://parks.qld.gov.au/parks/moreton-bay/zoning/trial_artificial_reef_program", "action": "Open source"},
+        {"label": "Great Sandy", "title": "What can patterned structures teach?", "text": "Great Sandy Marine Park's newer reefs include 88 bombora structures and reef pyramids with 80 m3 internal volume. Could void shape, pattern, spacing and monitoring matter as much as raw material volume?", "href": "https://parks.qld.gov.au/parks/great-sandy-marine/management-and-zoning/artificial-reefs", "action": "Open source"},
+        {"label": "Palm Beach", "title": "What does 60,000 tonnes of rock put in perspective?", "text": "Gold Coast's Palm Beach reef is a large surf-and-erosion reference: 60,000 tonnes of rock offshore. Could a Straddie calculator let people move between tiny blocks, bags, pods and major placements without losing scale?", "href": "https://www.goldcoast.qld.gov.au/Environment-sustainability/Protecting-our-environment/Managing-our-beaches/Seawalls-artificial-reefs", "action": "Open source"},
+        {"label": "Windara", "title": "What does 10,000 tonnes over 20 hectares teach?", "text": "Windara Reef used 10,000 tonnes of limestone across 159 reef segments and 20 hectares. Could oyster habitat, water quality, fishing, monitoring and community story become one shared material map?", "href": "https://www.marineparks.sa.gov.au/enjoy/fishing/artificial-reef-project", "action": "Open source"},
+    ]
     questions = [
         {"label": "Oyster reef", "title": "Could shellfish farming and habitat learn together?", "text": "Where could recycled shell, reef base, spat, water quality, working boats, monitoring and local food knowledge meet without pretending one shape fits every shore?"},
         {"label": "Erosion", "title": "Could living shorelines reduce hard-edge thinking?", "text": "Which bay edges, dune toes, wetlands or ferry-adjacent places invite slower water, more habitat and less panic about sand movement?"},
@@ -1260,6 +1299,16 @@ def reefs_body() -> str:
 """ + card_grid(examples) + """
   </div>
 </section>
+<section class="section">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="section-label">Scale comparisons</p>
+      <h2>How big are the pieces, cells and reef fields humans already use?</h2>
+      <p class="lede muted">Known projects use different public units: cubic metres, tonnes, structure counts, hectares and site footprints. Keeping those units visible helps people compare without pretending every reef, block, bag, tunnel or island idea belongs on the same ruler.</p>
+    </div>
+""" + card_grid(scale_cards) + """
+  </div>
+</section>
 <section class="section" id="reef-calculator">
   <div class="section-inner">
     <div class="section-heading">
@@ -1290,8 +1339,24 @@ def reefs_body() -> str:
           <input id="reef-bulking" type="range" min="0.8" max="1.6" step="0.05" value="1.15" data-calc-input="bulking">
         </div>
         <div class="range-field">
-          <label for="reef-module">Average reef module or media cell <output data-calc-out="moduleSize">25 m3</output></label>
-          <input id="reef-module" type="range" min="5" max="250" step="5" value="25" data-calc-input="moduleSize">
+          <label for="reef-preset">Media size preset <output data-calc-out="modulePreset">Quick interlock block</output></label>
+          <select id="reef-preset" data-calc-input="modulePreset">
+            <option value="0.08" selected>Quick interlock block - 0.08 m3</option>
+            <option value="0.02">Glass or silicate test batch - 0.02 m3</option>
+            <option value="0.05">Tile or paver batch - 0.05 m3</option>
+            <option value="0.18">Service-channel block - 0.18 m3</option>
+            <option value="0.35">Stone-circle seat block - 0.35 m3</option>
+            <option value="0.75">Small shoreline cell - 0.75 m3</option>
+            <option value="1.2">Reef basket or bag - 1.2 m3</option>
+            <option value="2.5">Large geotextile cell - 2.5 m3</option>
+            <option value="5">Small reef pod - 5 m3</option>
+            <option value="25">Large reef module - 25 m3</option>
+            <option value="custom">Custom size</option>
+          </select>
+        </div>
+        <div class="range-field">
+          <label for="reef-module">Average piece or media cell <output data-calc-out="moduleSize">0.08 m3</output></label>
+          <input id="reef-module" type="number" min="0.01" max="250" step="0.01" value="0.08" data-calc-input="moduleSize">
         </div>
       </div>
       <div class="calc-toggle-grid" aria-label="Material pathways">
@@ -1301,6 +1366,8 @@ def reefs_body() -> str:
         <label class="toggle-card"><input type="checkbox" data-calc-toggle="dune"><span>Stable dune support</span></label>
         <label class="toggle-card"><input type="checkbox" data-calc-toggle="island"><span>Artificial island / platform</span></label>
         <label class="toggle-card"><input type="checkbox" data-calc-toggle="surface" checked><span>Quick-fit surface blocks</span></label>
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="construction" checked><span>Construction interlock blocks</span></label>
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="meeting"><span>Stone circle / community pieces</span></label>
         <label class="toggle-card"><input type="checkbox" data-calc-toggle="homes"><span>Glass / silicate home products</span></label>
         <label class="toggle-card"><input type="checkbox" data-calc-toggle="automation" checked><span>Automation and sensors</span></label>
       </div>
@@ -1310,7 +1377,7 @@ def reefs_body() -> str:
         <article class="calc-metric"><span>Weekly tunnel volume</span><strong data-calc-out="weeklySpoil">10,179 m3</strong></article>
         <article class="calc-metric"><span>Weekly useful media</span><strong data-calc-out="weeklyReef">4,097 m3</strong></article>
         <article class="calc-metric"><span>Sprint useful media</span><strong data-calc-out="stageReef">16,389 m3</strong></article>
-        <article class="calc-metric"><span>Approx. modules / week</span><strong data-calc-out="weeklyModules">164</strong></article>
+        <article class="calc-metric"><span>Approx. pieces / week</span><strong data-calc-out="weeklyModules">51,212</strong></article>
         <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">14,251 m3</strong></article>
       </div>
       <div class="calc-panels">
@@ -1874,7 +1941,7 @@ It covers:
 - reef, oyster, surf-bank, artificial-island and Sandworm tunnel-media questions
 - fractal no-blade wind across vortex, flutter, rooftop and sensor-scale flows
 - future pressure, carbon, sensing and response network questions
-- links to maker-space, Sandworm, ferry terminal lab, Grants Lab, community wealth and Ready S.E.T. Trust Hub
+- links to maker-space, Sandworm, ferry terminal lab, Grants Lab, community wealth, Legal Memory Workbench and Ready S.E.T. Trust Hub
 
 ## How it works
 

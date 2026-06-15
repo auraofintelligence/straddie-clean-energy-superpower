@@ -11,7 +11,7 @@
 - [Wave And Tidal Without Underwater Blades](../marine.html) - Could wave and tide be explored from first principles: flutter, vortex shedding, shrimp timing, mantis-shrimp strikes, reef geometry, sensors, play, modelling and maker-space tests?
 - [Reefs, Surf Banks And Sand Media](../reefs.html) - Could oyster reefs, living shorelines, surf banks, stable dunes, artificial islands and Sandworm tunnel material flows become one inspectable abundance map?
 - [Fractal Wind And No-Blade Harvesting](../wind.html) - Could Straddie read wind as edge-flow, roof turbulence, vortex, flutter, electrostatic, piezo and triboelectric motion across many useful island places?
-- [Linked Local Labs](../network.html) - Deep links to the maker-space, Sandworm, ferry terminal lab, grants lab, community wealth and mutuals, and Ready S.E.T. Trust Hub.
+- [Linked Local Labs](../network.html) - Deep links to the maker-space, Sandworm, ferry terminal lab, grants lab, community wealth and mutuals, Legal Memory Workbench, and Ready S.E.T. Trust Hub.
 - [Community Wealth And Mutual Care](../wealth.html) - Could clean energy income, lower bills, mutual protection and grant readiness become patient local wealth rather than another extraction story?
 - [Markdown Builders](../builders/index.html) - Browser-only forms for clean energy option notes, boundaries, source trails and grant-ready project briefs.
 - [Boundaries Before Momentum](../boundaries.html) - Consent, Country, engineering review, marine life, pressure systems, response systems and public/private data boundaries.
@@ -36,5 +36,6 @@
 - [Stradbroke Grants Lab](https://auraofintelligence.github.io/stradbroke-grants-lab/) - [Stradbroke Grants Lab repo](https://github.com/auraofintelligence/stradbroke-grants-lab)
 - [Community Wealth and Mutual Care](https://auraofintelligence.github.io/moreton-bay-community-wealth-and-mutuals/) - [Community Wealth and Mutual Care repo](https://github.com/auraofintelligence/moreton-bay-community-wealth-and-mutuals)
 - [Ready S.E.T. Co-op Trust Hub](https://auraofintelligence.github.io/ready-set-co-op-trust-hub/) - [Ready S.E.T. Co-op Trust Hub repo](https://github.com/auraofintelligence/ready-set-co-op-trust-hub)
+- [Legal Memory Workbench](https://auraofintelligence.github.io/legal-memory-workbench/) - [Legal Memory Workbench repo](https://github.com/auraofintelligence/legal-memory-workbench)
 - [Ballow Road Sand & Screen Hub](https://auraofintelligence.github.io/ballow-road-sand-screen-hub/) - [Ballow Road Sand & Screen Hub repo](https://github.com/auraofintelligence/ballow-road-sand-screen-hub)
 - [Civilisation of Sand](https://auraofintelligence.github.io/civilisation-of-sand/) - [Civilisation of Sand repo](https://github.com/auraofintelligence/civilisation-of-sand)

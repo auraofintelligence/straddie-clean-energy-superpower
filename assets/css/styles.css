@@ -550,6 +550,13 @@ h3 {
   text-transform: uppercase;
 }
 
+.repo-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem 1.45rem;
+}
+
 .split {
   align-items: center;
   display: grid;
@@ -745,6 +752,18 @@ h3 {
   accent-color: var(--bay);
   min-height: 34px;
   padding: 0;
+}
+
+.range-field input[type="number"],
+.range-field select {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 2px);
+  color: var(--deep);
+  font: 800 1rem/1.2 var(--body);
+  min-height: 44px;
+  padding: .58rem .68rem;
+  width: 100%;
 }
 
 .toggle-card {

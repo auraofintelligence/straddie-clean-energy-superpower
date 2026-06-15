@@ -11,6 +11,7 @@
     weeks: root.querySelector('[data-calc-input="weeks"]'),
     reefShare: root.querySelector('[data-calc-input="reefShare"]'),
     bulking: root.querySelector('[data-calc-input="bulking"]'),
+    modulePreset: root.querySelector('[data-calc-input="modulePreset"]'),
     moduleSize: root.querySelector('[data-calc-input="moduleSize"]'),
   };
 
@@ -24,7 +25,10 @@
     return Boolean(toggle && toggle.checked);
   };
 
-  const metres3 = (value) => `${number.format(Math.round(value))} m3`;
+  const metres3 = (value) => {
+    if (Math.abs(value) < 100) return `${decimal.format(value)} m3`;
+    return `${number.format(Math.round(value))} m3`;
+  };
   const count = (value) => number.format(Math.max(0, Math.round(value)));
 
   const formatAdvance = (metresPerWeek) => {
@@ -48,6 +52,8 @@
     dune: "stable dune support",
     island: "artificial island / platform",
     surface: "quick-fit surface blocks",
+    construction: "construction interlock blocks",
+    meeting: "stone circle and community meeting pieces",
     homes: "glass and silicate home products",
     automation: "automation and sensing",
   };
@@ -86,6 +92,9 @@
     const reefShare = Number(inputs.reefShare.value);
     const bulking = Number(inputs.bulking.value);
     const moduleSize = Number(inputs.moduleSize.value);
+    const presetLabel = inputs.modulePreset && inputs.modulePreset.selectedOptions.length
+      ? inputs.modulePreset.selectedOptions[0].textContent.replace(/\s+-\s+.*$/, "")
+      : "Custom size";
 
     const area = Math.PI * (diameter / 2) ** 2;
     const per100 = area * 100;
@@ -102,6 +111,7 @@
     output("weeks", number.format(weeks));
     output("reefShare", `${number.format(reefShare)}%`);
     output("bulking", `${decimal.format(bulking)}x`);
+    output("modulePreset", presetLabel);
     output("moduleSize", metres3(moduleSize));
     output("per100", metres3(per100));
     output("timePer100", formatDuration(timePer100Hours));
@@ -145,6 +155,8 @@
     if (checked("dune")) skills.push("dune ecology", "sand fencing and vegetation care");
     if (checked("island")) skills.push("settlement monitoring", "staged landform records");
     if (checked("surface")) skills.push("interlock design", "service-channel layout", "robotic assembly", "move-and-repair planning");
+    if (checked("construction")) skills.push("quick-fit construction blocks", "assembly and disassembly planning", "hidden services layout");
+    if (checked("meeting")) skills.push("stone-circle layout", "public meeting geometry", "artistic finishing");
     if (checked("homes")) skills.push("glass tests", "ceramic forming", "home-fit design", "resident product passports");
 
     const automation = ["volume dashboard", "QR or RFID batch tags", "photo records", "load-cell or weighbridge feed"];
@@ -154,6 +166,8 @@
     if (checked("surf")) automation.push("wave-camera review");
     if (checked("oyster") || checked("living")) automation.push("water-quality sensors");
     if (checked("surface")) automation.push("service-map records", "block unlock history", "inspection-lid register");
+    if (checked("construction")) automation.push("robotic placement logs", "block passport records", "service-void scan records");
+    if (checked("meeting")) automation.push("layout templates", "community install records", "finish and repair notes");
     if (checked("homes")) automation.push("resident request queue", "recipe version records", "repair and return logs");
 
     const workMap = root.querySelector("[data-calc-out=\"workMap\"]");
@@ -166,7 +180,19 @@
     }
   };
 
-  Object.values(inputs).forEach((input) => input.addEventListener("input", update));
+  Object.entries(inputs).forEach(([name, input]) => {
+    if (!input || name === "modulePreset") return;
+    input.addEventListener("input", () => {
+      if (name === "moduleSize" && inputs.modulePreset) inputs.modulePreset.value = "custom";
+      update();
+    });
+  });
+  if (inputs.modulePreset) {
+    inputs.modulePreset.addEventListener("change", () => {
+      if (inputs.modulePreset.value !== "custom") inputs.moduleSize.value = inputs.modulePreset.value;
+      update();
+    });
+  }
   root.querySelectorAll("[data-calc-toggle]").forEach((toggle) => toggle.addEventListener("change", update));
   updateSandwormBridge();
   update();
