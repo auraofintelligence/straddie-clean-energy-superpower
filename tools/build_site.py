@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v5"
+ASSET_VERSION = "20260615-energy-superpower-v6"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -1314,7 +1314,7 @@ def reefs_body() -> str:
     <div class="section-heading">
       <p class="section-label">Interactive tunnel to reef ledger</p>
       <h2>What does 100 m of tunnel become, and how fast can it arrive?</h2>
-      <p class="lede muted">Move the sliders to sketch a weekly material flow. The 100 m volume stays as the clean comparison unit; tunnel speed shows whether that material arrives in hours, days or weeks. The scale spans small service and robot tunnels through Loop-style corridors, because the point is to advance the field rather than copy old tunnel pacing or current design-method assumptions.</p>
+      <p class="lede muted">Move the sliders to sketch a weekly material flow. The 100 m volume stays as the clean comparison unit; tunnel speed shows whether that material arrives in hours, days or weeks. The speed slider treats 1 km/week as the aspiration marker: early rigs sit to the left, and the far right asks what opens if the aspiration is exceeded.</p>
     </div>
     <div class="reef-calculator" data-reef-calculator>
       <div class="calc-controls">
@@ -1324,7 +1324,8 @@ def reefs_body() -> str:
         </div>
         <div class="range-field">
           <label for="reef-speed">Tunnel advance per week <output data-calc-out="weeklyAdvance">1 km/week</output></label>
-          <input id="reef-speed" type="range" min="50" max="5000" step="50" value="1000" data-calc-input="weeklyAdvance">
+          <input id="reef-speed" type="range" min="25" max="1250" step="25" value="1000" data-calc-input="weeklyAdvance">
+          <p class="range-note">Prototype pace to the left. 1 km/week is the aspiration marker near the high end.</p>
         </div>
         <div class="range-field">
           <label for="reef-weeks">Weeks in this sprint <output data-calc-out="weeks">4</output></label>

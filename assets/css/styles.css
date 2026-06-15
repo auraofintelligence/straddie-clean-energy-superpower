@@ -748,6 +748,13 @@ h3 {
   margin-top: .2rem;
 }
 
+.range-note {
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.45;
+  margin: -.15rem 0 0;
+}
+
 .range-field input[type="range"] {
   accent-color: var(--bay);
   min-height: 34px;
