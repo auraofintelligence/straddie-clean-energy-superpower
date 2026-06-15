@@ -900,6 +900,37 @@ h3 {
   padding: .45rem .55rem;
 }
 
+.component-split {
+  border-left: 3px solid rgba(0, 99, 115, .28);
+  padding-left: .75rem;
+}
+
+.component-split summary {
+  color: var(--bay);
+  cursor: pointer;
+  font-family: var(--heading);
+  font-size: .86rem;
+  font-weight: 900;
+}
+
+.component-split ul {
+  display: grid;
+  gap: .55rem;
+  list-style: none;
+  margin: .65rem 0 0;
+  padding: 0;
+}
+
+.component-split li {
+  color: var(--muted);
+  display: grid;
+  gap: .25rem;
+}
+
+.component-split code {
+  display: block;
+}
+
 .block-estimate-card em {
   font-style: normal;
 }

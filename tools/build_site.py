@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v8"
+ASSET_VERSION = "20260615-energy-superpower-v9"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "

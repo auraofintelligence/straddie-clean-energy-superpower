@@ -91,48 +91,106 @@
       title: "Covered bus stop",
       volume: 8,
       text: "shade bases, seats, battery plinth, cable channels and movable edges",
+      parts: [
+        { label: "shade bases", volume: 2.2 },
+        { label: "bench and waiting seats", volume: 1.4 },
+        { label: "battery or service plinth", volume: 1.3 },
+        { label: "cable-channel pieces", volume: 1.1 },
+        { label: "movable edge pieces", volume: 2 },
+      ],
     },
     {
       label: "Jetty",
       title: "Jetty footing set",
       volume: 30,
       text: "footing caps, service runs, spare blocks and inspection lids",
+      parts: [
+        { label: "footing caps", volume: 12 },
+        { label: "service-run blocks", volume: 7 },
+        { label: "spare repair blocks", volume: 5 },
+        { label: "inspection lids", volume: 6 },
+      ],
     },
     {
       label: "School / hall",
       title: "School or community upgrade",
       volume: 45,
       text: "ramps, shade edges, seating, storage and visible service blocks",
+      parts: [
+        { label: "ramp and access pieces", volume: 10 },
+        { label: "shade-edge blocks", volume: 8 },
+        { label: "outdoor seating", volume: 10 },
+        { label: "storage edges", volume: 7 },
+        { label: "visible service blocks", volume: 10 },
+      ],
     },
     {
       label: "Home",
       title: "Small housing shell",
       volume: 90,
       text: "raised core, wet-area walls, service spine and modular porch pieces",
+      parts: [
+        { label: "raised floor or core", volume: 30 },
+        { label: "wet-area wall blocks", volume: 18 },
+        { label: "service spine", volume: 12 },
+        { label: "modular porch pieces", volume: 16 },
+        { label: "adaptable spare pieces", volume: 14 },
+      ],
     },
     {
       label: "Ballow Road",
       title: "Sand sports clubhouse",
       volume: 120,
       text: "clubhouse walls, shade, counters, storage, screens and robot-readable block IDs",
+      parts: [
+        { label: "clubhouse wall blocks", volume: 40 },
+        { label: "shade structure bases", volume: 22 },
+        { label: "counter and kiosk pieces", volume: 12 },
+        { label: "storage modules", volume: 16 },
+        { label: "screen and media plinths", volume: 18 },
+        { label: "robot-readable spare blocks", volume: 12 },
+      ],
     },
     {
       label: "Ferry",
       title: "Ferry terminal upgrade",
       volume: 180,
       text: "arrival edges, seats, lighting bases, wayfinding plinths and service corridors",
+      parts: [
+        { label: "arrival-edge blocks", volume: 40 },
+        { label: "public seats", volume: 25 },
+        { label: "lighting bases", volume: 18 },
+        { label: "wayfinding plinths", volume: 22 },
+        { label: "service corridor pieces", volume: 50 },
+        { label: "reconfiguration reserve", volume: 25 },
+      ],
     },
     {
       label: "Steep seating",
       title: "Stadium seating on slopes",
       volume: 250,
       text: "terraced seating, retaining ribs, handrail bases and drain or service voids",
+      parts: [
+        { label: "terraced seating blocks", volume: 100 },
+        { label: "retaining ribs", volume: 55 },
+        { label: "handrail bases", volume: 20 },
+        { label: "drain and service void modules", volume: 45 },
+        { label: "repair and reconfiguration pieces", volume: 30 },
+      ],
     },
     {
       label: "Rock / living edge",
       title: "Rock wall or living edge",
       volume: 320,
       text: "heavy interlocks, toe pieces, planted pockets, access steps and monitoring points",
+      parts: [
+        { label: "heavy interlock blocks", volume: 100 },
+        { label: "toe pieces", volume: 70 },
+        { label: "planted pockets", volume: 55 },
+        { label: "access steps", volume: 40 },
+        { label: "monitoring-point blocks", volume: 20 },
+        { label: "future rearrangement reserve", volume: 35 },
+      ],
     },
   ];
 
@@ -147,6 +205,17 @@
     const blocks = moduleSize > 0 ? volume / moduleSize : 0;
     return `${raw(volume)} m3 / ${raw(moduleSize)} m3 = ${count(blocks)} blocks`;
   };
+
+  const componentRows = (parts, moduleSize) => parts.map((part) => {
+    const blocks = moduleSize > 0 ? part.volume / moduleSize : 0;
+    return {
+      ...part,
+      blocks,
+      formula: blockFormula(part.volume, moduleSize),
+    };
+  });
+
+  const componentTotal = (parts) => parts.reduce((sum, part) => sum + part.volume, 0);
 
   const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
@@ -264,6 +333,8 @@
         blocks,
         weeklySets,
         formula: blockFormula(item.volume, moduleSize),
+        components: componentRows(item.parts || [], moduleSize),
+        componentVolume: componentTotal(item.parts || []),
         batch: batchComparison(per100Useful, item.volume),
       };
     });
@@ -328,12 +399,19 @@
     const blockEstimates = root.querySelector("[data-calc-out=\"blockEstimates\"]");
     if (blockEstimates) {
       blockEstimates.innerHTML = scenarioResults.map((item) => {
+        const componentList = item.components.length ? `<details class="component-split">
+          <summary>Show example component split</summary>
+          <ul>
+            ${item.components.map((part) => `<li><span>${part.label}: ${metres3(part.volume)} -> ${count(part.blocks)} blocks</span><code>${part.formula}</code></li>`).join("")}
+          </ul>
+        </details>` : "";
         return `<article class="block-estimate-card">
           <p class="mini-label">${item.label}</p>
           <h4>${item.title}</h4>
           <strong>${count(item.blocks)} unique blocks</strong>
           <p>${metres3(item.volume)} sketch: ${item.text}.</p>
           <code>Formula: ${item.formula}</code>
+          ${componentList}
           <em>${item.batch}; current week: about ${setCount(item.weeklySets)} sets.</em>
         </article>`;
       }).join("");
@@ -413,6 +491,18 @@
       "| --- | ---: | --- | ---: | --- | --- |",
       ...state.scenarioResults.map((item) => `| ${item.title} | ${metres3(item.volume)} | ${item.formula} | ${count(item.blocks)} | ${item.batch} | about ${setCount(item.weeklySets)} sets |`),
       "",
+      "## Example Component Split Formulas",
+      "",
+      "These are editable sketch allocations. They show how the headline block count could be built from parts, while leaving room for better site survey, robotics, service holes and community design.",
+      "",
+      ...state.scenarioResults.flatMap((item) => [
+        `### ${item.title}`,
+        "",
+        `Total check: component sketch adds to ${metres3(item.componentVolume)}; total block formula is ${item.formula}.`,
+        "",
+        ...item.components.map((part) => `- ${part.label}: ${part.formula}`),
+        "",
+      ]),
       "## Verification Questions",
       "",
       "- Which parts are structural, non-structural, landscape, service, seating, reef, footing or temporary public-space pieces?",
