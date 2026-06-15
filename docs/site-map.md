@@ -16,6 +16,7 @@
 - [Markdown Builders](../builders/index.html) - Browser-only forms for clean energy option notes, boundaries, source trails and grant-ready project briefs.
 - [Boundaries Before Momentum](../boundaries.html) - Consent, Country, engineering review, marine life, pressure systems, response systems and public/private data boundaries.
 - [Source Trail](../sources.html) - Official sources, connected repos and research notes used to scaffold this first clean energy atlas.
+- [Public Licence](../licence.html) - The custom public-interest licence for learning from, sharing and adapting this clean-energy atlas without turning it into extractive repackaging.
 - [Site Map](../site-map.html) - All public pages, builder pages, Markdown templates and source bridges.
 
 ## Builders

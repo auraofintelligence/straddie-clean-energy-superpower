@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260614-energy-superpower-v2"
+ASSET_VERSION = "20260615-energy-superpower-v3"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -124,6 +124,13 @@ PAGES = [
         "description": "Official sources, connected repos and research notes used to scaffold this first clean energy atlas.",
     },
     {
+        "id": "licence",
+        "label": "Licence",
+        "href": "licence.html",
+        "title": "Public Licence",
+        "description": "The custom public-interest licence for learning from, sharing and adapting this clean-energy atlas without turning it into extractive repackaging.",
+    },
+    {
         "id": "site-map",
         "label": "Site map",
         "href": "site-map.html",
@@ -149,6 +156,7 @@ HERO_IMAGES = {
     "builders": "assets/img/heroes/builders.webp",
     "boundaries": "assets/img/heroes/boundaries-care-map.webp",
     "sources": "assets/img/heroes/sources.webp",
+    "licence": "assets/img/heroes/sources.webp",
     "site-map": "assets/img/heroes/site-map-tabletop.webp",
 }
 
@@ -1525,6 +1533,42 @@ def sources_body() -> str:
 """
 
 
+def licence_body() -> str:
+    return page_hero(by_id("licence")) + """
+<section class="section">
+  <div class="section-inner readable">
+    <p class="section-label">Custom public-interest licence</p>
+    <h2>Shared as public infrastructure, not as extractive packaging.</h2>
+    <p class="lede muted">This licence follows the Strange But True public-infrastructure pattern and is adapted for Straddie Clean Energy Superpower. It is written in plain English. It is not an open-source licence and it is not a public-domain release.</p>
+    <div class="info-panel">
+      <p><strong>Short version:</strong> the Straddie Clean Energy Superpower Public Licence welcomes public non-commercial learning, sharing, forking and community adaptation with attribution. Commercial rights, brand assets, generated images, close derivative products and extractive repackaging are reserved.</p>
+      <p><a class="text-link" href="https://github.com/auraofintelligence/straddie-clean-energy-superpower/blob/main/LICENCE.md">Read the source licence file</a></p>
+    </div>
+  </div>
+</section>
+<section class="section soft-band">
+  <div class="section-inner">
+""" + card_grid([
+        {"label": "Allowed", "title": "What can people do?", "text": "View, share, clone, fork, study, reference and adapt this repo for personal, educational, community, artistic, documentary, environmental, research, local-planning, regenerative or other non-commercial public-interest purposes."},
+        {"label": "Attribution", "title": "What should stay visible?", "text": "Credit Straddie Clean Energy Superpower and Aura of Intelligence where practical, and keep a clear trail to the original project and any changes made in a fork."},
+        {"label": "Builder notes", "title": "Who owns local outputs?", "text": "Markdown notes or drafts created by visitors belong to the people or groups who write the answers. Inspect them before sharing, and keep private details private."},
+        {"label": "Reserved", "title": "What is not freely granted?", "text": "Commercial use, close repackaging, brand use, generated images, page copy, planning material, calculator patterns and source-note structures are reserved unless written permission is given."},
+        {"label": "Authority", "title": "What does the licence not grant?", "text": "It does not grant cultural permission, land access, engineering approval, environmental approval, energy-market rights, safety advice, financial advice or community consent."},
+        {"label": "AI use", "title": "How can AI help without flattening it?", "text": "AI can use public pages and builder outputs as draft context, but should keep source limits, human authority, doubt, local consent and the right to disagree visible."},
+    ]) + """
+  </div>
+</section>
+<section class="section">
+  <div class="section-inner readable">
+    <p class="section-label">Reality check</p>
+    <h2>This is a sincere public workbench.</h2>
+    <p>This project is provided as is. Any real clean-energy, water, pressure, hydrogen, reef, tunnel, construction, finance, safety, cultural or environmental pathway still needs the right human review and approval before action.</p>
+    <p>Build wisely. Keep the questions visible. Look after the place, the people and the possibility.</p>
+  </div>
+</section>
+"""
+
+
 def builders_index_body() -> str:
     cards = []
     for builder in BUILDERS:
@@ -1658,6 +1702,7 @@ BODY_RENDERERS = {
     "builders": builders_index_body,
     "boundaries": boundaries_body,
     "sources": sources_body,
+    "licence": licence_body,
     "site-map": site_map_body,
 }
 
@@ -1754,7 +1799,7 @@ def write_site_data() -> None:
     by_page_id = {item["id"]: item for item in nav}
     nav_groups = [
         {"label": "Energy", "items": [by_page_id[item_id] for item_id in ["solar", "storage", "hydrogen", "sharing", "water", "marine", "reefs", "wind"]]},
-        {"label": "Proof", "items": [by_page_id[item_id] for item_id in ["network", "wealth", "boundaries", "sources", "site-map"]]},
+        {"label": "Proof", "items": [by_page_id[item_id] for item_id in ["network", "wealth", "boundaries", "sources", "licence", "site-map"]]},
     ]
     nav_order = [
         {"type": "link", "item": by_page_id["home"]},
@@ -1865,6 +1910,10 @@ python -m http.server 4179 --bind 127.0.0.1
 ## Public posture
 
 This is an exploration workbench. It is not an approval claim, engineering design, cultural authority statement, environmental approval, legal advice, financial advice or fire-safety design.
+
+## Licence
+
+This repo uses the [Straddie Clean Energy Superpower Public Licence](LICENCE.md), a custom public-interest licence adapted from the Strange But True public-infrastructure pattern. Public non-commercial learning, sharing, forking and community adaptation are welcome with attribution. Commercial use, extractive repackaging and false endorsement are reserved.
 """
     write("README.md", readme)
 

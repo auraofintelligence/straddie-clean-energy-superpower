@@ -295,6 +295,10 @@ h3 {
   width: 100%;
 }
 
+.section-inner.readable {
+  max-width: 880px;
+}
+
 .hero-copy {
   max-width: 760px;
 }
@@ -457,6 +461,7 @@ h3 {
 .builder-index a,
 .builder-panel,
 .quote-panel,
+.info-panel,
 .option-card {
   background: var(--white);
   border: 1px solid var(--line);
@@ -574,6 +579,13 @@ h3 {
   font-weight: 700;
   line-height: 1.42;
   padding: 1.4rem;
+}
+
+.info-panel {
+  display: grid;
+  gap: .8rem;
+  margin-top: 1.4rem;
+  padding: 1.25rem;
 }
 
 .question-list {

@@ -90,6 +90,7 @@
           <a href="${withBase("builders/index.html")}">Markdown builders</a>
           <a href="${withBase("boundaries.html")}">Boundaries</a>
           <a href="${withBase("sources.html")}">Sources</a>
+          <a href="${withBase("licence.html")}">Licence</a>
           <a href="${withBase("site-map.html")}">Site map</a>
           <a href="https://auraofintelligence.github.io/straddie-makerspace-lab/" target="_blank" rel="noopener noreferrer">Maker-Space Lab</a>
         </div>

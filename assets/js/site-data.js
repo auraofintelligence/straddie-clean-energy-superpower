@@ -76,6 +76,11 @@ window.CLEAN_ENERGY_SITE = {
       "href": "sources.html"
     },
     {
+      "id": "licence",
+      "label": "Licence",
+      "href": "licence.html"
+    },
+    {
       "id": "site-map",
       "label": "Site map",
       "href": "site-map.html"
@@ -149,6 +154,11 @@ window.CLEAN_ENERGY_SITE = {
           "id": "sources",
           "label": "Sources",
           "href": "sources.html"
+        },
+        {
+          "id": "licence",
+          "label": "Licence",
+          "href": "licence.html"
         },
         {
           "id": "site-map",
@@ -252,6 +262,11 @@ window.CLEAN_ENERGY_SITE = {
           "id": "sources",
           "label": "Sources",
           "href": "sources.html"
+        },
+        {
+          "id": "licence",
+          "label": "Licence",
+          "href": "licence.html"
         },
         {
           "id": "site-map",
@@ -376,6 +391,11 @@ window.CLEAN_ENERGY_SITE = {
       "id": "sources",
       "label": "Sources",
       "href": "sources.html"
+    },
+    {
+      "id": "licence",
+      "label": "Licence",
+      "href": "licence.html"
     },
     {
       "id": "site-map",
