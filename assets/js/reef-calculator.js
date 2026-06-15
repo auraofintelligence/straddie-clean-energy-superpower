@@ -7,8 +7,8 @@
 
   const inputs = {
     diameter: root.querySelector('[data-calc-input="diameter"]'),
-    monthlyLength: root.querySelector('[data-calc-input="monthlyLength"]'),
-    months: root.querySelector('[data-calc-input="months"]'),
+    weeklyAdvance: root.querySelector('[data-calc-input="weeklyAdvance"]'),
+    weeks: root.querySelector('[data-calc-input="weeks"]'),
     reefShare: root.querySelector('[data-calc-input="reefShare"]'),
     bulking: root.querySelector('[data-calc-input="bulking"]'),
     moduleSize: root.querySelector('[data-calc-input="moduleSize"]'),
@@ -27,6 +27,16 @@
   const metres3 = (value) => `${number.format(Math.round(value))} m3`;
   const count = (value) => number.format(Math.max(0, Math.round(value)));
 
+  const formatAdvance = (metresPerWeek) => {
+    if (metresPerWeek >= 1000) return `${decimal.format(metresPerWeek / 1000)} km/week`;
+    return `${number.format(metresPerWeek)} m/week`;
+  };
+
+  const formatDuration = (hours) => {
+    if (hours < 24) return `${decimal.format(hours)} h`;
+    return `${decimal.format(hours / 24)} days`;
+  };
+
   const makeList = (label, items) => {
     return `<div><strong>${label}</strong><p>${items.join(", ")}</p></div>`;
   };
@@ -37,6 +47,8 @@
     surf: "surf bank",
     dune: "stable dune support",
     island: "artificial island / platform",
+    surface: "quick-fit surface blocks",
+    homes: "glass and silicate home products",
     automation: "automation and sensing",
   };
 
@@ -69,32 +81,34 @@
 
   const update = () => {
     const diameter = Number(inputs.diameter.value);
-    const monthlyLength = Number(inputs.monthlyLength.value);
-    const months = Number(inputs.months.value);
+    const weeklyAdvance = Number(inputs.weeklyAdvance.value);
+    const weeks = Number(inputs.weeks.value);
     const reefShare = Number(inputs.reefShare.value);
     const bulking = Number(inputs.bulking.value);
     const moduleSize = Number(inputs.moduleSize.value);
 
     const area = Math.PI * (diameter / 2) ** 2;
     const per100 = area * 100;
-    const monthlySpoil = area * monthlyLength;
-    const monthlyDiverted = monthlySpoil * (reefShare / 100);
-    const monthlyReef = monthlyDiverted * bulking;
-    const stageReef = monthlyReef * months;
-    const stageDiverted = monthlyDiverted * months;
-    const monthlyModules = moduleSize > 0 ? monthlyReef / moduleSize : 0;
+    const weeklySpoil = area * weeklyAdvance;
+    const weeklyDiverted = weeklySpoil * (reefShare / 100);
+    const weeklyReef = weeklyDiverted * bulking;
+    const stageReef = weeklyReef * weeks;
+    const stageDiverted = weeklyDiverted * weeks;
+    const weeklyModules = moduleSize > 0 ? weeklyReef / moduleSize : 0;
+    const timePer100Hours = weeklyAdvance > 0 ? (100 / weeklyAdvance) * 7 * 24 : 0;
 
     output("diameter", `${decimal.format(diameter)} m`);
-    output("monthlyLength", `${number.format(monthlyLength)} m`);
-    output("months", number.format(months));
+    output("weeklyAdvance", formatAdvance(weeklyAdvance));
+    output("weeks", number.format(weeks));
     output("reefShare", `${number.format(reefShare)}%`);
     output("bulking", `${decimal.format(bulking)}x`);
     output("moduleSize", metres3(moduleSize));
     output("per100", metres3(per100));
-    output("monthlySpoil", metres3(monthlySpoil));
-    output("monthlyReef", metres3(monthlyReef));
+    output("timePer100", formatDuration(timePer100Hours));
+    output("weeklySpoil", metres3(weeklySpoil));
+    output("weeklyReef", metres3(weeklyReef));
     output("stageReef", metres3(stageReef));
-    output("monthlyModules", count(monthlyModules));
+    output("weeklyModules", count(weeklyModules));
     output("avoided", metres3(stageDiverted));
 
     const active = Object.keys(pathwayNames).filter((key) => checked(key));
@@ -103,24 +117,26 @@
 
     const timeline = root.querySelector("[data-calc-timeline]");
     if (timeline) {
-      const bars = Array.from({ length: months }, (_, index) => {
-        const label = `Month ${index + 1}`;
-        const width = Math.max(8, Math.min(100, (monthlyReef / Math.max(monthlySpoil, 1)) * 100));
-        return `<div class="timeline-row"><span>${label}</span><b style="width:${width}%"></b><em>${metres3(monthlyReef)}</em></div>`;
+      const bars = Array.from({ length: weeks }, (_, index) => {
+        const label = `Week ${index + 1}`;
+        const width = Math.max(8, Math.min(100, (weeklyReef / Math.max(weeklySpoil, 1)) * 100));
+        return `<div class="timeline-row"><span>${label}</span><b style="width:${width}%"></b><em>${metres3(weeklyReef)}</em></div>`;
       });
       timeline.innerHTML = bars.join("");
     }
 
     output(
       "timelineNote",
-      `Could ${metres3(stageDiverted)} of raw tunnel material become ${metres3(stageReef)} of formed media across ${number.format(months)} month${months === 1 ? "" : "s"} for ${stageText}?`
+      `Could ${metres3(stageDiverted)} of raw tunnel material become ${metres3(stageReef)} of formed media across ${number.format(weeks)} week${weeks === 1 ? "" : "s"} for ${stageText}? At ${formatAdvance(weeklyAdvance)}, the next 100 m arrives in about ${formatDuration(timePer100Hours)}.`
     );
 
-    const equipment = monthlySpoil < 500
-      ? ["maker-space test bays", "small screens", "skip bins", "hand moulds", "water-quality jars"]
-      : monthlySpoil < 2500
-        ? ["front-end loader", "mobile screener", "batch mixer", "module moulds", "covered laydown area", "barge or truck scheduling"]
-        : ["dedicated material yard", "conveyors", "screening train", "batching plant", "placement vessel planning", "public dashboard"];
+    const equipment = weeklySpoil < 250
+      ? ["micro-borer or service robot", "small carts", "maker-space test bays", "desktop moulds", "material jars"]
+      : weeklySpoil < 1500
+        ? ["compact TBM", "robot carts", "mobile screener", "small batch mixer", "quick-fit moulds", "covered laydown racks"]
+        : weeklySpoil < 10000
+          ? ["Loop-scale TBM", "conveyors", "screening train", "batch yard", "robotic block handling", "barge or truck scheduling"]
+          : ["multi-shift boring system", "automated spoil routing", "dedicated material yard", "continuous batching", "robotic placement fleet", "public dashboard"];
 
     const skills = ["survey and measurement", "materials testing", "batch records", "site logistics", "community explanation"];
     if (checked("oyster")) skills.push("shell recycling", "oyster restoration knowledge");
@@ -128,13 +144,17 @@
     if (checked("surf")) skills.push("bathymetry reading", "surfer observation", "wave modelling");
     if (checked("dune")) skills.push("dune ecology", "sand fencing and vegetation care");
     if (checked("island")) skills.push("settlement monitoring", "staged landform records");
+    if (checked("surface")) skills.push("interlock design", "service-channel layout", "robotic assembly", "move-and-repair planning");
+    if (checked("homes")) skills.push("glass tests", "ceramic forming", "home-fit design", "resident product passports");
 
-    const automation = ["volume dashboard", "QR batch tags", "photo records", "load-cell or weighbridge feed"];
+    const automation = ["volume dashboard", "QR or RFID batch tags", "photo records", "load-cell or weighbridge feed"];
     if (checked("automation")) {
-      automation.push("drone photogrammetry", "bathymetry passes", "sensor buoys", "weather and turbidity logs");
+      automation.push("drone photogrammetry", "bathymetry passes", "sensor buoys", "weather and turbidity logs", "robotic pick-and-place logs");
     }
     if (checked("surf")) automation.push("wave-camera review");
     if (checked("oyster") || checked("living")) automation.push("water-quality sensors");
+    if (checked("surface")) automation.push("service-map records", "block unlock history", "inspection-lid register");
+    if (checked("homes")) automation.push("resident request queue", "recipe version records", "repair and return logs");
 
     const workMap = root.querySelector("[data-calc-out=\"workMap\"]");
     if (workMap) {

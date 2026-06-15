@@ -513,6 +513,18 @@ SOURCE_LINKS = [
         "use": "Gives a public biology reference for peacock mantis shrimp mouthparts reaching about 12-23 m/s in water, fast enough to form cavitation bubbles during a strike.",
     },
     {
+        "title": "Prufrock",
+        "url": "https://www.boringcompany.com/prufrock",
+        "publisher": "The Boring Company",
+        "use": "Provides the high-throughput tunnel reference point: Prufrock targets more than 1 mile of tunnel per week.",
+    },
+    {
+        "title": "Music City Loop",
+        "url": "https://www.boringcompany.com/music-city-loop",
+        "publisher": "The Boring Company",
+        "use": "Provides the Loop-scale diameter reference: each tunnel is described as having a 12-foot internal diameter.",
+    },
+    {
         "title": "Seawalls and artificial reefs",
         "url": "https://www.goldcoast.qld.gov.au/Environment-sustainability/Protecting-our-environment/Managing-our-beaches/Seawalls-artificial-reefs",
         "publisher": "City of Gold Coast",
@@ -571,6 +583,30 @@ SOURCE_LINKS = [
         "url": "https://www.portbris.com.au/major-projects/fpe",
         "publisher": "Port of Brisbane",
         "use": "Queensland reclamation reference for large-scale material placement, sea walls, staged ground improvement and monitoring.",
+    },
+    {
+        "title": "Sand and Materials",
+        "url": "https://auraofintelligence.github.io/straddie-makerspace-lab/sand.html",
+        "publisher": "Straddie Maker-Space Lab",
+        "use": "Connects sand, glass, ceramics, mineral literacy and resident-use home products to the material-flow question.",
+    },
+    {
+        "title": "Concrete and Geopolymers",
+        "url": "https://auraofintelligence.github.io/straddie-makerspace-lab/concrete.html",
+        "publisher": "Straddie Maker-Space Lab",
+        "use": "Connects blocks, pavers, tiles, reusable bases, geopolymers and visible recipe-led material testing to the surface design pathway.",
+    },
+    {
+        "title": "10-12 Ballow Road Site",
+        "url": "https://auraofintelligence.github.io/ballow-road-sand-screen-hub/site.html",
+        "publisher": "Ballow Road Sand and Screen Hub",
+        "use": "Links adaptive surface blocks, sand sport, screens, shade, seating and service plinths to the 10-12 Ballow Road public concept site.",
+    },
+    {
+        "title": "Community concept images and design visualisations",
+        "url": "https://auraofintelligence.github.io/dunwich-gumpi-ferry-terminal-open-data-lab/community-genai-examples.html",
+        "publisher": "Dunwich / Gumpi Ferry Terminal Open Data Lab",
+        "use": "Connects climate-ready surface blocks to ferry-terminal visualisation, arrival paths, seating, lighting, service edges and public design discussion.",
     },
     {
         "title": "Carbon capture and storage",
@@ -1180,7 +1216,15 @@ def reefs_body() -> str:
         {"label": "Surf bank", "title": "Could point-break joy be part of the public value?", "text": "How might reef geometry, sand bypass learning, wave angle, bathymetry, surfer observation and storm recovery become a shared map?"},
         {"label": "Stable dunes", "title": "Could dunes become teachers, not raw material?", "text": "Which stable dunes, mineral sands, vegetation lines and old disturbance stories can help people read what belongs onshore and what belongs offshore?"},
         {"label": "Artificial island", "title": "Could landform imagination stay measurable?", "text": "Could any island, reef shelf, lagoon edge or platform idea carry a simple media ledger: volume, source, placement, monitoring and public learning?"},
-        {"label": "Automation", "title": "Could machines become transparent helpers?", "text": "Could conveyors, pumps, screens, geotextile bags, moulds, drones, bathymetry and sensor buoys show what they are doing month by month?"},
+        {"label": "Automation", "title": "Could machines become transparent helpers?", "text": "Could conveyors, pumps, screens, geotextile bags, moulds, drones, bathymetry and sensor buoys show what they are doing week by week?"},
+    ]
+    surface_cards = [
+        {"label": "Maker-space", "title": "Could climate-ready blocks be designed as island tools?", "text": "Could quick-fit interlocking blocks be robotically made, assembled, disassembled, serviced and customised for real residents rather than treated as profit-first building products?", "href": "https://auraofintelligence.github.io/straddie-makerspace-lab/sand.html", "action": "Open sand lab"},
+        {"label": "Geopolymer yard", "title": "Could surface pieces start as visible recipes?", "text": "Could pavers, tiles, weights, garden edges, service plinths and sample blocks carry recipes, QR material passports, cure dates, repair notes and next-version questions?", "href": "https://auraofintelligence.github.io/straddie-makerspace-lab/concrete.html", "action": "Open concrete lab"},
+        {"label": "Ferry gateway", "title": "Could ferry-terminal surfaces become service architecture?", "text": "Could seats, shade bases, low walls, lighting edges, screen plinths and path modules hide power, water, data, sensors and maintenance access while staying movable if sea levels rise?", "href": "https://auraofintelligence.github.io/dunwich-gumpi-ferry-terminal-open-data-lab/community-genai-examples.html", "action": "Open ferry lab"},
+        {"label": "Ballow Road", "title": "Could 10-12 Ballow Road test sand sport and screen blocks?", "text": "Could slope-aware blocks become seating, sand-sport boundaries, screen bases, market weights, cable runs, shaded terraces and storage pieces that can be reconfigured instead of locked into one layout?", "href": "https://auraofintelligence.github.io/ballow-road-sand-screen-hub/site.html", "action": "Open Ballow hub"},
+        {"label": "Homes", "title": "Could silicate products serve residents first?", "text": "Could glass filters, ceramic membranes, splashbacks, tiles, handles, knobs, jars, repairable appliance parts and custom homeware be made for island usefulness rather than outside-margin logic?", "href": "https://auraofintelligence.github.io/straddie-makerspace-lab/sand.html", "action": "Open home materials"},
+        {"label": "Service blocks", "title": "Could blocks hide services without hiding control?", "text": "Could conduits, ducts, micro-drainage, air paths, fibre, sensors, charge points and inspection lids sit inside interlocking blocks that residents can understand, service and move?"},
     ]
     return page_hero(by_id("reefs")) + """
 <section class="section">
@@ -1188,14 +1232,14 @@ def reefs_body() -> str:
     <div>
       <p class="section-label">Coastal material literacy</p>
       <h2>Could every metre of tunnel become a reef, dune, surf or habitat question?</h2>
-      <p class="lede muted">The Sandworm repo already asks how future tunnel spoil might become blocks, reef modules, dune support, tunnel lining tests or stored heat. This page turns that into a live reef-media ledger: tunnel diameter, build length, conversion share, reef geometry, human skills, automation and time.</p>
+      <p class="lede muted">The Sandworm repo already asks how future tunnel spoil might become blocks, reef modules, dune support, tunnel lining tests or stored heat. This page turns that into a live material ledger: small service tunnels, robot corridors, Loop-style tunnels, weekly advance speed, reef geometry, climate-ready blocks, glass and silicate products, human skills, automation and time.</p>
       <ol class="pathway">
-        <li><p><strong>Calculate volume.</strong> What comes out of a 100 m tunnel section at different diameters?</p></li>
-        <li><p><strong>Choose a pathway.</strong> What share could become reef media, living shoreline, surf-bank base, dune support, blocks or other useful material?</p></li>
-        <li><p><strong>Map the handoff.</strong> Which equipment, skills, testing, automation and storage yards help the material move without sitting in a lonely pile?</p></li>
+        <li><p><strong>Keep the 100 m unit.</strong> What volume comes from each 100 m section, and how fast could that next 100 m arrive?</p></li>
+        <li><p><strong>Choose a pathway.</strong> What share could become reef media, living shoreline, surf-bank base, dune support, service blocks, glass, ceramic or resident-use material?</p></li>
+        <li><p><strong>Map the handoff.</strong> Which equipment, skills, testing, automation and storage yards keep up when the tunnel system is advancing quickly?</p></li>
       </ol>
     </div>
-    <div class="quote-panel">A reef plan can empower the tunnel build when the material stream becomes visible early: not as waste, but as a timed flow of possible habitat, surf, shoreline and learning value.</div>
+    <div class="quote-panel">A reef and block plan can empower the tunnel build when the material stream becomes visible early: not as waste, but as a high-throughput flow of habitat, surf, surface services, homes and learning value.</div>
   </div>
 </section>
 <section class="section soft-band">
@@ -1212,25 +1256,25 @@ def reefs_body() -> str:
   <div class="section-inner">
     <div class="section-heading">
       <p class="section-label">Interactive tunnel to reef ledger</p>
-      <h2>What does tunnel diameter become per 100 m?</h2>
-      <p class="lede muted">Move the sliders to sketch a monthly material flow. The calculator is deliberately plain: it shows volume, possible reef-media conversion, module counts, stockpile avoided, work crews, equipment and automation notes. It is a public thinking tool, not an approval or design claim.</p>
+      <h2>What does 100 m of tunnel become, and how fast can it arrive?</h2>
+      <p class="lede muted">Move the sliders to sketch a weekly material flow. The 100 m volume stays as the clean comparison unit; tunnel speed shows whether that material arrives in hours, days or weeks. The scale spans small service and robot tunnels through Loop-style corridors, because the point is to advance the field rather than copy old tunnel pacing or current design-method assumptions.</p>
     </div>
     <div class="reef-calculator" data-reef-calculator>
       <div class="calc-controls">
         <div class="range-field">
-          <label for="reef-diameter">Tunnel diameter <output data-calc-out="diameter">6 m</output></label>
-          <input id="reef-diameter" type="range" min="3" max="15" step="0.5" value="6" data-calc-input="diameter">
+          <label for="reef-diameter">Tunnel diameter <output data-calc-out="diameter">3.6 m</output></label>
+          <input id="reef-diameter" type="range" min="0.6" max="5" step="0.1" value="3.6" data-calc-input="diameter">
         </div>
         <div class="range-field">
-          <label for="reef-length">Tunnel advance per month <output data-calc-out="monthlyLength">100 m</output></label>
-          <input id="reef-length" type="range" min="10" max="500" step="10" value="100" data-calc-input="monthlyLength">
+          <label for="reef-speed">Tunnel advance per week <output data-calc-out="weeklyAdvance">1 km/week</output></label>
+          <input id="reef-speed" type="range" min="50" max="5000" step="50" value="1000" data-calc-input="weeklyAdvance">
         </div>
         <div class="range-field">
-          <label for="reef-months">Months in this stage <output data-calc-out="months">6</output></label>
-          <input id="reef-months" type="range" min="1" max="24" step="1" value="6" data-calc-input="months">
+          <label for="reef-weeks">Weeks in this sprint <output data-calc-out="weeks">4</output></label>
+          <input id="reef-weeks" type="range" min="1" max="16" step="1" value="4" data-calc-input="weeks">
         </div>
         <div class="range-field">
-          <label for="reef-share">Material sent to reef/sand media <output data-calc-out="reefShare">35%</output></label>
+          <label for="reef-share">Material converted to useful media <output data-calc-out="reefShare">35%</output></label>
           <input id="reef-share" type="range" min="0" max="90" step="5" value="35" data-calc-input="reefShare">
         </div>
         <div class="range-field">
@@ -1248,15 +1292,18 @@ def reefs_body() -> str:
         <label class="toggle-card"><input type="checkbox" data-calc-toggle="surf" checked><span>Surf bank geometry</span></label>
         <label class="toggle-card"><input type="checkbox" data-calc-toggle="dune"><span>Stable dune support</span></label>
         <label class="toggle-card"><input type="checkbox" data-calc-toggle="island"><span>Artificial island / platform</span></label>
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="surface" checked><span>Quick-fit surface blocks</span></label>
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="homes"><span>Glass / silicate home products</span></label>
         <label class="toggle-card"><input type="checkbox" data-calc-toggle="automation" checked><span>Automation and sensors</span></label>
       </div>
       <div class="calc-results">
-        <article class="calc-metric"><span>Per 100 m tunnel</span><strong data-calc-out="per100">2,827 m3</strong></article>
-        <article class="calc-metric"><span>Monthly tunnel volume</span><strong data-calc-out="monthlySpoil">2,827 m3</strong></article>
-        <article class="calc-metric"><span>Monthly reef media</span><strong data-calc-out="monthlyReef">1,138 m3</strong></article>
-        <article class="calc-metric"><span>Stage reef media</span><strong data-calc-out="stageReef">6,828 m3</strong></article>
-        <article class="calc-metric"><span>Approx. modules / month</span><strong data-calc-out="monthlyModules">46</strong></article>
-        <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">6,828 m3</strong></article>
+        <article class="calc-metric"><span>Per 100 m tunnel</span><strong data-calc-out="per100">1,018 m3</strong></article>
+        <article class="calc-metric"><span>Time to earn 100 m</span><strong data-calc-out="timePer100">16.8 h</strong></article>
+        <article class="calc-metric"><span>Weekly tunnel volume</span><strong data-calc-out="weeklySpoil">10,179 m3</strong></article>
+        <article class="calc-metric"><span>Weekly useful media</span><strong data-calc-out="weeklyReef">4,097 m3</strong></article>
+        <article class="calc-metric"><span>Sprint useful media</span><strong data-calc-out="stageReef">16,389 m3</strong></article>
+        <article class="calc-metric"><span>Approx. modules / week</span><strong data-calc-out="weeklyModules">164</strong></article>
+        <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">14,251 m3</strong></article>
       </div>
       <div class="calc-panels">
         <article class="calc-panel">
@@ -1278,6 +1325,16 @@ def reefs_body() -> str:
         <div class="tag-row" data-sandworm-links></div>
       </div>
     </div>
+  </div>
+</section>
+<section class="section soft-band">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="section-label">Surface systems and homes</p>
+      <h2>Could tunnel media become climate-ready island architecture?</h2>
+      <p class="lede muted">Could surface design become an island capability: quick-fit interlocks, robotic placement, hidden services, material passports, repairable home products and movable public surfaces that help the island adapt if sea levels rise?</p>
+    </div>
+""" + card_grid(surface_cards) + """
   </div>
 </section>
 <section class="section soft-band">
