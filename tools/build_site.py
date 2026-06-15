@@ -8,11 +8,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260614-energy-superpower-v1"
+ASSET_VERSION = "20260614-energy-superpower-v2"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
-    "power sharing, water-height imagination, quiet marine energy, fractal no-blade wind and community wealth."
+    "green hydrogen, desalination, brine loops, power sharing, water-height imagination, "
+    "quiet marine energy, fractal no-blade wind and community wealth."
 )
 
 
@@ -44,6 +45,13 @@ PAGES = [
         "href": "storage.html",
         "title": "Sand, Air And Heat Storage",
         "description": "Could sand, heat, pressure air, EVs and demand shifting turn island sunlight into evening abundance while the deeper pressure-carbon-response weave gets its own future repo?",
+    },
+    {
+        "id": "hydrogen",
+        "label": "Hydrogen",
+        "href": "hydrogen.html",
+        "title": "Green Hydrogen, Desal And Brine Loops",
+        "description": "Could solar, desalinated water, electrolysis, oxygen, heat, brine minerals and bay repair questions become one transparent island water-energy loop?",
     },
     {
         "id": "sharing",
@@ -120,19 +128,20 @@ PAGES = [
 
 HERO_IMAGES = {
     "home": "assets/img/heroes/home-energy.webp",
-    "options": "assets/img/heroes/home-energy.webp",
+    "options": "assets/img/heroes/options-atlas.webp",
     "solar": "assets/img/heroes/home-energy.webp",
-    "storage": "assets/img/heroes/makerspace-lab.webp",
-    "sharing": "assets/img/heroes/community-wealth.webp",
-    "water": "assets/img/heroes/ferry-gateway.webp",
+    "storage": "assets/img/heroes/storage-abundance.webp",
+    "hydrogen": "assets/img/heroes/hydrogen-water-loop.webp",
+    "sharing": "assets/img/heroes/sharing-commons.webp",
+    "water": "assets/img/heroes/water-height-geography.webp",
     "marine": "assets/img/heroes/marine-energy.webp",
-    "wind": "assets/img/heroes/community-wealth.webp",
-    "network": "assets/img/heroes/ferry-gateway.webp",
+    "wind": "assets/img/heroes/fractal-wind-lab.webp",
+    "network": "assets/img/heroes/local-labs-network.webp",
     "wealth": "assets/img/heroes/wealth-hours.webp",
     "builders": "assets/img/heroes/builders.webp",
-    "boundaries": "assets/img/heroes/sources.webp",
+    "boundaries": "assets/img/heroes/boundaries-care-map.webp",
     "sources": "assets/img/heroes/sources.webp",
-    "site-map": "assets/img/heroes/sources.webp",
+    "site-map": "assets/img/heroes/site-map-tabletop.webp",
 }
 
 
@@ -290,6 +299,48 @@ SOURCE_LINKS = [
         "url": "https://polarnightenergy.com/sand-battery/",
         "publisher": "Polar Night Energy",
         "use": "Provides a plain commercial reference for sand batteries as thermal storage, not magic electric batteries.",
+    },
+    {
+        "title": "Australia's National Hydrogen Strategy 2024",
+        "url": "https://www.dcceew.gov.au/energy/publications/australias-national-hydrogen-strategy",
+        "publisher": "Australian Government DCCEEW",
+        "use": "Sets the national green-hydrogen context: production, use, export, community benefit and infrastructure questions.",
+    },
+    {
+        "title": "Hydrogen",
+        "url": "https://www.csiro.au/en/research/environmental-impacts/fuels/hydrogen",
+        "publisher": "CSIRO",
+        "use": "Provides a plain science reference for hydrogen production, storage, transport, use and Australia's hydrogen opportunity.",
+    },
+    {
+        "title": "Renewable hydrogen",
+        "url": "https://arena.gov.au/renewable-energy/hydrogen/",
+        "publisher": "ARENA",
+        "use": "Grounds hydrogen as renewable electricity plus water electrolysis, while keeping cost, scale and end-use questions visible.",
+    },
+    {
+        "title": "Beneficial reuse and disposal options for brine in Queensland",
+        "url": "https://gisera.csiro.au/beneficial-reuse-and-disposal-options-for-brine-in-queensland/",
+        "publisher": "CSIRO GISERA",
+        "use": "Opens desalination brine as a resource-recovery and reuse question rather than a waste afterthought.",
+    },
+    {
+        "title": "Mining valuable minerals from seawater: a critical review",
+        "url": "https://pubs.rsc.org/en/content/articlelanding/2017/ew/c6ew00268d",
+        "publisher": "Environmental Science: Water Research & Technology / RSC",
+        "use": "Adds a research trail for seawater and brine mineral recovery, including lithium, magnesium and other dissolved resources.",
+    },
+    {
+        "title": "South East Queensland Report Card",
+        "url": "https://reportcard.hlw.org.au/",
+        "publisher": "Healthy Land & Water",
+        "use": "Gives the Moreton Bay water-quality context for asking what clean-energy wealth, sensors and brine research could help repair.",
+    },
+    {
+        "title": "South East Queensland report card - Purpose",
+        "url": "https://wetlandinfo.des.qld.gov.au/wetlands/facts-maps/report-card-organisation-healthy-land-and-water/",
+        "publisher": "Queensland WetlandInfo",
+        "use": "Frames the official report-card purpose: tracking waterway health, pollutant loads, ecosystem condition and progress over time.",
     },
     {
         "title": "Broken Hill Advanced Compressed Air Energy Storage Demonstration",
@@ -547,16 +598,16 @@ BUILDERS = [
     },
     {
         "id": "sand-air-storage",
-        "title": "Sand And Pressure-Air Storage Builder",
-        "purpose": "Explore sand, heat and pressure-air storage as open questions for island abundance.",
+        "title": "Storage, Hydrogen And Water-Loop Builder",
+        "purpose": "Explore sand, heat, pressure-air, green-hydrogen, desal and brine-mineral loops as open questions for island abundance.",
         "filename": "straddie-sand-air-storage-brief",
-        "boundary": "Thermal sand storage, compressed air, CO2, pressure vessels and response systems can share a conversation while each keeps its own source trail and learning path.",
+        "boundary": "Thermal sand storage, compressed air, hydrogen, desalination, brine minerals, CO2, pressure vessels and response systems can share a conversation while each keeps its own source trail and learning path.",
         "next_step": "Choose one storage question and one hands-on learning step before connecting it to a bigger network.",
         "fields": [
             ("need", "What energy problem is being solved?", "Evening power, heat, workshop process heat, emergency backup, ferry gateway load, water pumping, or seasonal resilience."),
-            ("medium", "Which storage medium is in play?", "Hot sand, rock, hot water, compressed air vessel, distributed air container, aquifer question, battery, or hybrid."),
-            ("place", "Where could the first learning step live?", "Maker-space yard, service zone, ferry lab, existing industrial site, digital model, or not known."),
-            ("review", "Which lenses could help?", "Pressure behaviour, response systems, electrical, geology, heat insulation, public access, noise, access paths or economics."),
+            ("medium", "Which storage or water medium is in play?", "Hot sand, rock, hot water, compressed air vessel, hydrogen, desal loop, brine minerals, aquifer question, battery, or hybrid."),
+            ("place", "Where could the first learning step live?", "Maker-space yard, service zone, ferry lab, bay sensor node, existing industrial site, digital model, or not known."),
+            ("review", "Which lenses could help?", "Pressure behaviour, water source, brine recovery, response systems, electrical, geology, heat insulation, public access, noise, access paths or economics."),
         ],
     },
     {
@@ -719,6 +770,7 @@ def home_body() -> str:
 """ + card_grid([
         {"label": "Near term", "title": "How much rooftop solar is still untapped?", "text": "Could homes, shops, clubs, halls and shaded car parks become the first power station?"},
         {"label": "Storage", "title": "Can sand hold the evening?", "text": "Could solar heat or spare electricity charge sand, rock or hot-water stores for workshop heat, drying, cooking, water and community backup?"},
+        {"label": "Hydrogen", "title": "Could water become a clean-energy loop?", "text": "Could solar, desal, electrolysis, oxygen, heat and brine minerals help the island ask better questions about fuel, water and Moreton Bay repair?"},
         {"label": "Sharing", "title": "Can spare solar be worth more before it leaves?", "text": "Could neighbourhood batteries, EV charging, hot water, cold rooms and plain bill credits beat a weak feed-in tariff without trapping anyone?"},
         {"label": "Pressure", "title": "What can compressed air teach on a sand island?", "text": "Could air storage start with containers, pipes, compressors, heat recovery and aquifer models that map to Straddie's sandmass rather than generic mainland infrastructure?"},
         {"label": "Water", "title": "What can Snowy-scale thinking teach a sand island?", "text": "Could Snowy, Wivenhoe, Kidston, Borumba and pumped-hydro atlases help people ask better Straddie questions about ocean, bay, dune height, perched lakes, aquifers, sands and mineral sands?"},
@@ -768,6 +820,7 @@ def options_body() -> str:
         {"status": "Start now", "title": "Rooftop solar and batteries", "plain": "The most practical first layer: roofs, shade, small businesses, public buildings, hot water and batteries.", "question": "Which roofs and loads are obvious wins once the owner, electrician and network rules are checked?", "review": "Electrical, fire, roof, cyclone/wind loading, insurance and network export."},
         {"status": "Start small", "title": "Solar thermal and concentration", "plain": "Heat can be easier to store than electricity. Solar concentration might suit a workshop, kitchen, repair yard, hot-water load or sand-heat experiment.", "question": "Where does the island need clean heat, not just clean electrons?", "review": "Heat use, glare, fire access, land use, maintenance and economics."},
         {"status": "Prototype", "title": "Sand batteries", "plain": "A sand battery is thermal storage: heat goes into sand or similar material and comes out as heat, steam, air or sometimes power through another system.", "question": "Could a maker-space bench test show what local heat storage is good for?", "review": "Insulation, hot surfaces, materials, fire, monitoring, output use and public access."},
+        {"status": "Water-energy loop", "title": "Green hydrogen, desal and brine mining", "plain": "Green hydrogen asks for clean electricity and water. Straddie can ask it as a transparent loop: desal, electrolysis, oxygen, heat, brine minerals, ferry fuel questions, bay sensors and Moreton Bay repair economics.", "question": "Could a tiny public water-loop lab show what hydrogen, desal and brine recovery teach before a larger pathway takes shape?", "review": "Water source, desal energy, brine concentration, mineral recovery, oxygen use, heat, storage, ferry demand, bay health and economics."},
         {"status": "Sharing layer", "title": "Neighbourhood batteries and power sharing", "plain": "Local solar may be worth more when it is used, stored or shared locally before it is exported at a low feed-in tariff.", "question": "Could a community battery, EV charger or bill-credit ledger keep midday solar value close to residents?", "review": "Retailer, network tariff, metering, consent, privacy, fair-go help paths, tax, consumer law and governance."},
         {"status": "Research lane", "title": "Compressed air", "plain": "Compressed air can be explored through pressure vessels, pipes, heat recovery, control systems, sensor data and sandmass models before the future integrated network gets its own repo.", "question": "Could pressure-air thinking help Straddie understand storage, heat, sensing and resilience as one joyful systems question?", "review": "Pressure behaviour, compressor sound, heat recovery, service access, local skills, geology, emergency knowledge and economics."},
         {"status": "Storage lane", "title": "Flow batteries and salt-gradient ideas", "plain": "Vanadium flow batteries and salt-gradient storage add more storage imagination to the bench. They are different tools with different rhythms, materials and maintenance stories.", "question": "Which storage chemistry fits island loads, repair skills, water context, budget and local stewardship?", "review": "Lifecycle, cost, electrolyte handling, water sensitivity, maintenance, supply chain and end-of-life rules."},
@@ -846,6 +899,7 @@ def storage_body() -> str:
         {"label": "Flow battery", "title": "Could flow batteries suit the island's daily rhythm?", "text": "Flow batteries invite questions about longer cycling, maintenance, materials, water context, service access, ownership and who learns how to keep them working."},
         {"label": "Salt gradient", "title": "Could blue-energy chemistry add another doorway?", "text": "Salt-gradient systems can begin as a curiosity bench: what can ocean, bay, brine, membranes and chemistry teach before anyone imagines island hardware?"},
         {"label": "Pressure air", "title": "Could compressed air become a transparent pressure-energy question?", "text": "What can containers, pipes, compressors, heat recovery, controls, sensor data and sandmass modelling teach when residents can see the tradeoffs and imagine the next shape themselves?"},
+        {"label": "Hydrogen", "title": "Could hydrogen store sunlight as a water loop?", "text": "Could desal, electrolysis, oxygen, heat, hydrogen storage and brine minerals become a public learning loop for transport, backup power and Moreton Bay repair?", "href": "hydrogen.html", "action": "Open hydrogen"},
     ]) + """
   </div>
 </section>
@@ -863,6 +917,38 @@ def storage_body() -> str:
         {"label": "Reference", "title": "ARENA advanced compressed air", "text": "Australian source trail for long-duration compressed-air storage.", "href": "https://arena.gov.au/projects/hydrostor-broken-hill-advanced-compressed-air-energy-storage-demonstration/", "action": "Open source"},
         {"label": "Reference", "title": "Aquifer CAES technical paper", "text": "Study material for aquifer-storage questions and the future repo source trail.", "href": "https://www.sandia.gov/files/ess/EESAT/2009_papers/Technical%20Feasibility%20of%20Compressed-Air%20Energy%20Storage%20in%20an%20Aquifer%20Storage%20Vessel.pdf", "action": "Open paper"},
         {"label": "Atlas trail", "title": "Source notes", "text": "The current source trail stays here until the dedicated integrated-systems repo exists.", "href": "sources.html", "action": "Open sources"},
+    ]) + """
+  </div>
+</section>
+"""
+
+
+def hydrogen_body() -> str:
+    return page_hero(by_id("hydrogen")) + """
+<section class="section">
+  <div class="section-inner split">
+    <div>
+      <p class="section-label">Water-energy loop</p>
+      <h2>Could green hydrogen become a loop people can inspect?</h2>
+      <p class="lede muted">Green hydrogen starts with renewable electricity and water electrolysis. On a sand island, the richer question is wider: where does the water come from, could desalination be powered cleanly, what does the brine become, how are oxygen and heat used, and could the value make Moreton Bay repair work more resourced and visible over time?</p>
+      <ol class="pathway">
+        <li><p><strong>Start with water.</strong> Could a public desal bench show litres, energy, membranes, maintenance, brine concentration and water quality in plain English?</p></li>
+        <li><p><strong>Split the loop open.</strong> Could electrolysis make hydrogen, oxygen, heat, data and learning visible before a larger fuel pathway takes shape?</p></li>
+        <li><p><strong>Let the bay benefit.</strong> Could mineral recovery, sensors, seagrass knowledge, catchment repair and public report-card work sit in the same conversation?</p></li>
+      </ol>
+    </div>
+    <div class="quote-panel">A hydrogen idea gets more interesting when it becomes a water, minerals, oxygen, transport, data and Moreton Bay repair question.</div>
+  </div>
+</section>
+<section class="section soft-band">
+  <div class="section-inner">
+""" + card_grid([
+        {"label": "National strategy", "title": "What does Australia say hydrogen is for?", "text": "Could the national hydrogen strategy help Straddie ask about production, local use, export, skills, infrastructure and community benefit?", "href": "https://www.dcceew.gov.au/energy/publications/australias-national-hydrogen-strategy", "action": "Open source"},
+        {"label": "Electrolysis", "title": "What does renewable hydrogen need?", "text": "Could solar, water, electrolysers, oxygen, heat and storage be shown as one transparent public learning loop?", "href": "https://arena.gov.au/renewable-energy/hydrogen/", "action": "Open ARENA"},
+        {"label": "Desal", "title": "Could desal be a small visible water question first?", "text": "Could a bench-scale desal loop teach water input, filter care, energy use, brine concentration and maintenance before anyone imagines island-scale supply?"},
+        {"label": "Brine mining", "title": "Could brine become a resource-recovery lab?", "text": "Could concentrated brine invite magnesium, lithium, salt, trace-mineral and membrane research while keeping discharge and ecology visible?", "href": "https://gisera.csiro.au/beneficial-reuse-and-disposal-options-for-brine-in-queensland/", "action": "Open source"},
+        {"label": "Moreton Bay", "title": "Could clean-energy value help clean the bay?", "text": "Could hydrogen, desal and brine research help fund water-quality sensors, seagrass knowledge, catchment repair, public dashboards and local stewardship?", "href": "https://reportcard.hlw.org.au/", "action": "Open report card"},
+        {"label": "Ferries", "title": "Could ferries and service vehicles create a real fuel question?", "text": "Could hydrogen be compared with batteries, shore power, e-fuels and demand shifting for ferries, heavy vehicles, emergency backup and workshop loads?"},
     ]) + """
   </div>
 </section>
@@ -905,11 +991,12 @@ def sharing_body() -> str:
   <div class="section-inner split">
     <div>
       <p class="section-label">Transport web</p>
-      <h2>Could clean energy planning include ferries, EVs and future tunnels as one transport web?</h2>
-      <p class="lede muted">The ferry terminal upgrade makes the gateway a real transport planning node. EV charging, e-shuttles, service vehicles and future Sandworm-style tunnel ideas can be explored as load-shifting, service and movement questions.</p>
+      <h2>Could clean energy planning include ferries, EVs, hydrogen and future tunnels as one transport web?</h2>
+      <p class="lede muted">The ferry terminal upgrade makes the gateway a real transport planning node. EV charging, e-shuttles, service vehicles, green-hydrogen fuel questions and future Sandworm-style tunnel ideas can be explored as load-shifting, service and movement questions.</p>
       <ul class="question-list">
         <li>Could ferry arrival peaks tell chargers when not to draw hard from the grid?</li>
         <li>Could EV chargers reward slow, sunny charging instead of expensive evening charging?</li>
+        <li>Could hydrogen compare honestly with batteries and shore power for ferries, heavy vehicles or backup fuel?</li>
         <li>Could any future tunnel or utility corridor carry data, air, water and energy services as part of a dedicated Sandworm systems map?</li>
       </ul>
     </div>
@@ -1301,6 +1388,7 @@ BODY_RENDERERS = {
     "options": options_body,
     "solar": solar_body,
     "storage": storage_body,
+    "hydrogen": hydrogen_body,
     "sharing": sharing_body,
     "water": water_body,
     "marine": marine_body,
@@ -1405,7 +1493,7 @@ def write_site_data() -> None:
     nav = [{"id": page["id"], "label": page["label"], "href": page["href"]} for page in PAGES]
     by_page_id = {item["id"]: item for item in nav}
     nav_groups = [
-        {"label": "Energy", "items": [by_page_id[item_id] for item_id in ["solar", "storage", "sharing", "water", "marine", "wind"]]},
+        {"label": "Energy", "items": [by_page_id[item_id] for item_id in ["solar", "storage", "hydrogen", "sharing", "water", "marine", "wind"]]},
         {"label": "Proof", "items": [by_page_id[item_id] for item_id in ["network", "wealth", "boundaries", "sources", "site-map"]]},
     ]
     nav_order = [
@@ -1473,6 +1561,7 @@ It covers:
 - rooftop solar and batteries
 - solar thermal and solar concentration
 - sand batteries and other heat storage
+- green hydrogen, desalination and brine-mineral recovery questions
 - compressed air as a careful research lane
 - power sharing, neighbourhood batteries and bill ledgers
 - pumped-hydro lessons from Snowy, Wivenhoe, Kidston, Borumba and sand-island geography

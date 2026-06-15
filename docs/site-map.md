@@ -1,10 +1,11 @@
 # Straddie Clean Energy Superpower Site Map
 
 ## Pages
-- [Straddie Clean Energy Superpower](../index.html) - A self-sovereign public atlas for exploring clean energy options on Minjerribah / North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, power sharing, water-height imagination, quiet marine energy, fractal no-blade wind and community wealth.
+- [Straddie Clean Energy Superpower](../index.html) - A self-sovereign public atlas for exploring clean energy options on Minjerribah / North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, green hydrogen, desalination, brine loops, power sharing, water-height imagination, quiet marine energy, fractal no-blade wind and community wealth.
 - [Energy Options Map](../options.html) - A plain-English map of which energy options look near-term, which invite bench tests, and which work best as careful questions for now.
 - [Rooftops, Shade And Solar Heat](../solar.html) - Could island roofs, shade structures, ferry-gateway car parks and solar thermal tests become the first clean energy layer?
 - [Sand, Air And Heat Storage](../storage.html) - Could sand, heat, pressure air, EVs and demand shifting turn island sunlight into evening abundance while the deeper pressure-carbon-response weave gets its own future repo?
+- [Green Hydrogen, Desal And Brine Loops](../hydrogen.html) - Could solar, desalinated water, electrolysis, oxygen, heat, brine minerals and bay repair questions become one transparent island water-energy loop?
 - [Power Sharing And Neighbourhood Batteries](../sharing.html) - Could local solar be worth more when it is shared, stored, shifted into EVs or settled through a plain community ledger before it leaves the island cheaply?
 - [Sand Hills, Lakes And Pumped-Hydro Lessons](../water-height.html) - Could Straddie learn from Snowy, Wivenhoe, Kidston, Borumba and pumped-hydro atlases while asking its own ocean, bay, sand-hill, perched-lake, aquifer and mineral-sands questions?
 - [Wave And Tidal Without Underwater Blades](../marine.html) - Could wave and tide be explored from first principles: flutter, vortex shedding, shrimp-like cascades, reef geometry, sensors, play, modelling and maker-space tests?
@@ -19,7 +20,7 @@
 ## Builders
 - [Energy Entry Trail Builder](../builders/entry-trail.html) - Choose a clean-energy doorway without needing to accept the whole atlas.
 - [Rooftop Solar And Shade Note Builder](../builders/solar-rooftop-note.html) - Turn a roof, car park, shade structure or public building into a first clean-energy question.
-- [Sand And Pressure-Air Storage Builder](../builders/sand-air-storage.html) - Explore sand, heat and pressure-air storage as open questions for island abundance.
+- [Storage, Hydrogen And Water-Loop Builder](../builders/sand-air-storage.html) - Explore sand, heat, pressure-air, green-hydrogen, desal and brine-mineral loops as open questions for island abundance.
 - [No-Underwater-Blades Marine Brief Builder](../builders/marine-no-turbine.html) - Shape a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.
 - [Water-Height Geography Builder](../builders/perched-lake-boundary.html) - Turn water-height curiosity into a local geography note grounded in ocean, bay, sand hills, perched lakes, aquifers, sands and mineral sands.
 - [Power Sharing And Bill Ledger Builder](../builders/power-sharing-ledger.html) - Turn a local sharing idea into a plain-English bill, battery and governance question.

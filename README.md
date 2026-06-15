@@ -7,6 +7,7 @@ It covers:
 - rooftop solar and batteries
 - solar thermal and solar concentration
 - sand batteries and other heat storage
+- green hydrogen, desalination and brine-mineral recovery questions
 - compressed air as a careful research lane
 - power sharing, neighbourhood batteries and bill ledgers
 - pumped-hydro lessons from Snowy, Wivenhoe, Kidston, Borumba and sand-island geography

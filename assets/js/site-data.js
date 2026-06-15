@@ -21,6 +21,11 @@ window.CLEAN_ENERGY_SITE = {
       "href": "storage.html"
     },
     {
+      "id": "hydrogen",
+      "label": "Hydrogen",
+      "href": "hydrogen.html"
+    },
+    {
       "id": "sharing",
       "label": "Power sharing",
       "href": "sharing.html"
@@ -84,6 +89,11 @@ window.CLEAN_ENERGY_SITE = {
           "id": "storage",
           "label": "Storage",
           "href": "storage.html"
+        },
+        {
+          "id": "hydrogen",
+          "label": "Hydrogen",
+          "href": "hydrogen.html"
         },
         {
           "id": "sharing",
@@ -170,6 +180,11 @@ window.CLEAN_ENERGY_SITE = {
           "href": "storage.html"
         },
         {
+          "id": "hydrogen",
+          "label": "Hydrogen",
+          "href": "hydrogen.html"
+        },
+        {
           "id": "sharing",
           "label": "Power sharing",
           "href": "sharing.html"
@@ -253,6 +268,11 @@ window.CLEAN_ENERGY_SITE = {
       "href": "storage.html"
     },
     {
+      "id": "hydrogen",
+      "label": "Hydrogen",
+      "href": "hydrogen.html"
+    },
+    {
       "id": "sharing",
       "label": "Power sharing",
       "href": "sharing.html"
@@ -299,7 +319,7 @@ window.CLEAN_ENERGY_SITE = {
     },
     {
       "id": "builder-sand-air-storage",
-      "label": "Sand And Pressure-Air Storage Builder",
+      "label": "Storage, Hydrogen And Water-Loop Builder",
       "href": "builders/sand-air-storage.html"
     },
     {
