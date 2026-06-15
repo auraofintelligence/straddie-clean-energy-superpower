@@ -867,6 +867,40 @@ h3 {
   align-content: start;
 }
 
+.focus-measure-grid {
+  display: grid;
+  gap: .65rem;
+}
+
+.focus-measure-grid div {
+  background: rgba(0, 95, 108, .06);
+  border: 1px solid rgba(0, 95, 108, .14);
+  border-radius: calc(var(--radius) - 2px);
+  display: grid;
+  gap: .2rem;
+  padding: .7rem;
+}
+
+.focus-measure-grid span,
+.focus-measure-grid em {
+  color: var(--muted);
+  font-size: .82rem;
+  font-style: normal;
+}
+
+.focus-measure-grid strong {
+  color: var(--bay);
+  font-family: var(--heading);
+  font-size: 1rem;
+}
+
+.focus-measure-grid p {
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
 .timeline-bars {
   display: grid;
   gap: .55rem;

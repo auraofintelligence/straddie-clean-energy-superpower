@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v11"
+ASSET_VERSION = "20260615-energy-superpower-v12"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -1384,8 +1384,10 @@ def reefs_body() -> str:
         </div>
         <article class="calc-panel calc-assumptions">
           <p class="mini-label">Everyday yardsticks</p>
-          <h3>What do the numbers roughly mean?</h3>
-          <p>Uses simple public yardsticks: one wheelbarrow is about 0.1 m3, one concrete truck is about 6 m3, one twenty-foot shipping container is about 33 m3, and rough damp sandmass is counted as about 1.6 tonnes per m3. A common 390 x 190 x 190 mm Besser-style block is about 0.014 m3 as an outside envelope, so 2x is about 0.028 m3 and 4x is about 0.056 m3.</p>
+          <h3>What does this pathway roughly mean?</h3>
+          <p>Uses simple public yardsticks: one wheelbarrow is about 0.1 m3, one concrete truck is about 6 m3, one twenty-foot shipping container is about 33 m3, and rough damp sandmass is counted as about 1.6 tonnes per m3.</p>
+          <p data-calc-out="focusYardstick">A mixed island portfolio can compare small reef cells, quick-fit blocks, home products and public-space pieces from the same material stream.</p>
+          <div class="focus-measure-grid" data-calc-out="focusMeasures"></div>
         </article>
       </div>
       <div class="calc-results">
@@ -1394,14 +1396,14 @@ def reefs_body() -> str:
         <article class="calc-metric"><span>Weekly tunnel volume</span><strong data-calc-out="weeklySpoil">10,179 m3</strong><p data-calc-out="weeklySpoilScale">about 308 shipping containers</p></article>
         <article class="calc-metric"><span>Weekly useful media</span><strong data-calc-out="weeklyReef">4,097 m3</strong><p data-calc-out="weeklyReefScale">about 124 shipping containers</p></article>
         <article class="calc-metric"><span>Sprint useful media</span><strong data-calc-out="stageReef">16,389 m3</strong><p data-calc-out="stageReefScale">about 497 shipping containers</p></article>
-        <article class="calc-metric"><span>Approx. pieces / week</span><strong data-calc-out="weeklyModules">73,160</strong></article>
+        <article class="calc-metric"><span data-calc-out="weeklyUnitLabel">Approx. pieces / week</span><strong data-calc-out="weeklyModules">73,160</strong></article>
         <article class="calc-metric"><span>Rough weekly weight</span><strong data-calc-out="weeklyWeight">16,286 t</strong><p data-calc-out="weeklyWeightScale">about 814 loaded tip trucks</p></article>
         <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">14,251 m3</strong><p data-calc-out="avoidedScale">about 432 shipping containers</p></article>
       </div>
       <article class="calc-panel block-estimate-panel">
-        <p class="mini-label">Quick interlock building sketches</p>
-        <h3>How many unique blocks could real island works need?</h3>
-        <p class="calc-note">These are early public yardsticks for robotic placement and block schedules. Counts use the selected media size, treat each block as potentially unique, and leave room for service holes, conduits, lifting points, repairs, disassembly and sea-level adaptation.</p>
+        <p class="mini-label" data-calc-out="estimateKicker">Transformation sketches</p>
+        <h3 data-calc-out="estimateTitle">How large could this batch become?</h3>
+        <p class="calc-note" data-calc-out="estimateNote">Choose a pathway to swap the examples, piece sizes, component splits and verification note.</p>
         <div class="block-estimate-grid" data-calc-out="blockEstimates"></div>
         <div class="calc-export-actions">
           <button class="button primary" type="button" data-export-reef-markdown>Download verification .md</button>
@@ -1455,7 +1457,8 @@ def reefs_body() -> str:
   </div>
 </section>
 <script src="https://auraofintelligence.github.io/sandworm-subterranean-systems/assets/js/site-data.js"></script>
-<script src="assets/js/reef-calculator.js"></script>
+""" + f"""
+<script src="assets/js/reef-calculator.js?v={ASSET_VERSION}"></script>
 """
 
 
