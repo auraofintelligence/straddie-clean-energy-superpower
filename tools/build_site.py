@@ -72,7 +72,7 @@ PAGES = [
         "label": "Marine",
         "href": "marine.html",
         "title": "Wave And Tidal Without Underwater Blades",
-        "description": "Could wave and tide be explored from first principles: flutter, vortex shedding, shrimp-like cascades, reef geometry, sensors, play, modelling and maker-space tests?",
+        "description": "Could wave and tide be explored from first principles: flutter, vortex shedding, shrimp timing, mantis-shrimp strikes, reef geometry, sensors, play, modelling and maker-space tests?",
     },
     {
         "id": "wind",
@@ -502,7 +502,7 @@ SOURCE_LINKS = [
         "title": "Mechanics of Movement: Mantis Shrimp",
         "url": "https://pateklab.biology.duke.edu/research/mechanics-of-ultrafast-movement/mechanics-of-movement-mantis-shrimp/",
         "publisher": "Patek Lab, Duke University",
-        "use": "Gives a public biology reference for latch, spring and cavitation ideas that can inspire playful marine-energy questions.",
+        "use": "Gives a public biology reference for peacock mantis shrimp mouthparts reaching about 12-23 m/s in water, fast enough to form cavitation bubbles during a strike.",
     },
     {
         "title": "Carbon capture and storage",
@@ -613,13 +613,13 @@ BUILDERS = [
     {
         "id": "marine-no-turbine",
         "title": "No-Underwater-Blades Marine Brief Builder",
-        "purpose": "Shape a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.",
+        "purpose": "Shape a wave or tidal curiosity note from first principles: flutter, vortex, shrimp timing, mantis-shrimp strikes, foils, membranes, reefs, sensors, play and local observation.",
         "filename": "straddie-no-turbine-marine-brief",
         "boundary": "No underwater blades is not a lack of imagination. It opens the field to forms, rhythms, materials and processes that humans have barely mapped.",
         "next_step": "Start with sketches, kids' ideas, maker-space rigs, wave tanks, beach observations, digital simulation and source links before choosing any one device family.",
         "fields": [
             ("edge", "Which coast or water edge is being considered?", "Main Beach, Moreton Bay, ferry channel, Amity edge, reef model, wave tank, or concept only."),
-            ("pattern", "Which pattern or movement could inspire it?", "Shrimp-like flutter cascade, vortex shedding, oscillating foil, flexible flag, reef lattice, membrane pulse, buoyant hinge, kelp sway, shell geometry or a kid's sketch."),
+            ("pattern", "Which pattern or movement could inspire it?", "Shrimp appendage timing, mantis-shrimp latch-spring strikes, vortex shedding, oscillating foil, flexible flag, reef lattice, membrane pulse, buoyant hinge, kelp sway, shell geometry or a kid's sketch."),
             ("benefit", "What benefit could be tested?", "Power, sensor trickle-charge, monitoring, reef learning, erosion knowledge, emergency signal, food/habitat co-benefit or public education."),
             ("open_question", "What remains unmapped?", "Geometry, timing, material, scale, anchoring, reversibility, maintenance, community value, learning value or the next experiment."),
         ],
@@ -774,7 +774,7 @@ def home_body() -> str:
         {"label": "Sharing", "title": "Can spare solar be worth more before it leaves?", "text": "Could neighbourhood batteries, EV charging, hot water, cold rooms and plain bill credits beat a weak feed-in tariff without trapping anyone?"},
         {"label": "Pressure", "title": "What can compressed air teach on a sand island?", "text": "Could air storage start with containers, pipes, compressors, heat recovery and aquifer models that map to Straddie's sandmass rather than generic mainland infrastructure?"},
         {"label": "Water", "title": "What can Snowy-scale thinking teach a sand island?", "text": "Could Snowy, Wivenhoe, Kidston, Borumba and pumped-hydro atlases help people ask better Straddie questions about ocean, bay, dune height, perched lakes, aquifers, sands and mineral sands?"},
-        {"label": "Marine", "title": "How many wave and tide geometries are still unmapped?", "text": "Could flutter, vortex shedding, shrimp-like cascades, oscillating foils, membranes, reef lattices, sensors and kids' sketches open more than one marine-energy path?"},
+        {"label": "Marine", "title": "How many wave and tide geometries are still unmapped?", "text": "Could flutter, vortex shedding, shrimp timing, mantis-shrimp strike physics, oscillating foils, membranes, reef lattices, sensors and kids' sketches open more than one marine-energy path?"},
         {"label": "Wealth", "title": "Who owns the upside?", "text": "Could savings, income, training and resilience feed local stewardship instead of leaking away?"},
     ]) + """
   </div>
@@ -825,7 +825,7 @@ def options_body() -> str:
         {"status": "Research lane", "title": "Compressed air", "plain": "Compressed air can be explored through pressure vessels, pipes, heat recovery, control systems, sensor data and sandmass models before the future integrated network gets its own repo.", "question": "Could pressure-air thinking help Straddie understand storage, heat, sensing and resilience as one joyful systems question?", "review": "Pressure behaviour, compressor sound, heat recovery, service access, local skills, geology, emergency knowledge and economics."},
         {"status": "Storage lane", "title": "Flow batteries and salt-gradient ideas", "plain": "Vanadium flow batteries and salt-gradient storage add more storage imagination to the bench. They are different tools with different rhythms, materials and maintenance stories.", "question": "Which storage chemistry fits island loads, repair skills, water context, budget and local stewardship?", "review": "Lifecycle, cost, electrolyte handling, water sensitivity, maintenance, supply chain and end-of-life rules."},
         {"status": "Pumped-hydro lessons", "title": "Sand hills, perched lakes and water height", "plain": "Snowy 2.0, Wivenhoe, Kidston, Borumba and pumped-hydro atlases show that water-height storage is a serious family. Straddie asks it through ocean, bay, dune height, perched lakes, aquifers, wetlands, sands and mineral sands.", "question": "Could a local informal idea learn from those systems and translate the lesson into Straddie's own sand-island geography?", "review": "Snowy Hydro, CleanCo, Genex, Queensland Hydro, ANU atlas, WetlandInfo, local hydrology and community authority."},
-        {"status": "Ocean lab", "title": "Wave and tidal without underwater blades", "plain": "Humans have explored only a small part of wave and tide. No underwater blades can open flutter, vortex shedding, shrimp-like cascades, oscillating foils, membranes, reef lattices, buoys, sensors and maker-space geometry.", "question": "Could kids, fishers, surfers, engineers, artists and marine scientists all sketch different ways motion might become useful energy or knowledge?", "review": "Wave atlas data, marine life, navigation, anchoring, storms, sediment, local observation, repairability and reversibility."},
+        {"status": "Ocean lab", "title": "Wave and tidal without underwater blades", "plain": "Humans have explored only a small part of wave and tide. No underwater blades can open flutter, vortex shedding, shrimp timing, mantis-shrimp strike physics, oscillating foils, membranes, reef lattices, buoys, sensors and maker-space geometry.", "question": "Could kids, fishers, surfers, engineers, artists and marine scientists all sketch different ways motion might become useful energy or knowledge?", "review": "Wave atlas data, marine life, navigation, anchoring, storms, sediment, local observation, repairability and reversibility."},
         {"status": "Fractal harvesting", "title": "Bladeless, motionless and flutter wind", "plain": "Wind is not only tower-scale turbines. Vortex masts, rooftop pressure systems, flutter ribbons, piezo flags, triboelectric films and electrostatic converters all ask how motion at different scales could feed island intelligence.", "question": "Could island wind be mapped as many useful edge motions, not just one peak-output machine?", "review": "Roof edges, ferry ramps, dunes, vents, masts, railings, durability, quietness, repair, wildlife, data and output."},
         {"status": "Future repo", "title": "Integrated pressure, carbon and response network", "plain": "This atlas points toward a dedicated repo for the whole pressure, carbon, response and sensing system.", "question": "Could a dedicated map explore compressed air, aquifers, carbon capture, fire response, emergency power, water, ventilation, sensors, data and governance as one living system?", "review": "QYAC, Geoscience Australia, ARENA, Queensland WetlandInfo, emergency-response references and the public source trail."},
     ]) + """
@@ -1065,9 +1065,9 @@ def marine_body() -> str:
     <div>
       <p class="section-label">First principles ocean lab</p>
       <h2>How many wave and tide geometries are still unmapped?</h2>
-      <p class="lede muted">The known wave and tidal options explored by humans are only a small patch of the design space. A no-underwater-blades posture can invite more imagination: flutter cascades, shrimp-like timing, vortex shedding, oscillating foils, flexible flags, membranes, reef lattices, buoyant hinges, shell geometries, sensor trickle-power and ideas a kid can sketch in five minutes.</p>
+      <p class="lede muted">The known wave and tidal options explored by humans are only a small patch of the design space. A no-underwater-blades posture can invite more imagination: flutter cascades, shrimp appendage timing, mantis-shrimp strike physics, vortex shedding, oscillating foils, flexible flags, membranes, reef lattices, buoyant hinges, shell geometries, sensor trickle-power and ideas a kid can sketch in five minutes.</p>
       <ul class="question-list">
-        <li>What can waves, tides, fish, shrimp, kelp, shells, foam lines and sand ripples teach about motion?</li>
+        <li>What can waves, tides, fish, swimming shrimp, striking mantis shrimp, kelp, shells, foam lines and sand ripples teach about motion?</li>
         <li>Could maker-space rigs, school models, wave tanks and simulations let people test patterns before choosing a device?</li>
         <li>Could reef-energy ideas also improve monitoring, habitat knowledge, erosion understanding, food systems and public learning?</li>
       </ul>
@@ -1083,7 +1083,7 @@ def marine_body() -> str:
         {"label": "Wave atlas", "title": "Where is the movement?", "text": "Could ARENA and CSIRO-style resource mapping show swell, season, direction and energy while leaving the design space open?", "href": "https://arena.gov.au/projects/australian-wave-energy-atlas/", "action": "Open source"},
         {"label": "Flutter", "title": "Could flexible forms harvest tiny repeated motion?", "text": "Could inverted flags, kelp-like strips, soft hinges or piezo surfaces turn small oscillations into useful sensor power or lessons?", "href": "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/abs/energy-harvesting-by-flowinduced-flutter-in-a-simple-model-of-an-inverted-piezoelectric-flag/37FF699E5B55E238A41F056E4A06DBDB", "action": "Open source"},
         {"label": "Vortex", "title": "Could currents shake useful structures?", "text": "Could vortex-induced vibration, fish-like timing or oscillating bodies offer no-blade current ideas for models and careful field questions?", "href": "https://www.energy.gov/cmei/success-stories/articles/eere-success-story-vortex-hydro-energy-develops-transformational", "action": "Open source"},
-        {"label": "Shrimp clue", "title": "Could cascades and appendage timing teach new geometry?", "text": "Shrimp and mantis shrimp point toward timing, cascades, vortices, latch-spring motion and cavitation. Could those clues become sketches, simulations and bench rigs?", "href": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10303694/", "action": "Open source"},
+        {"label": "Shrimp clue", "title": "Could timing and strike physics teach new geometry?", "text": "Swimming shrimp show cascading appendage timing. Peacock mantis shrimp deliver one of the fastest animal strikes measured: their hammer-like mouthparts can hit 12-23 m/s in water and make cavitation bubbles. Could those clues become sketches, simulations and bench rigs?", "href": "https://pateklab.biology.duke.edu/research/mechanics-of-ultrafast-movement/mechanics-of-movement-mantis-shrimp/", "action": "Open Patek Lab"},
         {"label": "Foils", "title": "Could flapping or oscillating foils stay gentle and useful?", "text": "Could biomimetic foils, fish-fin movement and flexible hydrokinetic forms be compared with standard turbines instead of dismissed?", "href": "https://tethys-engineering.pnnl.gov/publications/analysis-biomimetic-stream-energy-device-based-flapping-foils", "action": "Open source"},
         {"label": "Reef geometry", "title": "Could habitat and energy learning share one model?", "text": "Could oyster-crete, reef modules, seagrass edges and sensor frames teach coastal processes first, with energy as one possible co-benefit?"},
         {"label": "Kids and makers", "title": "What would a five-minute sketch reveal?", "text": "Could school groups, surfers, fishers, artists, makers, engineers and marine scientists all add pattern ideas to the same public board?"},

@@ -8,7 +8,7 @@
 - [Green Hydrogen, Desal And Brine Loops](../hydrogen.html) - Could solar, desalinated water, electrolysis, oxygen, heat, brine minerals and bay repair questions become one transparent island water-energy loop?
 - [Power Sharing And Neighbourhood Batteries](../sharing.html) - Could local solar be worth more when it is shared, stored, shifted into EVs or settled through a plain community ledger before it leaves the island cheaply?
 - [Sand Hills, Lakes And Pumped-Hydro Lessons](../water-height.html) - Could Straddie learn from Snowy, Wivenhoe, Kidston, Borumba and pumped-hydro atlases while asking its own ocean, bay, sand-hill, perched-lake, aquifer and mineral-sands questions?
-- [Wave And Tidal Without Underwater Blades](../marine.html) - Could wave and tide be explored from first principles: flutter, vortex shedding, shrimp-like cascades, reef geometry, sensors, play, modelling and maker-space tests?
+- [Wave And Tidal Without Underwater Blades](../marine.html) - Could wave and tide be explored from first principles: flutter, vortex shedding, shrimp timing, mantis-shrimp strikes, reef geometry, sensors, play, modelling and maker-space tests?
 - [Fractal Wind And No-Blade Harvesting](../wind.html) - Could Straddie read wind as edge-flow, roof turbulence, vortex, flutter, electrostatic, piezo and triboelectric motion across many useful island places?
 - [Linked Local Labs](../network.html) - Deep links to the maker-space, Sandworm, ferry terminal lab, grants lab, community wealth and mutuals, and Ready S.E.T. Trust Hub.
 - [Community Wealth And Mutual Care](../wealth.html) - Could clean energy income, lower bills, mutual protection and grant readiness become patient local wealth rather than another extraction story?
@@ -21,7 +21,7 @@
 - [Energy Entry Trail Builder](../builders/entry-trail.html) - Choose a clean-energy doorway without needing to accept the whole atlas.
 - [Rooftop Solar And Shade Note Builder](../builders/solar-rooftop-note.html) - Turn a roof, car park, shade structure or public building into a first clean-energy question.
 - [Storage, Hydrogen And Water-Loop Builder](../builders/sand-air-storage.html) - Explore sand, heat, pressure-air, green-hydrogen, desal and brine-mineral loops as open questions for island abundance.
-- [No-Underwater-Blades Marine Brief Builder](../builders/marine-no-turbine.html) - Shape a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.
+- [No-Underwater-Blades Marine Brief Builder](../builders/marine-no-turbine.html) - Shape a wave or tidal curiosity note from first principles: flutter, vortex, shrimp timing, mantis-shrimp strikes, foils, membranes, reefs, sensors, play and local observation.
 - [Water-Height Geography Builder](../builders/perched-lake-boundary.html) - Turn water-height curiosity into a local geography note grounded in ocean, bay, sand hills, perched lakes, aquifers, sands and mineral sands.
 - [Power Sharing And Bill Ledger Builder](../builders/power-sharing-ledger.html) - Turn a local sharing idea into a plain-English bill, battery and governance question.
 - [Wealth And Grant Readiness Builder](../builders/wealth-grant-readiness.html) - Turn an energy option into a local-benefit note that Grants Lab and mutual-care thinking can inspect.

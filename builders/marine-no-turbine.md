@@ -1,6 +1,6 @@
 # No-Underwater-Blades Marine Brief Builder
 
-Purpose: Shape a wave or tidal curiosity note from first principles: flutter, vortex, shrimp-like timing, foils, membranes, reefs, sensors, play and local observation.
+Purpose: Shape a wave or tidal curiosity note from first principles: flutter, vortex, shrimp timing, mantis-shrimp strikes, foils, membranes, reefs, sensors, play and local observation.
 
 Status: Working note for human review
 
@@ -14,7 +14,7 @@ _Not answered yet._
 
 ### Which pattern or movement could inspire it?
 
-Prompt: Shrimp-like flutter cascade, vortex shedding, oscillating foil, flexible flag, reef lattice, membrane pulse, buoyant hinge, kelp sway, shell geometry or a kid's sketch.
+Prompt: Shrimp appendage timing, mantis-shrimp latch-spring strikes, vortex shedding, oscillating foil, flexible flag, reef lattice, membrane pulse, buoyant hinge, kelp sway, shell geometry or a kid's sketch.
 
 _Not answered yet._
 
