@@ -778,6 +778,53 @@ h3 {
   width: 100%;
 }
 
+.segmented-control {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) - 2px);
+  display: grid;
+  gap: .25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: .25rem;
+}
+
+.segmented-control label {
+  margin: 0;
+}
+
+.segmented-control input {
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 1px;
+}
+
+.segmented-control span {
+  align-items: center;
+  border-radius: .42rem;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--heading);
+  font-size: .88rem;
+  font-weight: 900;
+  justify-content: center;
+  min-height: 2.35rem;
+  padding: .45rem .35rem;
+  text-align: center;
+}
+
+.segmented-control input:checked + span {
+  background: var(--bay);
+  color: var(--white);
+}
+
+.segmented-control input:focus-visible + span {
+  outline: 3px solid rgba(232, 176, 66, .55);
+  outline-offset: 2px;
+}
+
 .calc-metric {
   display: grid;
   gap: .35rem;

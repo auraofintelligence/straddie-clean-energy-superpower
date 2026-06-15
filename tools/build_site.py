@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SITE_TITLE = "Straddie Clean Energy Superpower"
 BASE_URL = "https://auraofintelligence.github.io/straddie-clean-energy-superpower/"
-ASSET_VERSION = "20260615-energy-superpower-v9"
+ASSET_VERSION = "20260615-energy-superpower-v10"
 DESCRIPTION = (
     "A self-sovereign public atlas for exploring clean energy options on Minjerribah / "
     "North Stradbroke Island: rooftop solar, solar thermal, sand batteries, compressed air, "
@@ -1319,12 +1319,12 @@ def reefs_body() -> str:
     <div class="reef-calculator" data-reef-calculator>
       <div class="calc-controls">
         <div class="range-field">
-          <label for="reef-diameter">Tunnel diameter <output data-calc-out="diameter">3.6 m</output></label>
-          <input id="reef-diameter" type="range" min="0.6" max="5" step="0.1" value="3.6" data-calc-input="diameter">
+          <label for="reef-diameter">Tunnel diameter <output data-calc-out="diameter">1.5 m</output></label>
+          <input id="reef-diameter" type="range" min="0.6" max="5" step="0.1" value="1.5" data-calc-input="diameter">
         </div>
         <div class="range-field">
-          <label for="reef-speed">Tunnel advance per week <output data-calc-out="weeklyAdvance">1 km/week</output></label>
-          <input id="reef-speed" type="range" min="25" max="1250" step="25" value="1000" data-calc-input="weeklyAdvance">
+          <label for="reef-speed">Tunnel advance per week <output data-calc-out="weeklyAdvance">300 m/week</output></label>
+          <input id="reef-speed" type="range" min="25" max="1250" step="25" value="300" data-calc-input="weeklyAdvance">
           <p class="range-note">Prototype pace to the left. 1 km/week is the aspiration marker near the high end.</p>
         </div>
         <div class="range-field">
@@ -1356,6 +1356,15 @@ def reefs_body() -> str:
         <div class="range-field">
           <label for="reef-module">Average piece or media cell <output data-calc-out="moduleSize">0.056 m3</output></label>
           <input id="reef-module" type="number" min="0.01" max="250" step="0.001" value="0.056" data-calc-input="moduleSize">
+        </div>
+        <div class="range-field scale-field" id="reef-scale">
+          <label>Build-example scale <output data-calc-out="scenarioScale">Medium</output></label>
+          <div class="segmented-control" role="radiogroup" aria-label="Build-example scale">
+            <label><input type="radio" name="reef-scale" value="minimal" data-calc-input="scenarioScale"><span>Minimal</span></label>
+            <label><input type="radio" name="reef-scale" value="medium" data-calc-input="scenarioScale" checked><span>Medium</span></label>
+            <label><input type="radio" name="reef-scale" value="large" data-calc-input="scenarioScale"><span>Large</span></label>
+          </div>
+          <p class="range-note">Switches every building example, including its component split and exported Markdown.</p>
         </div>
       </div>
       <div class="calc-choice-grid" aria-label="Material story">

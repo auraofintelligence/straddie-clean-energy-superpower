@@ -20,6 +20,7 @@
     reefShare: root.querySelector('[data-calc-input="reefShare"]'),
     modulePreset: root.querySelector('[data-calc-input="modulePreset"]'),
     moduleSize: root.querySelector('[data-calc-input="moduleSize"]'),
+    scenarioScale: root.querySelectorAll('[data-calc-input="scenarioScale"]'),
     focus: root.querySelector('[data-calc-input="focus"]'),
   };
   const exportButton = root.querySelector("[data-export-reef-markdown]");
@@ -83,6 +84,24 @@
 
   const makeList = (label, items) => {
     return `<div><strong>${label}</strong><p>${items.join(", ")}</p></div>`;
+  };
+
+  const scaleBands = {
+    minimal: {
+      label: "Minimal",
+      multiplier: 0.55,
+      note: "first useful sketch",
+    },
+    medium: {
+      label: "Medium",
+      multiplier: 1,
+      note: "current middle sketch",
+    },
+    large: {
+      label: "Large",
+      multiplier: 2.2,
+      note: "fuller public build",
+    },
   };
 
   const blockScenarios = [
@@ -206,12 +225,15 @@
     return `${raw(volume)} m3 / ${raw(moduleSize)} m3 = ${count(blocks)} blocks`;
   };
 
-  const componentRows = (parts, moduleSize) => parts.map((part) => {
-    const blocks = moduleSize > 0 ? part.volume / moduleSize : 0;
+  const componentRows = (parts, moduleSize, scaleMultiplier = 1) => parts.map((part) => {
+    const volume = part.volume * scaleMultiplier;
+    const blocks = moduleSize > 0 ? volume / moduleSize : 0;
     return {
       ...part,
+      baseVolume: part.volume,
+      volume,
       blocks,
-      formula: blockFormula(part.volume, moduleSize),
+      formula: blockFormula(volume, moduleSize),
     };
   });
 
@@ -310,6 +332,8 @@
     const reefShare = Number(inputs.reefShare.value);
     const moduleSize = Number(inputs.moduleSize.value);
     const focus = focusData[inputs.focus.value] || focusData.mixed;
+    const selectedScale = root.querySelector('[data-calc-input="scenarioScale"]:checked')?.value || "medium";
+    const scenarioScale = scaleBands[selectedScale] || scaleBands.medium;
     const presetLabel = inputs.modulePreset && inputs.modulePreset.selectedOptions.length
       ? inputs.modulePreset.selectedOptions[0].textContent.replace(/\s+-\s+.*$/, "")
       : "Custom size";
@@ -326,16 +350,21 @@
     const weeklyWeight = weeklySpoil * SANDMASS_TONNES_PER_M3;
     const timePer100Hours = weeklyAdvance > 0 ? (100 / weeklyAdvance) * 7 * 24 : 0;
     const scenarioResults = blockScenarios.map((item) => {
-      const blocks = moduleSize > 0 ? item.volume / moduleSize : 0;
-      const weeklySets = item.volume > 0 ? weeklyReef / item.volume : 0;
+      const components = componentRows(item.parts || [], moduleSize, scenarioScale.multiplier);
+      const volume = components.length ? componentTotal(components) : item.volume * scenarioScale.multiplier;
+      const blocks = moduleSize > 0 ? volume / moduleSize : 0;
+      const weeklySets = volume > 0 ? weeklyReef / volume : 0;
       return {
         ...item,
+        baseVolume: item.volume,
+        volume,
         blocks,
         weeklySets,
-        formula: blockFormula(item.volume, moduleSize),
-        components: componentRows(item.parts || [], moduleSize),
-        componentVolume: componentTotal(item.parts || []),
-        batch: batchComparison(per100Useful, item.volume),
+        formula: blockFormula(volume, moduleSize),
+        components,
+        componentVolume: componentTotal(components),
+        scale: scenarioScale,
+        batch: batchComparison(per100Useful, volume),
       };
     });
 
@@ -345,6 +374,7 @@
     output("reefShare", `${number.format(reefShare)}%`);
     output("modulePreset", presetLabel);
     output("moduleSize", metres3(moduleSize));
+    output("scenarioScale", scenarioScale.label);
     output("focusLabel", focus.label);
     output("per100", metres3(per100));
     output("per100Scale", volumeScale(per100));
@@ -409,7 +439,7 @@
           <p class="mini-label">${item.label}</p>
           <h4>${item.title}</h4>
           <strong>${count(item.blocks)} unique blocks</strong>
-          <p>${metres3(item.volume)} sketch: ${item.text}.</p>
+          <p>${item.scale.label} scale: ${metres3(item.volume)} sketch. Medium reference was ${metres3(item.baseVolume)}. Includes ${item.text}.</p>
           <code>Formula: ${item.formula}</code>
           ${componentList}
           <em>${item.batch}; current week: about ${setCount(item.weeklySets)} sets.</em>
@@ -423,6 +453,7 @@
       weeks,
       reefShare,
       moduleSize,
+      scenarioScale,
       focus,
       presetLabel,
       area,
@@ -460,6 +491,7 @@
       `- Material converted to useful media: ${number.format(state.reefShare)}%`,
       `- Media preset: ${state.presetLabel}`,
       `- Selected piece or media cell: ${metres3(state.moduleSize)}`,
+      `- Build-example scale: ${state.scenarioScale.label} (${state.scenarioScale.note}, ${raw(state.scenarioScale.multiplier, 2)}x the medium sketch)`,
       `- Material story: ${state.focus.label}`,
       "",
       "## Shared Assumptions",
@@ -470,6 +502,7 @@
       `- Besser-style reference envelope: ${BESSER_LENGTH_M} m x ${BESSER_WIDTH_M} m x ${BESSER_HEIGHT_M} m = ${raw(BESSER_ENVELOPE_M3, 6)} m3.`,
       `- 2x Besser-style envelope: ${raw(BESSER_ENVELOPE_M3 * 2, 3)} m3.`,
       `- 4x Besser-style envelope: ${raw(BESSER_ENVELOPE_M3 * 4, 3)} m3.`,
+      "- Example scales are adjustable guesses: minimal = 0.55x medium, medium = 1x, large = 2.2x. The point is to expose the range, not pretend one early number is final.",
       "- Service holes, lifting points, conduits, drainage, interlocks and material recipes can change the final mass and engineering method. This note counts block envelopes for early verification.",
       "",
       "## Core Formulas",
@@ -487,9 +520,9 @@
       "",
       "Each example uses: sketch volume / selected block envelope = approximate unique blocks.",
       "",
-      "| Example | Sketch volume | Formula | Approx. blocks | 100 m batch comparison | Current week |",
-      "| --- | ---: | --- | ---: | --- | --- |",
-      ...state.scenarioResults.map((item) => `| ${item.title} | ${metres3(item.volume)} | ${item.formula} | ${count(item.blocks)} | ${item.batch} | about ${setCount(item.weeklySets)} sets |`),
+      "| Example | Scale | Medium reference | Sketch volume | Formula | Approx. blocks | 100 m batch comparison | Current week |",
+      "| --- | --- | ---: | ---: | --- | ---: | --- | --- |",
+      ...state.scenarioResults.map((item) => `| ${item.title} | ${item.scale.label} | ${metres3(item.baseVolume)} | ${metres3(item.volume)} | ${item.formula} | ${count(item.blocks)} | ${item.batch} | about ${setCount(item.weeklySets)} sets |`),
       "",
       "## Example Component Split Formulas",
       "",
@@ -497,6 +530,8 @@
       "",
       ...state.scenarioResults.flatMap((item) => [
         `### ${item.title}`,
+        "",
+        `Scale: ${item.scale.label} (${raw(item.scale.multiplier, 2)}x medium). Medium reference was ${metres3(item.baseVolume)}.`,
         "",
         `Total check: component sketch adds to ${metres3(item.componentVolume)}; total block formula is ${item.formula}.`,
         "",
@@ -541,11 +576,14 @@
 
   Object.entries(inputs).forEach(([name, input]) => {
     if (!input || name === "modulePreset") return;
-    input.addEventListener("input", () => {
-      if (name === "moduleSize" && inputs.modulePreset) inputs.modulePreset.value = "custom";
-      update();
+    const controls = input.addEventListener ? [input] : Array.from(input);
+    controls.forEach((control) => {
+      control.addEventListener("input", () => {
+        if (name === "moduleSize" && inputs.modulePreset) inputs.modulePreset.value = "custom";
+        update();
+      });
+      control.addEventListener("change", update);
     });
-    input.addEventListener("change", update);
   });
 
   if (inputs.modulePreset) {
@@ -554,6 +592,15 @@
       update();
     });
   }
+
+  root.querySelectorAll(".segmented-control label").forEach((label) => {
+    label.addEventListener("click", () => {
+      const radio = label.querySelector('[data-calc-input="scenarioScale"]');
+      if (!radio || radio.checked) return;
+      radio.checked = true;
+      update();
+    });
+  });
 
   if (exportButton) exportButton.addEventListener("click", downloadMarkdown);
 
