@@ -9,6 +9,7 @@
 - [Power Sharing And Neighbourhood Batteries](../sharing.html) - Could local solar be worth more when it is shared, stored, shifted into EVs or settled through a plain community ledger before it leaves the island cheaply?
 - [Sand Hills, Lakes And Pumped-Hydro Lessons](../water-height.html) - Could Straddie learn from Snowy, Wivenhoe, Kidston, Borumba and pumped-hydro atlases while asking its own ocean, bay, sand-hill, perched-lake, aquifer and mineral-sands questions?
 - [Wave And Tidal Without Underwater Blades](../marine.html) - Could wave and tide be explored from first principles: flutter, vortex shedding, shrimp timing, mantis-shrimp strikes, reef geometry, sensors, play, modelling and maker-space tests?
+- [Reefs, Surf Banks And Sand Media](../reefs.html) - Could oyster reefs, living shorelines, surf banks, stable dunes, artificial islands and Sandworm tunnel material flows become one inspectable abundance map?
 - [Fractal Wind And No-Blade Harvesting](../wind.html) - Could Straddie read wind as edge-flow, roof turbulence, vortex, flutter, electrostatic, piezo and triboelectric motion across many useful island places?
 - [Linked Local Labs](../network.html) - Deep links to the maker-space, Sandworm, ferry terminal lab, grants lab, community wealth and mutuals, and Ready S.E.T. Trust Hub.
 - [Community Wealth And Mutual Care](../wealth.html) - Could clean energy income, lower bills, mutual protection and grant readiness become patient local wealth rather than another extraction story?

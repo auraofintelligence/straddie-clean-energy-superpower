@@ -75,6 +75,13 @@ PAGES = [
         "description": "Could wave and tide be explored from first principles: flutter, vortex shedding, shrimp timing, mantis-shrimp strikes, reef geometry, sensors, play, modelling and maker-space tests?",
     },
     {
+        "id": "reefs",
+        "label": "Reefs",
+        "href": "reefs.html",
+        "title": "Reefs, Surf Banks And Sand Media",
+        "description": "Could oyster reefs, living shorelines, surf banks, stable dunes, artificial islands and Sandworm tunnel material flows become one inspectable abundance map?",
+    },
+    {
         "id": "wind",
         "label": "Fractal wind",
         "href": "wind.html",
@@ -135,6 +142,7 @@ HERO_IMAGES = {
     "sharing": "assets/img/heroes/sharing-commons.webp",
     "water": "assets/img/heroes/water-height-geography.webp",
     "marine": "assets/img/heroes/marine-energy.webp",
+    "reefs": "assets/img/heroes/reef-sand-surf-banks.webp",
     "wind": "assets/img/heroes/fractal-wind-lab.webp",
     "network": "assets/img/heroes/local-labs-network.webp",
     "wealth": "assets/img/heroes/wealth-hours.webp",
@@ -505,6 +513,66 @@ SOURCE_LINKS = [
         "use": "Gives a public biology reference for peacock mantis shrimp mouthparts reaching about 12-23 m/s in water, fast enough to form cavitation bubbles during a strike.",
     },
     {
+        "title": "Seawalls and artificial reefs",
+        "url": "https://www.goldcoast.qld.gov.au/Environment-sustainability/Protecting-our-environment/Managing-our-beaches/Seawalls-artificial-reefs",
+        "publisher": "City of Gold Coast",
+        "use": "Australian coastal reference for Narrowneck and Palm Beach artificial reefs as erosion, beach and surf-amenity structures.",
+    },
+    {
+        "title": "Tweed River Entrance Sand Bypassing Project",
+        "url": "https://www.qld.gov.au/environment/coasts-waterways/beach/tweed-river",
+        "publisher": "Queensland Government",
+        "use": "Grounds the Snapper Rocks and southern Gold Coast sand-bank conversation in an operating sand bypass system.",
+    },
+    {
+        "title": "Artificial reefs",
+        "url": "https://www.qld.gov.au/environment/coasts-waterways/marine-parks/artificial-reefs",
+        "publisher": "Queensland Government",
+        "use": "Provides a Queensland public-source doorway for artificial reef types, locations and marine park context.",
+    },
+    {
+        "title": "Moreton Bay trial artificial reef program",
+        "url": "https://www.qld.gov.au/environment/coasts-waterways/marine-parks/artificial-reefs",
+        "publisher": "Queensland Parks",
+        "use": "Shows artificial reef sites already operating in Moreton Bay Marine Park for habitat and recreational fishing value.",
+    },
+    {
+        "title": "Restoring Australia's lost shellfish reefs",
+        "url": "https://www.nature.org/en-us/about-us/where-we-work/asia-pacific/australia/stories-in-australia/restoring-australias-lost-shellfish-reefs/",
+        "publisher": "The Nature Conservancy",
+        "use": "Frames shellfish reef restoration as a national habitat, water-quality, fish and coastal community pathway.",
+    },
+    {
+        "title": "Windara Reef reviving the Gulf",
+        "url": "https://www.natureaustralia.org.au/what-we-do/our-priorities/oceans/ocean-stories/restoring-shellfish-reefs/gulf-st-vincent/",
+        "publisher": "The Nature Conservancy Australia",
+        "use": "Australian oyster reef reference for restored shellfish reef benefits, including fish, water quality and biodiversity.",
+    },
+    {
+        "title": "Moreton Bay Shellfish Reef Restoration",
+        "url": "https://ozfish.org.au/projects/moreton-bay-shellfish-reef-restoration/",
+        "publisher": "OzFish Unlimited",
+        "use": "Connects Moreton Bay shellfish reef restoration to recycled shells, community work and bay habitat recovery.",
+    },
+    {
+        "title": "Living Shorelines",
+        "url": "https://www.oceanwatch.org.au/community/livingshorelines/",
+        "publisher": "OceanWatch Australia",
+        "use": "Australian living-shoreline reference for oyster shells, erosion control and habitat repair.",
+    },
+    {
+        "title": "Raine Island Recovery Project",
+        "url": "https://www.qld.gov.au/environment/plants-animals/conservation/raineisland-recovery",
+        "publisher": "Queensland Parks",
+        "use": "Australian island-shaping reference for beach re-profiling, turtle habitat and careful monitoring over time.",
+    },
+    {
+        "title": "Future Port Expansion",
+        "url": "https://www.portbris.com.au/major-projects/fpe",
+        "publisher": "Port of Brisbane",
+        "use": "Queensland reclamation reference for large-scale material placement, sea walls, staged ground improvement and monitoring.",
+    },
+    {
         "title": "Carbon capture and storage",
         "url": "https://www.ga.gov.au/aecr2024/carbon-capture-and-storage",
         "publisher": "Geoscience Australia",
@@ -775,6 +843,7 @@ def home_body() -> str:
         {"label": "Pressure", "title": "What can compressed air teach on a sand island?", "text": "Could air storage start with containers, pipes, compressors, heat recovery and aquifer models that map to Straddie's sandmass rather than generic mainland infrastructure?"},
         {"label": "Water", "title": "What can Snowy-scale thinking teach a sand island?", "text": "Could Snowy, Wivenhoe, Kidston, Borumba and pumped-hydro atlases help people ask better Straddie questions about ocean, bay, dune height, perched lakes, aquifers, sands and mineral sands?"},
         {"label": "Marine", "title": "How many wave and tide geometries are still unmapped?", "text": "Could flutter, vortex shedding, shrimp timing, mantis-shrimp strike physics, oscillating foils, membranes, reef lattices, sensors and kids' sketches open more than one marine-energy path?"},
+        {"label": "Reefs", "title": "Could sand flows become reef, surf and habitat capability?", "text": "Could Sandworm tunnel volumes, oyster reefs, living shorelines, surf banks, stable dunes and artificial-island questions share one public material ledger?"},
         {"label": "Wealth", "title": "Who owns the upside?", "text": "Could savings, income, training and resilience feed local stewardship instead of leaking away?"},
     ]) + """
   </div>
@@ -826,6 +895,7 @@ def options_body() -> str:
         {"status": "Storage lane", "title": "Flow batteries and salt-gradient ideas", "plain": "Vanadium flow batteries and salt-gradient storage add more storage imagination to the bench. They are different tools with different rhythms, materials and maintenance stories.", "question": "Which storage chemistry fits island loads, repair skills, water context, budget and local stewardship?", "review": "Lifecycle, cost, electrolyte handling, water sensitivity, maintenance, supply chain and end-of-life rules."},
         {"status": "Pumped-hydro lessons", "title": "Sand hills, perched lakes and water height", "plain": "Snowy 2.0, Wivenhoe, Kidston, Borumba and pumped-hydro atlases show that water-height storage is a serious family. Straddie asks it through ocean, bay, dune height, perched lakes, aquifers, wetlands, sands and mineral sands.", "question": "Could a local informal idea learn from those systems and translate the lesson into Straddie's own sand-island geography?", "review": "Snowy Hydro, CleanCo, Genex, Queensland Hydro, ANU atlas, WetlandInfo, local hydrology and community authority."},
         {"status": "Ocean lab", "title": "Wave and tidal without underwater blades", "plain": "Humans have explored only a small part of wave and tide. No underwater blades can open flutter, vortex shedding, shrimp timing, mantis-shrimp strike physics, oscillating foils, membranes, reef lattices, buoys, sensors and maker-space geometry.", "question": "Could kids, fishers, surfers, engineers, artists and marine scientists all sketch different ways motion might become useful energy or knowledge?", "review": "Wave atlas data, marine life, navigation, anchoring, storms, sediment, local observation, repairability and reversibility."},
+        {"status": "Coastal abundance", "title": "Reefs, surf banks and sand-media loops", "plain": "Artificial reefs, oyster reefs, living shorelines, surf banks, stable dunes and Sandworm spoil loops can be explored together as material literacy: where does media come from, where could it go, who learns the skills, and what changes over time?", "question": "Could tunnel-volume thinking help a reef plan become a useful local build pathway instead of a stockpile problem?", "review": "Narrowneck, Palm Beach, Tweed sand bypassing, Moreton Bay reefs, Windara Reef, OceanWatch living shorelines, Raine Island, Port of Brisbane and Sandworm spoil-loop data."},
         {"status": "Fractal harvesting", "title": "Bladeless, motionless and flutter wind", "plain": "Wind is not only tower-scale turbines. Vortex masts, rooftop pressure systems, flutter ribbons, piezo flags, triboelectric films and electrostatic converters all ask how motion at different scales could feed island intelligence.", "question": "Could island wind be mapped as many useful edge motions, not just one peak-output machine?", "review": "Roof edges, ferry ramps, dunes, vents, masts, railings, durability, quietness, repair, wildlife, data and output."},
         {"status": "Future repo", "title": "Integrated pressure, carbon and response network", "plain": "This atlas points toward a dedicated repo for the whole pressure, carbon, response and sensing system.", "question": "Could a dedicated map explore compressed air, aquifers, carbon capture, fire response, emergency power, water, ventilation, sensors, data and governance as one living system?", "review": "QYAC, Geoscience Australia, ARENA, Queensland WetlandInfo, emergency-response references and the public source trail."},
     ]) + """
@@ -1085,11 +1155,143 @@ def marine_body() -> str:
         {"label": "Vortex", "title": "Could currents shake useful structures?", "text": "Could vortex-induced vibration, fish-like timing or oscillating bodies offer no-blade current ideas for models and careful field questions?", "href": "https://www.energy.gov/cmei/success-stories/articles/eere-success-story-vortex-hydro-energy-develops-transformational", "action": "Open source"},
         {"label": "Shrimp clue", "title": "Could timing and strike physics teach new geometry?", "text": "Swimming shrimp show cascading appendage timing. Peacock mantis shrimp deliver one of the fastest animal strikes measured: their hammer-like mouthparts can hit 12-23 m/s in water and make cavitation bubbles. Could those clues become sketches, simulations and bench rigs?", "href": "https://pateklab.biology.duke.edu/research/mechanics-of-ultrafast-movement/mechanics-of-movement-mantis-shrimp/", "action": "Open Patek Lab"},
         {"label": "Foils", "title": "Could flapping or oscillating foils stay gentle and useful?", "text": "Could biomimetic foils, fish-fin movement and flexible hydrokinetic forms be compared with standard turbines instead of dismissed?", "href": "https://tethys-engineering.pnnl.gov/publications/analysis-biomimetic-stream-energy-device-based-flapping-foils", "action": "Open source"},
-        {"label": "Reef geometry", "title": "Could habitat and energy learning share one model?", "text": "Could oyster-crete, reef modules, seagrass edges and sensor frames teach coastal processes first, with energy as one possible co-benefit?"},
+        {"label": "Reef geometry", "title": "Could habitat, surf and sand media share one model?", "text": "Could oyster reefs, living shorelines, surf banks, reef modules and Sandworm material flows become their own public calculator and map?", "href": "reefs.html", "action": "Open reefs"},
         {"label": "Kids and makers", "title": "What would a five-minute sketch reveal?", "text": "Could school groups, surfers, fishers, artists, makers, engineers and marine scientists all add pattern ideas to the same public board?"},
     ]) + """
   </div>
 </section>
+"""
+
+
+def reefs_body() -> str:
+    examples = [
+        {"label": "Gold Coast", "title": "What can Narrowneck and Palm Beach teach?", "text": "Could artificial reefs be read as coastal protection, surf amenity, wave-shape learning and long-term monitoring, not just dumped rock?", "href": "https://www.goldcoast.qld.gov.au/Environment-sustainability/Protecting-our-environment/Managing-our-beaches/Seawalls-artificial-reefs", "action": "Open source"},
+        {"label": "Sand bank", "title": "What can Tweed sand bypassing teach?", "text": "Could the Snapper Rocks / southern Gold Coast story help people ask how sand movement, point breaks, nourishment and public value interact?", "href": "https://www.qld.gov.au/environment/coasts-waterways/beach/tweed-river", "action": "Open source"},
+        {"label": "Moreton Bay", "title": "What do existing artificial reefs already show?", "text": "Could Moreton Bay reef sites help compare habitat, recreation, placement, access, monitoring and public explanation?", "href": "https://www.qld.gov.au/environment/coasts-waterways/marine-parks/artificial-reefs", "action": "Open source"},
+        {"label": "Shellfish", "title": "What can Windara Reef and shellfish restoration teach?", "text": "Could oyster reefs and recycled-shell work show how habitat, water quality, fish life, community labour and coastal care can grow together?", "href": "https://www.natureaustralia.org.au/what-we-do/our-priorities/oceans/ocean-stories/restoring-shellfish-reefs/gulf-st-vincent/", "action": "Open source"},
+        {"label": "Living shoreline", "title": "Could oyster shells slow water and grow habitat?", "text": "Could living shorelines turn erosion, shell recovery, saltmarsh, oysters, sediment and community work into a visible coastal repair pathway?", "href": "https://www.oceanwatch.org.au/community/livingshorelines/", "action": "Open source"},
+        {"label": "Island shaping", "title": "What can Raine Island teach about shaping with care?", "text": "Could beach re-profiling, habitat outcomes, monitoring and long timeframes sharpen how people talk about any artificial-island or stable-dune idea?", "href": "https://www.qld.gov.au/environment/plants-animals/conservation/raineisland-recovery", "action": "Open source"},
+        {"label": "Reclamation", "title": "What can Port of Brisbane teach about staged media placement?", "text": "Could large-scale reclamation help people ask better questions about walls, ground improvement, material logistics, settlement, monitoring and public evidence?", "href": "https://www.portbris.com.au/major-projects/fpe", "action": "Open source"},
+        {"label": "Sandworm", "title": "How does the tunnel-spoil loop join this page?", "text": "Could the Sandworm spoil-loop builder supply the material-stream question while this page calculates volume, reef media, skills, equipment and timing?", "href": "https://auraofintelligence.github.io/sandworm-subterranean-systems/builders/spoil-loop-brief.html", "action": "Open builder"},
+    ]
+    questions = [
+        {"label": "Oyster reef", "title": "Could shellfish farming and habitat learn together?", "text": "Where could recycled shell, reef base, spat, water quality, working boats, monitoring and local food knowledge meet without pretending one shape fits every shore?"},
+        {"label": "Erosion", "title": "Could living shorelines reduce hard-edge thinking?", "text": "Which bay edges, dune toes, wetlands or ferry-adjacent places invite slower water, more habitat and less panic about sand movement?"},
+        {"label": "Surf bank", "title": "Could point-break joy be part of the public value?", "text": "How might reef geometry, sand bypass learning, wave angle, bathymetry, surfer observation and storm recovery become a shared map?"},
+        {"label": "Stable dunes", "title": "Could dunes become teachers, not raw material?", "text": "Which stable dunes, mineral sands, vegetation lines and old disturbance stories can help people read what belongs onshore and what belongs offshore?"},
+        {"label": "Artificial island", "title": "Could landform imagination stay measurable?", "text": "Could any island, reef shelf, lagoon edge or platform idea carry a simple media ledger: volume, source, placement, monitoring and public learning?"},
+        {"label": "Automation", "title": "Could machines become transparent helpers?", "text": "Could conveyors, pumps, screens, geotextile bags, moulds, drones, bathymetry and sensor buoys show what they are doing month by month?"},
+    ]
+    return page_hero(by_id("reefs")) + """
+<section class="section">
+  <div class="section-inner split">
+    <div>
+      <p class="section-label">Coastal material literacy</p>
+      <h2>Could every metre of tunnel become a reef, dune, surf or habitat question?</h2>
+      <p class="lede muted">The Sandworm repo already asks how future tunnel spoil might become blocks, reef modules, dune support, tunnel lining tests or stored heat. This page turns that into a live reef-media ledger: tunnel diameter, build length, conversion share, reef geometry, human skills, automation and time.</p>
+      <ol class="pathway">
+        <li><p><strong>Calculate volume.</strong> What comes out of a 100 m tunnel section at different diameters?</p></li>
+        <li><p><strong>Choose a pathway.</strong> What share could become reef media, living shoreline, surf-bank base, dune support, blocks or other useful material?</p></li>
+        <li><p><strong>Map the handoff.</strong> Which equipment, skills, testing, automation and storage yards help the material move without sitting in a lonely pile?</p></li>
+      </ol>
+    </div>
+    <div class="quote-panel">A reef plan can empower the tunnel build when the material stream becomes visible early: not as waste, but as a timed flow of possible habitat, surf, shoreline and learning value.</div>
+  </div>
+</section>
+<section class="section soft-band">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="section-label">Australian examples</p>
+      <h2>Which real Australian projects can teach the first questions?</h2>
+      <p class="lede muted">These are not copy-paste answers for Straddie. They are public examples that help people compare shape, purpose, monitoring, material, public value and the kind of evidence a serious reef or sand-media idea gathers.</p>
+    </div>
+""" + card_grid(examples) + """
+  </div>
+</section>
+<section class="section" id="reef-calculator">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="section-label">Interactive tunnel to reef ledger</p>
+      <h2>What does tunnel diameter become per 100 m?</h2>
+      <p class="lede muted">Move the sliders to sketch a monthly material flow. The calculator is deliberately plain: it shows volume, possible reef-media conversion, module counts, stockpile avoided, work crews, equipment and automation notes. It is a public thinking tool, not an approval or design claim.</p>
+    </div>
+    <div class="reef-calculator" data-reef-calculator>
+      <div class="calc-controls">
+        <div class="range-field">
+          <label for="reef-diameter">Tunnel diameter <output data-calc-out="diameter">6 m</output></label>
+          <input id="reef-diameter" type="range" min="3" max="15" step="0.5" value="6" data-calc-input="diameter">
+        </div>
+        <div class="range-field">
+          <label for="reef-length">Tunnel advance per month <output data-calc-out="monthlyLength">100 m</output></label>
+          <input id="reef-length" type="range" min="10" max="500" step="10" value="100" data-calc-input="monthlyLength">
+        </div>
+        <div class="range-field">
+          <label for="reef-months">Months in this stage <output data-calc-out="months">6</output></label>
+          <input id="reef-months" type="range" min="1" max="24" step="1" value="6" data-calc-input="months">
+        </div>
+        <div class="range-field">
+          <label for="reef-share">Material sent to reef/sand media <output data-calc-out="reefShare">35%</output></label>
+          <input id="reef-share" type="range" min="0" max="90" step="5" value="35" data-calc-input="reefShare">
+        </div>
+        <div class="range-field">
+          <label for="reef-bulking">Bulking or formed-media factor <output data-calc-out="bulking">1.15x</output></label>
+          <input id="reef-bulking" type="range" min="0.8" max="1.6" step="0.05" value="1.15" data-calc-input="bulking">
+        </div>
+        <div class="range-field">
+          <label for="reef-module">Average reef module or media cell <output data-calc-out="moduleSize">25 m3</output></label>
+          <input id="reef-module" type="range" min="5" max="250" step="5" value="25" data-calc-input="moduleSize">
+        </div>
+      </div>
+      <div class="calc-toggle-grid" aria-label="Material pathways">
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="oyster" checked><span>Oyster / shellfish reef</span></label>
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="living" checked><span>Living shoreline</span></label>
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="surf" checked><span>Surf bank geometry</span></label>
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="dune"><span>Stable dune support</span></label>
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="island"><span>Artificial island / platform</span></label>
+        <label class="toggle-card"><input type="checkbox" data-calc-toggle="automation" checked><span>Automation and sensors</span></label>
+      </div>
+      <div class="calc-results">
+        <article class="calc-metric"><span>Per 100 m tunnel</span><strong data-calc-out="per100">2,827 m3</strong></article>
+        <article class="calc-metric"><span>Monthly tunnel volume</span><strong data-calc-out="monthlySpoil">2,827 m3</strong></article>
+        <article class="calc-metric"><span>Monthly reef media</span><strong data-calc-out="monthlyReef">1,138 m3</strong></article>
+        <article class="calc-metric"><span>Stage reef media</span><strong data-calc-out="stageReef">6,828 m3</strong></article>
+        <article class="calc-metric"><span>Approx. modules / month</span><strong data-calc-out="monthlyModules">46</strong></article>
+        <article class="calc-metric"><span>Stockpile avoided</span><strong data-calc-out="avoided">6,828 m3</strong></article>
+      </div>
+      <div class="calc-panels">
+        <article class="calc-panel">
+          <p class="mini-label">Time flow</p>
+          <h3>How does the material move over time?</h3>
+          <div class="timeline-bars" data-calc-timeline></div>
+          <p class="calc-note" data-calc-out="timelineNote"></p>
+        </article>
+        <article class="calc-panel">
+          <p class="mini-label">Work map</p>
+          <h3>What equipment, skills and automation appear?</h3>
+          <div class="work-map" data-calc-out="workMap"></div>
+        </article>
+      </div>
+      <div class="sandworm-bridge" data-sandworm-bridge>
+        <p class="mini-label">Sandworm data bridge</p>
+        <h3>Could the Sandworm repo feed the next calculator?</h3>
+        <p>The live calculator starts with local inputs here and reads the public Sandworm site data when available. The next useful bridge could pull corridor pages, spoil-loop builder fields and digital-twin layers into one shared material ledger.</p>
+        <div class="tag-row" data-sandworm-links></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section soft-band">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="section-label">Local questions</p>
+      <h2>What else belongs beside wave and tidal energy?</h2>
+      <p class="lede muted">Reefs are not only energy structures. They can be oyster habitat, erosion buffers, surf-shaping experiments, stable-dune companions, living shorelines, artificial-island questions, sensor platforms and material-flow teachers.</p>
+    </div>
+""" + card_grid(questions) + """
+  </div>
+</section>
+<script src="https://auraofintelligence.github.io/sandworm-subterranean-systems/assets/js/site-data.js"></script>
+<script src="assets/js/reef-calculator.js"></script>
 """
 
 
@@ -1392,6 +1594,7 @@ BODY_RENDERERS = {
     "sharing": sharing_body,
     "water": water_body,
     "marine": marine_body,
+    "reefs": reefs_body,
     "wind": wind_body,
     "network": network_body,
     "wealth": wealth_body,
@@ -1493,7 +1696,7 @@ def write_site_data() -> None:
     nav = [{"id": page["id"], "label": page["label"], "href": page["href"]} for page in PAGES]
     by_page_id = {item["id"]: item for item in nav}
     nav_groups = [
-        {"label": "Energy", "items": [by_page_id[item_id] for item_id in ["solar", "storage", "hydrogen", "sharing", "water", "marine", "wind"]]},
+        {"label": "Energy", "items": [by_page_id[item_id] for item_id in ["solar", "storage", "hydrogen", "sharing", "water", "marine", "reefs", "wind"]]},
         {"label": "Proof", "items": [by_page_id[item_id] for item_id in ["network", "wealth", "boundaries", "sources", "site-map"]]},
     ]
     nav_order = [
@@ -1566,6 +1769,7 @@ It covers:
 - power sharing, neighbourhood batteries and bill ledgers
 - pumped-hydro lessons from Snowy, Wivenhoe, Kidston, Borumba and sand-island geography
 - first-principles wave and tidal options without underwater blades
+- reef, oyster, surf-bank, artificial-island and Sandworm tunnel-media questions
 - fractal no-blade wind across vortex, flutter, rooftop and sensor-scale flows
 - future pressure, carbon, sensing and response network questions
 - links to maker-space, Sandworm, ferry terminal lab, Grants Lab, community wealth and Ready S.E.T. Trust Hub

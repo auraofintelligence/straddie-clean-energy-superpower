@@ -41,6 +41,11 @@ window.CLEAN_ENERGY_SITE = {
       "href": "marine.html"
     },
     {
+      "id": "reefs",
+      "label": "Reefs",
+      "href": "reefs.html"
+    },
+    {
       "id": "wind",
       "label": "Fractal wind",
       "href": "wind.html"
@@ -109,6 +114,11 @@ window.CLEAN_ENERGY_SITE = {
           "id": "marine",
           "label": "Marine",
           "href": "marine.html"
+        },
+        {
+          "id": "reefs",
+          "label": "Reefs",
+          "href": "reefs.html"
         },
         {
           "id": "wind",
@@ -200,6 +210,11 @@ window.CLEAN_ENERGY_SITE = {
           "href": "marine.html"
         },
         {
+          "id": "reefs",
+          "label": "Reefs",
+          "href": "reefs.html"
+        },
+        {
           "id": "wind",
           "label": "Fractal wind",
           "href": "wind.html"
@@ -286,6 +301,11 @@ window.CLEAN_ENERGY_SITE = {
       "id": "marine",
       "label": "Marine",
       "href": "marine.html"
+    },
+    {
+      "id": "reefs",
+      "label": "Reefs",
+      "href": "reefs.html"
     },
     {
       "id": "wind",

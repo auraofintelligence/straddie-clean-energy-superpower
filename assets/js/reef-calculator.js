@@ -1,0 +1,153 @@
+(function () {
+  const root = document.querySelector("[data-reef-calculator]");
+  if (!root) return;
+
+  const number = new Intl.NumberFormat("en-AU", { maximumFractionDigits: 0 });
+  const decimal = new Intl.NumberFormat("en-AU", { maximumFractionDigits: 2 });
+
+  const inputs = {
+    diameter: root.querySelector('[data-calc-input="diameter"]'),
+    monthlyLength: root.querySelector('[data-calc-input="monthlyLength"]'),
+    months: root.querySelector('[data-calc-input="months"]'),
+    reefShare: root.querySelector('[data-calc-input="reefShare"]'),
+    bulking: root.querySelector('[data-calc-input="bulking"]'),
+    moduleSize: root.querySelector('[data-calc-input="moduleSize"]'),
+  };
+
+  const output = (name, value) => {
+    const target = root.querySelector(`[data-calc-out="${name}"]`);
+    if (target) target.textContent = value;
+  };
+
+  const checked = (name) => {
+    const toggle = root.querySelector(`[data-calc-toggle="${name}"]`);
+    return Boolean(toggle && toggle.checked);
+  };
+
+  const metres3 = (value) => `${number.format(Math.round(value))} m3`;
+  const count = (value) => number.format(Math.max(0, Math.round(value)));
+
+  const makeList = (label, items) => {
+    return `<div><strong>${label}</strong><p>${items.join(", ")}</p></div>`;
+  };
+
+  const pathwayNames = {
+    oyster: "oyster reef",
+    living: "living shoreline",
+    surf: "surf bank",
+    dune: "stable dune support",
+    island: "artificial island / platform",
+    automation: "automation and sensing",
+  };
+
+  const updateSandwormBridge = () => {
+    const holder = root.querySelector("[data-sandworm-links]");
+    if (!holder) return;
+
+    const fallback = [
+      { label: "Spoil loop", href: "https://auraofintelligence.github.io/sandworm-subterranean-systems/sandworm-lab.html" },
+      { label: "Reefs + power", href: "https://auraofintelligence.github.io/sandworm-subterranean-systems/civilisation-of-sand.html" },
+      { label: "Twin layer", href: "https://auraofintelligence.github.io/sandworm-subterranean-systems/digital-twin.html" },
+      { label: "Builder", href: "https://auraofintelligence.github.io/sandworm-subterranean-systems/builders/spoil-loop-brief.html" },
+    ];
+
+    const nav = window.SANDWORM_SITE && Array.isArray(window.SANDWORM_SITE.nav)
+      ? window.SANDWORM_SITE.nav
+      : [];
+    const byId = Object.fromEntries(nav.map((item) => [item.id, item]));
+    const live = ["sandworm-lab", "civilisation", "digital-twin", "makerspace"]
+      .map((id) => byId[id])
+      .filter(Boolean)
+      .map((item) => ({
+        label: item.label,
+        href: `https://auraofintelligence.github.io/sandworm-subterranean-systems/${item.href}`,
+      }));
+
+    const links = live.length ? live : fallback;
+    holder.innerHTML = links.map((item) => `<a class="tag" href="${item.href}">${item.label}</a>`).join("");
+  };
+
+  const update = () => {
+    const diameter = Number(inputs.diameter.value);
+    const monthlyLength = Number(inputs.monthlyLength.value);
+    const months = Number(inputs.months.value);
+    const reefShare = Number(inputs.reefShare.value);
+    const bulking = Number(inputs.bulking.value);
+    const moduleSize = Number(inputs.moduleSize.value);
+
+    const area = Math.PI * (diameter / 2) ** 2;
+    const per100 = area * 100;
+    const monthlySpoil = area * monthlyLength;
+    const monthlyDiverted = monthlySpoil * (reefShare / 100);
+    const monthlyReef = monthlyDiverted * bulking;
+    const stageReef = monthlyReef * months;
+    const stageDiverted = monthlyDiverted * months;
+    const monthlyModules = moduleSize > 0 ? monthlyReef / moduleSize : 0;
+
+    output("diameter", `${decimal.format(diameter)} m`);
+    output("monthlyLength", `${number.format(monthlyLength)} m`);
+    output("months", number.format(months));
+    output("reefShare", `${number.format(reefShare)}%`);
+    output("bulking", `${decimal.format(bulking)}x`);
+    output("moduleSize", metres3(moduleSize));
+    output("per100", metres3(per100));
+    output("monthlySpoil", metres3(monthlySpoil));
+    output("monthlyReef", metres3(monthlyReef));
+    output("stageReef", metres3(stageReef));
+    output("monthlyModules", count(monthlyModules));
+    output("avoided", metres3(stageDiverted));
+
+    const active = Object.keys(pathwayNames).filter((key) => checked(key));
+    const activeNames = active.map((key) => pathwayNames[key]);
+    const stageText = activeNames.length ? activeNames.join(", ") : "open material questions";
+
+    const timeline = root.querySelector("[data-calc-timeline]");
+    if (timeline) {
+      const bars = Array.from({ length: months }, (_, index) => {
+        const label = `Month ${index + 1}`;
+        const width = Math.max(8, Math.min(100, (monthlyReef / Math.max(monthlySpoil, 1)) * 100));
+        return `<div class="timeline-row"><span>${label}</span><b style="width:${width}%"></b><em>${metres3(monthlyReef)}</em></div>`;
+      });
+      timeline.innerHTML = bars.join("");
+    }
+
+    output(
+      "timelineNote",
+      `Could ${metres3(stageDiverted)} of raw tunnel material become ${metres3(stageReef)} of formed media across ${number.format(months)} month${months === 1 ? "" : "s"} for ${stageText}?`
+    );
+
+    const equipment = monthlySpoil < 500
+      ? ["maker-space test bays", "small screens", "skip bins", "hand moulds", "water-quality jars"]
+      : monthlySpoil < 2500
+        ? ["front-end loader", "mobile screener", "batch mixer", "module moulds", "covered laydown area", "barge or truck scheduling"]
+        : ["dedicated material yard", "conveyors", "screening train", "batching plant", "placement vessel planning", "public dashboard"];
+
+    const skills = ["survey and measurement", "materials testing", "batch records", "site logistics", "community explanation"];
+    if (checked("oyster")) skills.push("shell recycling", "oyster restoration knowledge");
+    if (checked("living")) skills.push("living-shoreline planting", "sediment observation");
+    if (checked("surf")) skills.push("bathymetry reading", "surfer observation", "wave modelling");
+    if (checked("dune")) skills.push("dune ecology", "sand fencing and vegetation care");
+    if (checked("island")) skills.push("settlement monitoring", "staged landform records");
+
+    const automation = ["volume dashboard", "QR batch tags", "photo records", "load-cell or weighbridge feed"];
+    if (checked("automation")) {
+      automation.push("drone photogrammetry", "bathymetry passes", "sensor buoys", "weather and turbidity logs");
+    }
+    if (checked("surf")) automation.push("wave-camera review");
+    if (checked("oyster") || checked("living")) automation.push("water-quality sensors");
+
+    const workMap = root.querySelector("[data-calc-out=\"workMap\"]");
+    if (workMap) {
+      workMap.innerHTML = [
+        makeList("Equipment that could appear", equipment),
+        makeList("Human skills that could grow", skills),
+        makeList("Automation that could keep the story visible", automation),
+      ].join("");
+    }
+  };
+
+  Object.values(inputs).forEach((input) => input.addEventListener("input", update));
+  root.querySelectorAll("[data-calc-toggle]").forEach((toggle) => toggle.addEventListener("change", update));
+  updateSandwormBridge();
+  update();
+})();

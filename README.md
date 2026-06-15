@@ -12,6 +12,7 @@ It covers:
 - power sharing, neighbourhood batteries and bill ledgers
 - pumped-hydro lessons from Snowy, Wivenhoe, Kidston, Borumba and sand-island geography
 - first-principles wave and tidal options without underwater blades
+- reef, oyster, surf-bank, artificial-island and Sandworm tunnel-media questions
 - fractal no-blade wind across vortex, flutter, rooftop and sensor-scale flows
 - future pressure, carbon, sensing and response network questions
 - links to maker-space, Sandworm, ferry terminal lab, Grants Lab, community wealth and Ready S.E.T. Trust Hub
