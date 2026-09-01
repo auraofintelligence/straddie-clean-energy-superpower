@@ -1,5 +1,32 @@
 # Straddie Clean Energy Superpower
 
+<!-- github-organisation:start -->
+
+## Project links and history
+
+- First substantive build: 14 June 2026.
+- GitHub repository: [straddie-clean-energy-superpower](https://github.com/auraofintelligence/straddie-clean-energy-superpower).
+- Public site: [visit the public site](https://auraofintelligence.github.io/straddie-clean-energy-superpower/).
+
+## Related public projects
+
+Each link below reflects an evidenced family, lineage or direct connection. This project has 7 relevant public connections.
+
+### Aura Systems Image Atlas source projects
+
+- [aura-systems-image-atlas](https://github.com/auraofintelligence/aura-systems-image-atlas) - [public page](https://auraofintelligence.github.io/aura-systems-image-atlas/) - source project represented in this visual atlas.
+- [civilisation-of-sand](https://github.com/auraofintelligence/civilisation-of-sand) - [public page](https://auraofintelligence.github.io/civilisation-of-sand/) - shared community programme.
+- [Sandworm-subterranean-systems](https://github.com/auraofintelligence/sandworm-subterranean-systems) - [public page](https://auraofintelligence.github.io/sandworm-subterranean-systems/) - explicit cross-reference, shared community programme.
+- [shared-table-initiative](https://github.com/auraofintelligence/shared-table-initiative) - [public page](https://auraofintelligence.github.io/shared-table-initiative/) - shared community programme.
+- [straddie-makerspace-lab](https://github.com/auraofintelligence/straddie-makerspace-lab) - [public page](https://auraofintelligence.github.io/straddie-makerspace-lab/) - explicit cross-reference, shared community programme.
+
+### Circular making and local infrastructure
+
+- [grain-by-grain](https://github.com/auraofintelligence/grain-by-grain) - [public page](https://auraofintelligence.github.io/grain-by-grain/) - shared community programme.
+- [straddie-tip-loop-lab](https://github.com/auraofintelligence/straddie-tip-loop-lab) - [public page](https://auraofintelligence.github.io/straddie-tip-loop-lab/) - explicit cross-reference, shared community programme.
+
+<!-- github-organisation:end -->
+
 A public, question-led static site for exploring clean energy options for Minjerribah / North Stradbroke Island.
 
 It covers:
